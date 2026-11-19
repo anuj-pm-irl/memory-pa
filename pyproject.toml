@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "memory-pa"
+version = "0.1.0"
+description = "A personal memory workspace any agent can write to."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = ["jsonschema>=4.23,<5", "referencing>=0.35,<1"]
+
+[project.optional-dependencies]
+s3 = ["boto3>=1.37,<2"]
+test = ["moto[s3]>=5.1,<6", "boto3>=1.37,<2"]
+
+[project.scripts]
+memory-pa = "memory_pa.cli:main"
+
+[tool.setuptools]
+packages = ["memory_pa", "memory_pa.storage", "memory_pa.schemas", "memory_pa.examples"]
+package-dir = {"" = "src", "memory_pa.schemas" = "schemas", "memory_pa.examples" = "examples"}
+
+[tool.setuptools.package-data]
+"memory_pa.schemas" = ["*.json"]
+"memory_pa.examples" = ["*.json"]

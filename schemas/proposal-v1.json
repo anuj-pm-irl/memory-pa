@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:memory-pa:proposal:v1",
+  "title": "memory-pa capture proposal v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format_version", "topic", "title", "source", "text"],
+  "properties": {
+    "format_version": {"const": 1},
+    "topic": {"$ref": "#/$defs/topic"},
+    "title": {"$ref": "#/$defs/title"},
+    "date": {"$ref": "#/$defs/optional_date"},
+    "text": {"type": "string", "minLength": 1, "maxLength": 2097152},
+    "source": {"$ref": "#/$defs/origin"},
+    "summary": {"type": "string", "minLength": 1, "maxLength": 8000},
+    "decisions": {"type": "array", "maxItems": 100, "items": {"$ref": "#/$defs/line"}},
+    "actions": {"type": "array", "maxItems": 100, "items": {"$ref": "#/$defs/proposed_action"}},
+    "entities": {"type": "array", "maxItems": 100, "items": {"$ref": "#/$defs/proposed_entity"}}
+  },
+  "$defs": {
+    "topic": {"type": "string", "maxLength": 64, "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "title": {"type": "string", "minLength": 1, "maxLength": 200, "pattern": "^[^\\r\\n]+$"},
+    "line": {"type": "string", "minLength": 1, "maxLength": 2000, "pattern": "^[^\\r\\n]+$"},
+    "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$", "format": "date"},
+    "optional_date": {"oneOf": [{"$ref": "#/$defs/date"}, {"type": "null"}]},
+    "action_id": {"type": "string", "pattern": "^act-[a-f0-9]{32}$"},
+    "entity_id": {"type": "string", "pattern": "^ent-[a-f0-9]{32}$"},
+    "entity_kind": {"enum": ["person", "company", "project"]},
+    "action_status": {"enum": ["open", "done", "cancelled"]},
+    "origin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "properties": {
+        "kind": {"enum": ["note", "file", "meeting", "recording", "email", "chat", "other"]},
+        "url": {"type": "string", "maxLength": 2048, "pattern": "^https?://[^\\s]+$"},
+        "external": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["provider", "account", "id"],
+          "properties": {
+            "provider": {"type": "string", "maxLength": 64, "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+            "account": {"$ref": "#/$defs/title"},
+            "id": {"$ref": "#/$defs/line"}
+          }
+        }
+      }
+    },
+    "proposed_action": {
+      "type": "object",
+      "additionalProperties": false,
+      "anyOf": [{"required": ["id"]}, {"required": ["text"]}],
+      "properties": {
+        "id": {"$ref": "#/$defs/action_id"},
+        "text": {"$ref": "#/$defs/line"},
+        "owner": {"oneOf": [{"$ref": "#/$defs/title"}, {"type": "null"}]},
+        "due": {"$ref": "#/$defs/optional_date"},
+        "status": {"$ref": "#/$defs/action_status"}
+      }
+    },
+    "proposed_entity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "name"],
+      "dependentRequired": {"id": ["basis"], "basis": ["id"]},
+      "not": {"required": ["id", "distinct"]},
+      "properties": {
+        "id": {"$ref": "#/$defs/entity_id"},
+        "kind": {"$ref": "#/$defs/entity_kind"},
+        "name": {"$ref": "#/$defs/title"},
+        "basis": {"$ref": "#/$defs/line"},
+        "distinct": {"const": true},
+        "facts": {"type": "array", "maxItems": 100, "items": {"$ref": "#/$defs/line"}}
+      }
+    }
+  }
+}

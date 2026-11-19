@@ -1,0 +1,32 @@
+{
+  "actions": [
+    {
+      "due": null,
+      "id": "act-c2038eb3d2415be5995e3e93be367c24",
+      "owner": "Kit Copper",
+      "previous_source": null,
+      "status": "open",
+      "text": "Test the blue lantern before the next meeting."
+    }
+  ],
+  "captured_at": "2026-02-03T12:00:00Z",
+  "date": "2026-02-03",
+  "decisions": [
+    "Use the blue lantern for the welcome table."
+  ],
+  "entities": [
+    "ent-c2038eb3d2415be5995e3e93be367c24",
+    "ent-6c8a02653fb857209b5574c608250c12",
+    "ent-531d80454deb5fa1b0a7f34606662264"
+  ],
+  "fingerprint": "ea55d77324c68d882828cb68648df96b0a8425531ea7b489e235dc4d6e2afcd7",
+  "id": "src-6c15a08e1a665239b0da9165d350beb3",
+  "note": "topics/robot-club/rainy-robot-club-meeting-2026-02-03.md",
+  "origin": {
+    "kind": "meeting"
+  },
+  "summary": "The Rainy Robot Club chose a lantern for the welcome table.",
+  "text_sha256": "ea55d77324c68d882828cb68648df96b0a8425531ea7b489e235dc4d6e2afcd7",
+  "title": "Rainy Robot Club meeting",
+  "topic": "robot-club"
+}

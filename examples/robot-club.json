@@ -1,0 +1,16 @@
+{
+  "format_version": 1,
+  "title": "Rainy Robot Club meeting",
+  "topic": "robot-club",
+  "date": "2026-02-03",
+  "source": {"kind": "meeting"},
+  "text": "The Rainy Robot Club agreed to use the blue lantern for the welcome table. Kit Copper volunteered to test the blue lantern before the next meeting.",
+  "summary": "The Rainy Robot Club chose a lantern for the welcome table.",
+  "decisions": ["Use the blue lantern for the welcome table."],
+  "actions": [{"text": "Test the blue lantern before the next meeting.", "owner": "Kit Copper"}],
+  "entities": [
+    {"kind": "person", "name": "Kit Copper", "facts": ["Volunteered to test the blue lantern."]},
+    {"kind": "company", "name": "Rainy Robot Club"},
+    {"kind": "project", "name": "Welcome Table"}
+  ]
+}
