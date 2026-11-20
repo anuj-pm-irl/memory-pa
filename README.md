@@ -41,6 +41,18 @@ When you save a later note saying the lantern passed its test, you can mark the 
 
 [See a bigger map](docs/media/answer-trail.svg) · [How memory-pa builds the map](docs/format.md#how-the-memory-map-is-built)
 
+## Update in chat
+
+When you’re ready to check for a new version, paste this into your assistant’s chat.
+
+```text
+Check for a memory-pa update and tell me what’s new. Ask before installing it.
+After the update, check that you can still open my existing notes.
+Follow https://github.com/anuj-pm-irl/memory-pa/blob/main/docs/commands.md#update-memory-pa
+```
+
+Your assistant can update the tool and the skill you copied into your project. If a release changes how notes are stored, it will explain the change and ask about a private backup first. [Update in Terminal](docs/commands.md#update-memory-pa)
+
 <details>
 <summary>Set up in Terminal</summary>
 

@@ -2,6 +2,29 @@
 
 Use `memory-pa --help` and `memory-pa COMMAND --help` for the full options.
 
+## Update memory-pa
+
+1. Run `memory-pa --version`. Look for a newer published release and read its notes. [Latest memory-pa release](https://github.com/anuj-pm-irl/memory-pa/releases/latest)
+2. On the machine or runner that uses your notes, run `memory-pa config --json` and `memory-pa validate --json` with the same settings and flags you use for normal commands. Keep the store settings and `workspace_id` for the check after updating. On v0.1.0, use your existing store settings and `validate`.
+3. If the release notes ask you to convert your saved notes, read those instructions first. Make a backup with the working version using `memory-pa export NEW_PRIVATE_FOLDER`. If you’re guiding someone, explain what will change and get their approval before the backup and conversion.
+4. Install the chosen release using the same installer and environment. For the `uv` quickstart, run `uv tool install` again with the new tag and the Python version the release requires. Keep the `s3` extra if you use S3 and carry over any extra adapter packages you installed. The examples below use `v0.1.3` and Python 3.11. [How uv updates tagged installs](https://docs.astral.sh/uv/concepts/tools/#upgrading-tools)
+
+   For a folder or private GitHub, replace `v0.1.3` with the chosen tag and run this command.
+
+   ```sh
+   uv tool install --python 3.11 "git+https://github.com/anuj-pm-irl/memory-pa.git@v0.1.3"
+   ```
+
+   For S3, use the release tag in this command.
+
+   ```sh
+   uv tool install --python 3.11 "memory-pa[s3] @ git+https://github.com/anuj-pm-irl/memory-pa.git@v0.1.3"
+   ```
+
+5. Run `memory-pa --version`, `memory-pa config --json`, and `memory-pa validate --json` again. Check that the installed version matches the release and the store settings and workspace ID match your earlier check. If you copied the skill into your project, update that copy from `skills/memory-pa/SKILL.md` at the same release tag. Use it in your next chat.
+
+If a routine update fails verification, install the previous tag with the same command and check the workspace again. For a release that changed how notes are stored, follow its recovery instructions.
+
 ## Save a note from a file
 
 1. Run `memory-pa --store "~/Memory PA" init --remember` once to use that folder. Run `memory-pa config` any time to check where your notes go. See [storage setup](storage.md) for private GitHub and S3.
