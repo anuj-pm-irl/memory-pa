@@ -1,6 +1,10 @@
 # memory-pa
 
-Save a note today. Later, ask your AI assistant what you decided or who promised to do something. It can show you the note behind the answer.
+A personal memory workspace any agent can write to, stored where you choose.
+
+> **Who’s testing the blue lantern?**
+>
+> **Kit Copper.** [Read the original demo note](examples/workspace/topics/robot-club/rainy-robot-club-meeting-2026-02-03.md#source-text)
 
 ## Start in chat
 
@@ -14,9 +18,7 @@ Follow the setup skill in https://github.com/anuj-pm-irl/memory-pa
 
 1. **Pick a home for your notes.** Choose a folder on your computer, a private GitHub repo, or a private S3 bucket. A folder on this computer is the easiest place to start.
 2. **Let the assistant do the setup you approve.** It can install what it needs, create or open the store, and check that it works. If it needs you to sign in, it hands control back. Enter any key in your own terminal’s hidden prompt, close the screen showing the key, and say **“Done.”**
-3. **Try a made-up note together.** Ask “Who’s testing the blue lantern?” The demo finds Kit Copper and shows the note that says so.
-
-<img src="docs/media/setup-steps.gif" width="720" alt="The four setup steps. Paste in chat, pick a home for your notes, approve setup, and try the demo.">
+3. **Try a made-up note together.** Ask your assistant to run the demo with you, then ask who’s testing the blue lantern.
 
 ## Save your first note
 
@@ -28,17 +30,16 @@ Already use a note taker? Say **“Help me connect Pocket and try one note.”**
 
 ## How the memory map grows
 
-The map is a set of linked files in the place you picked for your notes.
+When you save a note, memory-pa keeps the original text and links the people, projects, decisions, and to-dos to it. It updates the topic summary so your assistant can see what changed and find the note behind an answer.
 
-1. **The assistant prepares the note.** It picks out the people, decisions, and to-dos it can find in what you shared.
-2. **memory-pa connects the pieces when you save.** It keeps the note and where it came from, links the people and projects mentioned, and updates the topic’s list of decisions and open tasks.
-3. **Your next question follows those links.** Search finds matching notes and the assistant opens the section that supports its answer. Later notes can update a task while keeping the earlier note available.
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="docs/media/answer-trail.svg">
+  <img src="docs/media/answer-trail.gif" width="720" alt="A highlighted line connects the lantern test to its owner, Kit Copper, and to the meeting note where Kit volunteered.">
+</picture>
 
-<img src="docs/media/memory-map.svg" width="720" alt="Mind map of the fictional Rainy Robot Club, branching into notes, sources, people, decisions, projects, and to-dos. Dashed lines connect related items, including Kit Copper and the lantern test.">
+The highlighted links come from the demo note. The wider map shows how the fictional club’s notes could connect after a few meetings.
 
-Here’s how the Rainy Robot Club’s map could look after a few meetings. Follow the dashed lines from the club meeting to its source or from Kit Copper to the lantern test.
-
-[See the full-size map](docs/media/memory-map.svg) · [Open the demo topic](examples/workspace/topics/robot-club/_summary.md) · [How the backend builds the map](docs/format.md#how-the-memory-map-is-built)
+[See the still diagram](docs/media/answer-trail.svg) · [Open the demo topic](examples/workspace/topics/robot-club/_summary.md) · [How the backend builds the map](docs/format.md#how-the-memory-map-is-built)
 
 <details>
 <summary>Set up in Terminal</summary>

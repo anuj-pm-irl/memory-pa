@@ -1,5 +1,5 @@
-# README diagrams
+# The answer trail
 
-The [setup GIF](setup-steps.gif) highlights four steps in order and settles on the full diagram. The labels stay visible throughout.
+The [diagram](answer-trail.svg) highlights the open lantern test, Kit Copper, and the [fictional meeting note](../../examples/workspace/topics/robot-club/rainy-robot-club-meeting-2026-02-03.md#source-text) that connects them. The muted nodes illustrate links that could accumulate as the club saves more notes.
 
-The [memory map](memory-map.svg) extends the [fictional Rainy Robot Club note](../../examples/robot-club.json) with made-up examples of later notes and links. The branches group entries by kind. Dashed lines connect a few related entries, such as a person and their action item.
+The [animated version](answer-trail.gif) draws the highlighted line once and keeps all three labels visible throughout.

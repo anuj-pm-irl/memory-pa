@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="276" viewBox="0 0 760 276" role="img" aria-labelledby="title description">
+  <title id="title">From an open task to its original note</title>
+  <desc id="description">A map of a fictional club's memory. One highlighted line connects the lantern test, its owner Kit Copper, and the meeting note where Kit volunteered. The other nodes illustrate how the map can grow as more notes are saved.</desc>
+  <style>
+    text { fill: #f3f5f7; font: 500 24px system-ui, -apple-system, 'Segoe UI', sans-serif; letter-spacing: -.35px; }
+    .answer { font-size: 30px; font-weight: 650; }
+    .role { fill: #b3bdcb; font-size: 17px; font-weight: 400; letter-spacing: 0; }
+  </style>
+
+  <rect width="760" height="276" fill="#121418"/>
+
+  <g fill="none" stroke="#5c626e" stroke-width="1.25" stroke-linejoin="round">
+    <path d="M47 125 92 64 159 97 219 43 258 103 321 56 369 89 405 41 454 100 494 61 550 108 582 43 638 82 697 47 717 117"/>
+    <path d="M47 125 116 127 159 97 202 145 258 103 298 141 354 126 369 89"/>
+    <path d="M454 100 467 148 550 108 555 154 638 82 657 143 717 117"/>
+    <path d="M47 125 136 174 116 127 M136 174 202 145 M298 141 380 174 354 126 M380 174 467 148 M555 154 627 174 657 143 M321 56 405 41"/>
+  </g>
+
+  <g fill="#858d9a">
+    <circle cx="47" cy="125" r="3.2"/>
+    <circle cx="92" cy="64" r="2.8"/>
+    <circle cx="116" cy="127" r="2.8"/>
+    <circle cx="159" cy="97" r="4.1"/>
+    <circle cx="202" cy="145" r="3.2"/>
+    <circle cx="219" cy="43" r="2.8"/>
+    <circle cx="258" cy="103" r="4.1"/>
+    <circle cx="298" cy="141" r="3.2"/>
+    <circle cx="321" cy="56" r="3.2"/>
+    <circle cx="354" cy="126" r="2.8"/>
+    <circle cx="369" cy="89" r="3.2"/>
+    <circle cx="405" cy="41" r="2.8"/>
+    <circle cx="454" cy="100" r="3.2"/>
+    <circle cx="467" cy="148" r="3.2"/>
+    <circle cx="494" cy="61" r="2.8"/>
+    <circle cx="550" cy="108" r="4.1"/>
+    <circle cx="555" cy="154" r="3.2"/>
+    <circle cx="582" cy="43" r="2.8"/>
+    <circle cx="638" cy="82" r="4.1"/>
+    <circle cx="657" cy="143" r="3.2"/>
+    <circle cx="697" cy="47" r="2.8"/>
+    <circle cx="717" cy="117" r="3.2"/>
+  </g>
+
+  <path d="M136 174H627" stroke="#5c626e" stroke-width="2"/>
+  <g fill="#9dd1ff" stroke-linecap="round">
+    <path id="trail" d="M136 174H627" fill="none" stroke="#9dd1ff" stroke-width="2.5"/>
+    <circle cx="136" cy="174" r="5.5"/>
+    <circle id="owner" cx="380" cy="174" r="7.5"/>
+    <circle id="source" cx="627" cy="174" r="5.5"/>
+  </g>
+
+  <g text-anchor="middle">
+    <text x="136" y="220">Test the lantern</text>
+    <text class="answer" x="380" y="220">Kit Copper</text>
+    <text x="627" y="220">Meeting note</text>
+    <text class="role" x="136" y="246">Open task</text>
+    <text class="role" x="380" y="246">Owner</text>
+    <text class="role" x="627" y="246">Source</text>
+  </g>
+</svg>
