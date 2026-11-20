@@ -2,24 +2,27 @@
   <title id="title">Rainy Robot Club memory map</title>
   <desc id="description">A fictional topic with six branches. Notes, sources, people, decisions, projects, and to-dos each have three entries. Dashed lines connect Club meeting to Meeting text, Kit Copper to Test the lantern, Use blue lantern to Welcome table, and Put up signs to Club signs.</desc>
   <style>
-    text { font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; }
-    .links { fill: none; stroke: #8490a4; stroke-width: 1.4; stroke-linecap: round; }
-    .related { stroke: #5a61b4; stroke-dasharray: 3 5; }
-    .branches { fill: #47566d; font-size: 17px; font-weight: 650; }
-    .entries { fill: #2b3547; font-size: 16px; }
-    .entries circle { fill: #fcfcfe; stroke: #6b7890; stroke-width: 1.45; }
+    .topic, .branches { fill: #27231f; font-family: Georgia, 'Times New Roman', serif; }
+    .topic { font-size: 23px; }
+    .branches { font-size: 20px; }
+    .branches circle { fill: #76614f; }
+    .links { fill: none; stroke: #948170; stroke-width: 1.3; stroke-linecap: round; }
+    .related { stroke: #a65038; stroke-dasharray: 2 5; }
+    .entries { fill: #302922; font: 16px system-ui, -apple-system, 'Segoe UI', sans-serif; }
+    .entries circle { fill: #f8f4ec; stroke: #796a5a; stroke-width: 1.4; }
+    .entries .linked { fill: #a65038; stroke: #a65038; }
   </style>
 
-  <rect x=".5" y=".5" width="759" height="469" rx="16" fill="#fcfcfe" stroke="#dde1ea"/>
+  <rect x=".5" y=".5" width="759" height="469" rx="14" fill="#f8f4ec" stroke="#ded3c5"/>
 
   <g class="links">
-    <path d="M274 140 335 212 M486 140 425 212 M222 236H300 M538 236H460 M274 344 335 260 M486 344 425 260"/>
-    <path d="M274 140 257 64 M274 140 203 97 M274 140 175 139"/>
-    <path d="M486 140 503 64 M486 140 557 97 M486 140 585 139"/>
-    <path d="M222 236 164 196 M222 236H133 M222 236 165 281"/>
-    <path d="M538 236 596 196 M538 236H608 M538 236 595 281"/>
-    <path d="M274 344 174 345 M274 344 221 399 M274 344 273 434"/>
-    <path d="M486 344 586 345 M486 344 539 399 M486 344 487 434"/>
+    <path d="M274 140Q290 182 331 207 M486 140Q470 182 429 207 M222 236H303 M538 236H457 M274 344Q292 295 331 265 M486 344Q468 295 429 265"/>
+    <path d="M274 140Q258 107 257 64 M274 140Q241 108 203 97 M274 140Q221 132 175 139"/>
+    <path d="M486 140Q502 107 503 64 M486 140Q519 108 557 97 M486 140Q539 132 585 139"/>
+    <path d="M222 236Q190 226 164 196 M222 236H133 M222 236Q198 265 165 281"/>
+    <path d="M538 236Q570 226 596 196 M538 236H608 M538 236Q562 265 595 281"/>
+    <path d="M274 344Q222 336 174 345 M274 344Q251 382 221 399 M274 344Q266 387 273 434"/>
+    <path d="M486 344Q538 336 586 345 M486 344Q509 382 539 399 M486 344Q494 387 487 434"/>
     <path class="related" d="M257 64C320 25 440 25 503 64 M165 281C190 296 190 327 174 345 M595 281C570 296 570 327 586 345 M273 434Q380 469 487 434"/>
   </g>
 
@@ -29,9 +32,9 @@
     <circle cx="486" cy="140" r="4"/>
     <text x="474" y="131" text-anchor="end">Sources</text>
     <circle cx="222" cy="236" r="4"/>
-    <text x="234" y="205">People</text>
+    <text x="210" y="215">People</text>
     <circle cx="538" cy="236" r="4"/>
-    <text x="526" y="205" text-anchor="end">Decisions</text>
+    <text x="550" y="215" text-anchor="end">Decisions</text>
     <circle cx="274" cy="344" r="4"/>
     <text x="286" y="360">To-dos</text>
     <circle cx="486" cy="344" r="4"/>
@@ -39,29 +42,29 @@
   </g>
 
   <g class="entries" text-anchor="end">
-    <circle cx="257" cy="64" r="3.3"/><text x="246" y="69">Club meeting</text>
+    <circle class="linked" cx="257" cy="64" r="3.3"/><text x="246" y="69">Club meeting</text>
     <circle cx="203" cy="97" r="3.3"/><text x="192" y="102">Lantern checklist</text>
     <circle cx="175" cy="139" r="3.3"/><text x="164" y="144">Setup notes</text>
     <circle cx="164" cy="196" r="3.3"/><text x="153" y="201">Fern Bolt</text>
     <circle cx="133" cy="236" r="3.3"/><text x="122" y="241">Tess Relay</text>
-    <circle cx="165" cy="281" r="3.3"/><text x="154" y="286">Kit Copper</text>
-    <circle cx="174" cy="345" r="3.3"/><text x="163" y="350">Test the lantern</text>
+    <circle class="linked" cx="165" cy="281" r="3.3"/><text x="154" y="286">Kit Copper</text>
+    <circle class="linked" cx="174" cy="345" r="3.3"/><text x="163" y="350">Test the lantern</text>
     <circle cx="221" cy="399" r="3.3"/><text x="210" y="404">Bring batteries</text>
-    <circle cx="273" cy="434" r="3.3"/><text x="262" y="439">Put up signs</text>
+    <circle class="linked" cx="273" cy="434" r="3.3"/><text x="262" y="439">Put up signs</text>
   </g>
 
   <g class="entries">
-    <circle cx="503" cy="64" r="3.3"/><text x="514" y="69">Meeting text</text>
+    <circle class="linked" cx="503" cy="64" r="3.3"/><text x="514" y="69">Meeting text</text>
     <circle cx="557" cy="97" r="3.3"/><text x="568" y="102">Voice memo</text>
     <circle cx="585" cy="139" r="3.3"/><text x="596" y="144">Group chat</text>
     <circle cx="596" cy="196" r="3.3"/><text x="607" y="201">Set up indoors</text>
     <circle cx="608" cy="236" r="3.3"/><text x="619" y="241">Share checklist</text>
-    <circle cx="595" cy="281" r="3.3"/><text x="606" y="286">Use blue lantern</text>
-    <circle cx="586" cy="345" r="3.3"/><text x="597" y="350">Welcome table</text>
+    <circle class="linked" cx="595" cy="281" r="3.3"/><text x="606" y="286">Use blue lantern</text>
+    <circle class="linked" cx="586" cy="345" r="3.3"/><text x="597" y="350">Welcome table</text>
     <circle cx="539" cy="399" r="3.3"/><text x="550" y="404">Rain shelter</text>
-    <circle cx="487" cy="434" r="3.3"/><text x="498" y="439">Club signs</text>
+    <circle class="linked" cx="487" cy="434" r="3.3"/><text x="498" y="439">Club signs</text>
   </g>
 
-  <rect x="300" y="211" width="160" height="50" rx="13" fill="#eef0fc" stroke="#5a61b4" stroke-width="1.4"/>
-  <text x="380" y="242" fill="#303670" font-size="17" font-weight="700" text-anchor="middle">Rainy Robot Club</text>
+  <ellipse cx="380" cy="236" rx="78" ry="41" fill="#f1e4d9" stroke="#a65038" stroke-width="1.3"/>
+  <text class="topic" text-anchor="middle"><tspan x="380" y="232">Rainy Robot</tspan> <tspan x="380" y="256" font-style="italic">Club</tspan></text>
 </svg>
