@@ -25,11 +25,17 @@ class Storage(Protocol):
         """Store a complete snapshot only if expected is still current. Return its new token."""
 
 
-def open_storage(target: str | None, branch: str = "main") -> Storage:
+def default_local_path() -> Path:
+    return Path.home() / ".memory-pa" / "workspaces" / "default"
+
+
+def open_storage(
+    target: str | None, branch: str = "main", *, aws_profile: str | None = None
+) -> Storage:
     if not target or "://" not in target:
         from .local import LocalStorage
 
-        path = Path(target) if target else Path.home() / ".memory-pa" / "workspaces" / "default"
+        path = Path(target) if target else default_local_path()
         return LocalStorage(path)
 
     scheme = target.split("://", 1)[0]
@@ -41,7 +47,7 @@ def open_storage(target: str | None, branch: str = "main") -> Storage:
     if scheme == "s3":
         from .s3 import S3Storage
 
-        return S3Storage(target)
+        return S3Storage(target, profile=aws_profile)
 
     adapters = list(entry_points(group="memory_pa.storage", name=scheme))
     if len(adapters) != 1:

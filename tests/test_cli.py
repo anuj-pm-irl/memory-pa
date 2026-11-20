@@ -1,4 +1,6 @@
 import json
+import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -12,15 +14,25 @@ class CLITests(unittest.TestCase):
     def setUp(self):
         self.tmp = Path(self.enterContext(tempfile.TemporaryDirectory()))
         self.store = self.tmp / "private-workspace"
+        self.settings = self.tmp / "settings" / "config.json"
+        self.environment = {
+            name: value
+            for name, value in os.environ.items()
+            if name not in {"MEMORY_PA_STORE", "MEMORY_PA_GIT_BRANCH"}
+        }
+        self.environment["MEMORY_PA_CONFIG"] = str(self.settings)
 
-    def call(self, *args, body=None, status=0):
+    def call(self, *args, body=None, status=0, use_default=False, cwd=None, environment=None):
+        location = [] if use_default else ["--store", str(self.store)]
         result = subprocess.run(
-            [sys.executable, "-m", "memory_pa", "--store", str(self.store), *args],
+            [sys.executable, "-m", "memory_pa", *location, *args],
             capture_output=True,
             input=body,
             text=True,
             encoding="utf-8",
             check=False,
+            cwd=cwd,
+            env={**self.environment, **(environment or {})},
         )
         self.assertEqual(result.returncode, status, result.stdout + result.stderr)
         return result.stdout
@@ -49,6 +61,85 @@ class CLITests(unittest.TestCase):
         self.assertIn("Open action", output)
         self.assertIn("#source-text", output)
         self.assertFalse(self.store.exists())
+        self.assertFalse(self.settings.exists())
+
+    def test_remember_a_relative_folder_for_future_commands(self):
+        folder = self.tmp / "My memory folder"
+        result = json.loads(
+            self.call(
+                "--store",
+                folder.name,
+                "init",
+                "--remember",
+                "--json",
+                use_default=True,
+                cwd=self.tmp,
+            )
+        )
+        self.assertTrue(result["default_saved"])
+        self.assertTrue(folder.is_dir())
+        config = json.loads(self.call("config", "--json", use_default=True))
+        self.assertEqual(config["store"], str(folder.resolve()))
+        self.assertEqual(config["source"], "saved")
+        state = json.loads(self.call("validate", "--json", use_default=True))
+        self.assertEqual(state["workspace_id"], result["workspace_id"])
+        draft = json.dumps(example())
+        ready = json.loads(
+            self.call("add", "--proposal", "-", "--json", body=draft, use_default=True)
+        )
+        self.call(
+            "add", "--proposal", "-", "--apply", ready["apply_token"], body=draft, use_default=True
+        )
+        hits = json.loads(self.call("search", "blue lantern", "--json", use_default=True))
+        self.assertTrue(any(hit["note"] == ready["note"] for hit in hits))
+
+    def test_flags_and_environment_take_precedence_over_the_saved_store(self):
+        self.call("init", "--remember")
+        override = self.tmp / "a different folder"
+        environment = {"MEMORY_PA_STORE": str(override)}
+        active = json.loads(
+            self.call("config", "--json", use_default=True, environment=environment)
+        )
+        self.assertEqual(active["store"], str(override.resolve()))
+        self.assertEqual(active["source"], "environment")
+        using_flag = json.loads(self.call("config", "--json", environment=environment))
+        self.assertEqual(using_flag["store"], str(self.store.resolve()))
+        self.assertEqual(using_flag["source"], "flag")
+        self.assertFalse(override.exists())
+
+    def test_unsuccessful_setup_keeps_the_previous_default(self):
+        self.call("init", "--remember")
+        before = self.settings.read_bytes()
+        occupied = self.tmp / "occupied"
+        occupied.mkdir()
+        (occupied / "other.txt").write_text("Fictional notes", encoding="utf-8")
+        self.call("--store", str(occupied), "init", "--remember", status=1, use_default=True)
+        self.assertEqual(self.settings.read_bytes(), before)
+
+    @unittest.skipUnless(shutil.which("git"), "Git is required")
+    def test_remember_git_target_and_branch(self):
+        repository = self.tmp / "fictional.git"
+        subprocess.run(
+            ["git", "init", "--bare", "--quiet", str(repository)], check=True, capture_output=True
+        )
+        address = f"git+{repository.as_uri()}"
+        initialized = json.loads(
+            self.call(
+                "--store",
+                address,
+                "--git-branch",
+                "notes",
+                "init",
+                "--remember",
+                "--json",
+                use_default=True,
+            )
+        )
+        state = json.loads(self.call("validate", "--json", use_default=True))
+        self.assertEqual(state["workspace_id"], initialized["workspace_id"])
+        active = json.loads(self.call("config", "--json", use_default=True))
+        self.assertEqual(active["store"], address)
+        self.assertEqual(active["git_branch"], "notes")
 
     def test_different_processes_can_capture_and_recall(self):
         self.call("init")

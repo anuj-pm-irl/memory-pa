@@ -1,27 +1,32 @@
 # Where your memory lives
 
-Use one private workspace address for each memory you want to keep. Use `--store` before the command to choose it. For a routine or an agent with its own settings, set `MEMORY_PA_STORE` in that agent's environment.
+Use `init --remember` to set the default store on this computer. `memory-pa config` shows the current choice and `memory-pa validate` checks that it works. The saved settings live in `~/.memory-pa/config.json` and hold the store address, Git branch, and named AWS profile. Use Git or AWS sign-in for credentials.
+
+To choose a different store for a command, pass `--store` before the command. For a routine or an agent on another machine, set `MEMORY_PA_STORE` in that agent's environment. Commands use the flag first, then the environment, then the saved default, then the built-in local folder. Set `MEMORY_PA_CONFIG` to a different settings file if an agent needs its own saved default.
 
 ## This computer
 
-Run `memory-pa init`. The default is `~/.memory-pa/workspaces/default`. A separate local workspace can use any new private folder outside the project checkout.
+Pick a new folder, an empty folder, or an existing memory-pa workspace outside the code checkout. For example, use a folder called `Memory PA` in your home folder.
 
 ```sh
-memory-pa --store ~/club-memory init
-memory-pa --store ~/club-memory search "lantern"
+memory-pa --store "~/Memory PA" init --remember
+memory-pa config
+memory-pa validate
 ```
 
-## Private Git
+If you run `memory-pa init` with no location selected, it uses `~/.memory-pa/workspaces/default`.
+
+## Private GitHub or Git
 
 1. Create an empty **private** repository on your Git host. Check its visibility in its settings and give your agent access if it will run on a different computer.
 2. Set up Git to sign in to that host with its credential helper or an SSH key. Copy the repository's clone URL.
 3. Add `git+` before the URL and use it as the store. For SSH, use a URL of the form `git+ssh://git@example.com/owner/notes.git`.
 
 ```sh
-memory-pa --store git+https://github.com/your-account/your-private-notes.git init
+memory-pa --store git+https://github.com/your-account/your-private-notes.git init --remember
 ```
 
-The adapter uses a dedicated branch in a standard SHA-1 Git repository, `main` by default, containing the workspace files. To choose another branch, set `MEMORY_PA_GIT_BRANCH` or pass `--git-branch` before the command. Each save appends one commit using an exact lease on the expected branch tip. Keep attachments and other repositories in their own locations.
+The adapter uses a dedicated branch in a standard SHA-1 Git repository, `main` by default, containing the workspace files. Pass `--git-branch` before `init --remember` to save another branch, or set `MEMORY_PA_GIT_BRANCH` for a routine. Each save appends one commit using an exact lease on the expected branch tip. Keep attachments and other repositories in their own locations.
 
 ## Private S3
 
@@ -30,9 +35,11 @@ The adapter uses a dedicated branch in a standard SHA-1 Git repository, `main` b
 3. Install the S3 extra and use the address of your bucket and prefix.
 
 ```sh
-uv tool install --python 3.11 "memory-pa[s3] @ git+https://github.com/anuj-pm-irl/memory-pa.git@v0.1.0"
-memory-pa --store s3://your-private-bucket/my-memory init
+uv tool install --python 3.11 "memory-pa[s3] @ git+https://github.com/anuj-pm-irl/memory-pa.git@v0.1.1"
+memory-pa --store s3://your-private-bucket/my-memory init --remember
 ```
+
+If you sign in with a named AWS profile, add `--aws-profile PROFILE_NAME` before `init` to remember it with the store. Pass `--aws-profile` again to use a different profile for one command. With no profile selected, memory-pa uses your usual AWS sign-in, environment, or role.
 
 The workspace prefix contains `HEAD.json` and immutable `revisions/<sha256>.zip` files. The adapter writes the archive first, then publishes the head with an S3 conditional write. Set retention for old revisions according to your needs and keep the archive referenced by `HEAD.json` available. Git history and previous local and S3 revisions can retain old source text.
 

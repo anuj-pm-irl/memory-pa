@@ -4,7 +4,7 @@ Use `memory-pa --help` and `memory-pa COMMAND --help` for the full options.
 
 ## Save a note from a file
 
-1. Run `memory-pa init` once. To start in another folder, use `memory-pa --store /path/to/private-memory init`.
+1. Run `memory-pa --store "~/Memory PA" init --remember` once to use that folder. Run `memory-pa config` any time to check where your notes go. See [storage setup](storage.md) for private GitHub and S3.
 2. Put some text you want to save in `my-note.txt`. Run the command below to preview the note. Use a short topic with lowercase letters and hyphens. Add `--date YYYY-MM-DD` when you know the date the note is about.
 
    ```sh

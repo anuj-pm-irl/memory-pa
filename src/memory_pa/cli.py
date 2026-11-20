@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import argparse
 import getpass
-import os
 import sys
 import tempfile
 import warnings
@@ -21,6 +20,7 @@ from .files import (
     read_tree,
 )
 from .memory import MAX_SOURCE_BYTES, Workspace, empty_workspace
+from .settings import remember, select_store, settings_data
 from .storage import open_storage
 from .storage.local import LocalStorage
 
@@ -70,7 +70,7 @@ def _output(args, data, lines=()):
             print(line)
 
 
-def _add(args, store, head, workspace):
+def _add(args, store, head, workspace, selection):
     proposal = _proposal(args)
     capture = workspace.prepare(proposal)
     source = capture.source
@@ -78,9 +78,10 @@ def _add(args, store, head, workspace):
     if capture.files is None:
         _output(args, {"status": "duplicate", **result}, [f"Already saved in {source['note']}."])
         return
-    apply_token = digest(
-        json_bytes([workspace.id, head.token, args.store, args.git_branch, proposal])
-    )
+    review = [workspace.id, head.token, selection.store, selection.git_branch, proposal]
+    if selection.aws_profile:
+        review.append(selection.aws_profile)
+    apply_token = digest(json_bytes(review))
     if args.apply is None:
         changes = sorted(
             path for path, body in capture.files.items() if workspace.files.get(path) != body
@@ -107,7 +108,11 @@ def _add(args, store, head, workspace):
     _output(args, {"status": "saved", **result}, [f"Saved {source['note']}."])
 
 
-def _init(args, store, head):
+def _init(args, store, head, selection):
+    defaults = None
+    if args.remember:
+        target = str(store.root) if isinstance(store, LocalStorage) else selection.store
+        defaults = settings_data(target, selection.git_branch, selection.aws_profile)
     seed = read_tree(Path(args.seed).expanduser().resolve()) if args.seed else None
     if head.token is not None:
         workspace = Workspace(head.files)
@@ -115,20 +120,18 @@ def _init(args, store, head):
             raise Conflict(
                 "That destination already holds a workspace. Choose an empty destination to import."
             )
-        _output(
-            args,
-            {"status": "exists", "workspace_id": workspace.id, "revision": head.token},
-            ["Your workspace is ready."],
-        )
-        return
-    content = seed if seed is not None else empty_workspace()
-    workspace = Workspace(content)
-    revision = store.publish(None, content)
-    _output(
-        args,
-        {"status": "created", "workspace_id": workspace.id, "revision": revision},
-        ["Your workspace is ready."],
-    )
+        result = {"status": "exists", "workspace_id": workspace.id, "revision": head.token}
+    else:
+        content = seed if seed is not None else empty_workspace()
+        workspace = Workspace(content)
+        revision = store.publish(None, content)
+        result = {"status": "created", "workspace_id": workspace.id, "revision": revision}
+    lines = ["Your workspace is ready."]
+    if defaults is not None:
+        remember(defaults)
+        result["default_saved"] = True
+        lines.append("Saved this location as your default memory store.")
+    _output(args, result, lines)
 
 
 def _demo(args):
@@ -212,16 +215,21 @@ def _dispatch(args):
         )
         print(json_bytes(result).decode("utf-8"), end="")
         return
-    store = open_storage(args.store, args.git_branch)
+    selection = select_store(args.store, args.git_branch, args.aws_profile)
+    if args.command == "config":
+        config = selection.describe()
+        _output(args, config, [f"Memory store ({config['source']}) · {config['store']}"])
+        return
+    store = open_storage(selection.store, selection.git_branch, aws_profile=selection.aws_profile)
     head = store.read()
     if args.command == "init":
-        _init(args, store, head)
+        _init(args, store, head, selection)
         return
     if head.token is None:
         raise MemoryPAError("Run memory-pa init to create a workspace first.")
     workspace = Workspace(head.files)
     if args.command == "add":
-        _add(args, store, head, workspace)
+        _add(args, store, head, workspace, selection)
     elif args.command == "search":
         if not 1 <= args.limit <= 100:
             raise MemoryPAError("Set --limit between 1 and 100.")
@@ -263,14 +271,9 @@ def parser():
         prog="memory-pa", description="A personal memory workspace any agent can write to."
     )
     root.add_argument("--version", action="version", version=f"%(prog)s {version('memory-pa')}")
-    root.add_argument(
-        "--store", default=os.environ.get("MEMORY_PA_STORE"), help="memory directory or storage URL"
-    )
-    root.add_argument(
-        "--git-branch",
-        default=os.environ.get("MEMORY_PA_GIT_BRANCH", "main"),
-        help="workspace branch (default main)",
-    )
+    root.add_argument("--store", help="memory directory or storage URL")
+    root.add_argument("--git-branch", help="workspace branch (default main)")
+    root.add_argument("--aws-profile", help="named AWS profile for an S3 workspace")
     commands = root.add_subparsers(dest="command", required=True)
 
     def command(name, help_text):
@@ -286,6 +289,10 @@ def parser():
     setup.add_argument(
         "--from", dest="seed", metavar="DIRECTORY", help="start with an exported workspace"
     )
+    setup.add_argument(
+        "--remember", action="store_true", help="save this store as the local default"
+    )
+    command("config", "show the selected store without contacting it")
     add = command("add", "preview or save a note")
     inputs = add.add_mutually_exclusive_group(required=True)
     inputs.add_argument("--file", help="read selected UTF-8 text, or - for stdin")

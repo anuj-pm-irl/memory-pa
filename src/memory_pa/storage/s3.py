@@ -57,7 +57,7 @@ def _status(error) -> int:
 
 
 class S3Storage:
-    def __init__(self, url: str, client=None):
+    def __init__(self, url: str, client=None, *, profile: str | None = None):
         target = urlsplit(url)
         prefix = unquote(target.path).strip("/")
         self.bucket = target.netloc
@@ -90,7 +90,8 @@ class S3Storage:
             except ImportError as exc:
                 raise MemoryPAError("Install the memory-pa[s3] extra to use S3.") from exc
             try:
-                client = boto3.client("s3", config=Config(retries={"total_max_attempts": 1}))
+                session = boto3.Session(profile_name=profile) if profile else boto3
+                client = session.client("s3", config=Config(retries={"total_max_attempts": 1}))
             except (BotoCoreError, ClientError) as exc:
                 raise MemoryPAError(
                     "Could not load your AWS credentials or configuration."
