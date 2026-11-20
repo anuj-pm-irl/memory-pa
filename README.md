@@ -1,10 +1,13 @@
 # memory-pa
 
-A personal memory workspace any agent can write to, stored where you choose.
+Save a note with your AI assistant. Later, ask a question about it and see the note behind the answer. You choose where your notes live.
 
-> **Who’s testing the blue lantern?**
->
-> **Kit Copper.** [Read the original demo note](examples/workspace/topics/robot-club/rainy-robot-club-meeting-2026-02-03.md#source-text)
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="docs/media/save-ask-answer.svg">
+  <img src="docs/media/save-ask-answer.gif" width="720" alt="Save a note that Kit Copper will test the blue lantern. Ask who’s testing the lantern. Get the answer, Kit Copper, with a link to the meeting note.">
+</picture>
+
+[Read the sample meeting note](examples/workspace/topics/robot-club/rainy-robot-club-meeting-2026-02-03.md#source-text)
 
 ## Start in chat
 
@@ -16,30 +19,27 @@ Guide me one step at a time and do the setup I approve.
 Follow the setup skill in https://github.com/anuj-pm-irl/memory-pa
 ```
 
-1. **Pick a home for your notes.** Choose a folder on your computer, a private GitHub repo, or a private S3 bucket. A folder on this computer is the easiest place to start.
-2. **Let the assistant do the setup you approve.** It can install what it needs, create or open the store, and check that it works. If it needs you to sign in, it hands control back. Enter any key in your own terminal’s hidden prompt, close the screen showing the key, and say **“Done.”**
-3. **Try a made-up note together.** Ask your assistant to run the demo with you, then ask who’s testing the blue lantern.
+1. **Choose where to keep your notes.** Pick a folder on your computer, private GitHub, or private S3. A folder on your computer is the easiest place to start.
+2. **Let your assistant set it up.** Say yes to the steps you want it to do.
+3. **Try the sample note.** Say **“Run the demo with me.”** Then ask **“Who’s testing the lantern?”**
+
+If you need to sign in, your assistant will pause so you can do it yourself. If you need an API key, it will guide you to a hidden prompt in your own terminal. Close the screen showing the key and say **“Done.”**
 
 ## Save your first note
 
-**Say** “Remember this for garden club. We picked basil for planting day. I’ll bring seeds.”
-
-Check what the assistant plans to save and give it the okay. Next time, try **“What did we pick for planting day? Show me the note.”**
+Say **“Remember this”** and tell your assistant what to save. It will show you what it plans to keep. Say **“Yes, save it”** if it looks right. When you ask about it later, you can say **“Show me the note you used.”**
 
 Already use a note taker? Say **“Help me connect Pocket and try one note.”** You can do the same with Granola or Plaud. [Note taker setup](docs/note-takers.md) · [Set up a routine](docs/note-takers.md#make-it-a-routine)
 
 ## How the memory map grows
 
-When you save a note, memory-pa keeps the original text and links the people, projects, decisions, and to-dos to it. It updates the topic summary so your assistant can see what changed and find the note behind an answer.
+memory-pa keeps your original note and links what you want to remember back to it.
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="docs/media/answer-trail.svg">
-  <img src="docs/media/answer-trail.gif" width="720" alt="A highlighted line connects the lantern test to its owner, Kit Copper, and to the meeting note where Kit volunteered.">
-</picture>
+<img src="docs/media/one-note-map.svg" width="720" alt="The club meeting note links to Kit Copper, the decision to use the blue lantern, and the open task to test the lantern.">
 
-The highlighted links come from the demo note. The wider map shows how the fictional club’s notes could connect after a few meetings.
+When you save a later note saying the lantern passed its test, you can mark the task done and still see the meeting note where it started.
 
-[See the still diagram](docs/media/answer-trail.svg) · [Open the demo topic](examples/workspace/topics/robot-club/_summary.md) · [How the backend builds the map](docs/format.md#how-the-memory-map-is-built)
+[See a bigger map](docs/media/answer-trail.svg) · [How memory-pa builds the map](docs/format.md#how-the-memory-map-is-built)
 
 <details>
 <summary>Set up in Terminal</summary>

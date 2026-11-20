@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="243" viewBox="0 0 760 243" role="img" aria-labelledby="title description">
+  <title id="title">What memory-pa saves from one note</title>
+  <desc id="description">The club meeting note connects to Kit Copper, the decision to use the blue lantern, and the open task to test the lantern.</desc>
+  <style>
+    text { font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; text-anchor: middle; }
+    .note { fill: #f3f5f7; font-size: 28px; font-weight: 650; letter-spacing: -.35px; }
+    .fact { fill: #f3f5f7; font-size: 23px; font-weight: 600; letter-spacing: -.25px; }
+    .kind { fill: #d0d7e1; font-size: 18px; }
+  </style>
+
+  <rect width="760" height="243" fill="#121418"/>
+  <text class="note" x="380" y="53">Club meeting note</text>
+
+  <g fill="#9dd1ff">
+    <path d="M380 82V151 M139 151V121Q139 112 148 112H612Q621 112 621 121V151" fill="none" stroke="#9dd1ff" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="380" cy="82" r="6"/>
+    <circle cx="139" cy="151" r="5"/>
+    <circle cx="380" cy="151" r="5"/>
+    <circle cx="621" cy="151" r="5"/>
+  </g>
+
+  <text class="fact" x="139" y="190">Kit Copper</text>
+  <text class="fact" x="380" y="190">Use the blue lantern</text>
+  <text class="fact" x="621" y="190">Test the blue lantern</text>
+  <text class="kind" x="139" y="216">Person</text>
+  <text class="kind" x="380" y="216">Decision</text>
+  <text class="kind" x="621" y="216">Still to do</text>
+</svg>
