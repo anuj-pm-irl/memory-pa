@@ -17,7 +17,7 @@ Save a meeting, an idea, or a promise you made on Tuesday. Ask about it later an
 Prefer a command you can paste yourself? Install [uv](https://docs.astral.sh/uv/getting-started/installation/) and [Git](https://git-scm.com/install), then open Terminal or PowerShell and run these one at a time.
 
 ```sh
-uv tool install --python 3.11 "git+https://github.com/anuj-pm-irl/memory-pa.git@v0.1.1"
+uv tool install --python 3.11 "git+https://github.com/anuj-pm-irl/memory-pa.git@v0.1.2"
 memory-pa demo
 ```
 
@@ -48,9 +48,10 @@ To share one memory across assistants, point each of them at the same folder or 
 
 Already recording your meetings? You can bring those notes along too.
 
-1. Tell your assistant which app you use. Try “I use Pocket. Help me connect it and look up one note I pick.” The [note taker guide](docs/note-takers.md) covers Pocket, Granola, and Plaud.
-2. Sign in through the connection screen if your assistant offers one. If you need an API key, the guide shows where to create it and where to paste it on your computer.
-3. Pick one note and check the preview. When that works, use the [routine recipe](docs/note-takers.md#make-it-a-routine) to ask your assistant to pick up new notes on a schedule.
+1. **Pick your app.** Try “Help me connect Pocket. Ask before opening any settings.” You can also use Granola or Plaud.
+2. **Choose hands-on help or a walkthrough.** With your okay, your assistant can open the setup screen and get it ready. It hands control back for sign-in and waits for you to close the sign-in or key screen and say “Done.”
+3. **Sign in yourself.** Use the provider’s sign-in screen. If you choose an API key for Granola or Pocket, paste it into the hidden prompt in your own Terminal or PowerShell. Keep the key out of chat. The setup command saves it for you. [Where keys go](docs/note-takers.md#use-a-key-for-granola-or-pocket)
+4. **Check it together.** Your assistant checks the connection, then asks which note you’d like to try. Check the preview before saving it. [Note taker guide](docs/note-takers.md) · [Routine recipe](docs/note-takers.md#make-it-a-routine)
 
 ## Choose storage
 

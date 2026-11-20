@@ -30,4 +30,6 @@ Use `memory-pa add --proposal - --json` for a preview, then repeat with `--apply
 
 Run `memory-pa schema proposal` to read the exact installed proposal format. `memory-pa schema workspace` prints the workspace schema.
 
+Use `memory-pa connect pocket --check --json` or `memory-pa connect granola --check --json` to check API access after entering a key or setting a job secret. It returns the provider and `verified` on success. To enter a new key, run `memory-pa connect pocket` or `memory-pa connect granola` in your own terminal. [Connection setup](note-takers.md)
+
 Exit code `0` means the command succeeded, including an already-saved note. `1` means invalid input, access trouble, or another operation error. `2` means a command syntax error. `3` means a stale revision or a note or identity that needs review. `4` means the adapter could not confirm the write. Run another preview after a `3` or a `4`. It will show an existing note if the write already landed.

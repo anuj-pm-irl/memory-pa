@@ -1,11 +1,14 @@
 import io
+import json
 import os
 import tempfile
 import unittest
+from contextlib import redirect_stdout
 from pathlib import Path
 from unittest.mock import patch
 from urllib.error import HTTPError
 
+from memory_pa.cli import main
 from memory_pa.errors import MemoryPAError
 from memory_pa.providers import _get, connect, disconnect, fetch
 
@@ -111,6 +114,42 @@ class ProviderTests(unittest.TestCase):
                 self.assertEqual(fetch("pocket")["records"], [])
                 disconnect("pocket")
                 self.assertFalse(key_path.exists())
+
+    def test_connection_check_reports_only_status(self):
+        response = {
+            "data": [{"id": "fixture", "title": "A private fixture title"}],
+            "pagination": {"has_more": False},
+        }
+        output = io.StringIO()
+        with (
+            patch.dict(os.environ, {"MEMORY_PA_POCKET_API_KEY": KEY}),
+            patch("memory_pa.providers._get", return_value=response) as request,
+            patch("memory_pa.cli.getpass.getpass") as prompt,
+            patch("memory_pa.providers.connect") as save_key,
+            redirect_stdout(output),
+        ):
+            self.assertEqual(main(["connect", "pocket", "--check", "--json"]), 0)
+        prompt.assert_not_called()
+        save_key.assert_not_called()
+        request.assert_called_once_with(
+            "https://public.heypocketai.com/api/v1/public/recordings", {"limit": 1}, KEY
+        )
+        self.assertEqual(
+            json.loads(output.getvalue()), {"status": "verified", "provider": "pocket"}
+        )
+
+    def test_connect_leaves_piped_key_input_unread(self):
+        output = io.StringIO()
+        with (
+            patch("memory_pa.cli.sys.stdin") as stdin,
+            patch("memory_pa.cli.getpass.getpass") as prompt,
+            redirect_stdout(output),
+        ):
+            stdin.isatty.return_value = False
+            self.assertEqual(main(["connect", "pocket", "--json"]), 1)
+        self.assertEqual(json.loads(output.getvalue())["status"], "error")
+        stdin.read.assert_not_called()
+        prompt.assert_not_called()
 
     def test_fetch_validates_before_reading_credentials(self):
         for kwargs in ({"record": "../bad"}, {"since": "2026-02-31"}, {"limit": 31}):

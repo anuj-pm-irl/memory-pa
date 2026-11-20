@@ -2,11 +2,17 @@
 
 Start with one note. Once you can find it in memory-pa, you can hand the same job to a routine.
 
+## Let your assistant help
+
+1. **Tell it which app and account you want to use.** Try “Help me connect my Pocket work account to memory-pa.”
+2. **Choose how much help you want.** Your assistant can talk you through each click. If it can use your screen, it can also open the official setup screen with your permission.
+3. **Take over for sign-in.** Your assistant pauses while you sign in, create or enter a key, or review access. Close any screen that shows a password, key, or code, then say “Done” in chat. Your assistant can check the connection from there.
+
 ## Connect directly from your assistant
 
-1. Open your assistant's **Connectors** or **MCP Servers** settings. Look for your note taker. If the settings let you add a custom MCP server, you can paste its address from the table.
-2. Sign into the note taker in the window that opens. Choose the account or workspace whose notes you want to use.
-3. Tell your assistant “Show me a few recent note titles. I'll pick one for memory-pa.” Pick a title and check the save preview.
+1. Open your assistant's **Connectors** or **MCP Servers** settings. Look for your note taker. If the settings let you add a custom MCP server, use its address from the table.
+2. Sign into the note taker in the window that opens. Choose the account or workspace whose notes you want to use. Review the access it asks for and approve it yourself if you're happy with it.
+3. Say “Done.” Your assistant can check the connection in its settings. When you're ready to try it, ask it to open a note you choose and show the save preview.
 
 | App | Official MCP address | Setup guide |
 | --- | --- | --- |
@@ -18,24 +24,25 @@ Google Antigravity also supports custom remote MCP servers. Ask your assistant t
 
 ## Use a key for Granola or Pocket
 
-Use this path if your assistant can run `memory-pa` commands and you prefer to connect with an API key.
+Use this path if you prefer an API key. You'll paste it once into a hidden prompt in your own terminal. `memory-pa` saves it as plaintext under `~/.memory-pa/keys/` on that computer. macOS and Linux use owner-only file permissions. Windows uses the folder's account permissions. For a sign-in flow managed by your assistant's connector, use the [MCP setup above](#connect-directly-from-your-assistant).
 
-1. **Create a key in your note taker.** In Granola, open **Settings → Connectors → API keys** and choose **Create new key**. API keys require Business or Enterprise. In Pocket, use **Settings → Developer → API Keys**. Pick the smallest read access that covers the notes you want.
-2. **Open Terminal or PowerShell yourself.** Run `memory-pa connect granola` or `memory-pa connect pocket`. Paste the key at the prompt and press Enter. The key stays hidden as you type and is stored in a local credential file under `~/.memory-pa/keys/`. Paste keys here, away from chats, notes, and project files.
-3. **Ask for a sample.** Say “Use memory-pa to list three recent Pocket recordings. I'll choose which one to save.” Your assistant can run one of these commands.
+1. **Create a key in your note taker.** Take control before generating it. In Granola, open **Settings → Connectors → API keys** and choose **Create new key**. API keys require Business or Enterprise. In Pocket, use **Settings → Developer → API Keys**. Pick the smallest read access that covers the notes you want.
+2. **Open Terminal or PowerShell yourself.** Run just the line for your app.
 
    ```sh
-   memory-pa fetch pocket --limit 3
-   memory-pa fetch granola --limit 3
+   memory-pa connect granola
+   memory-pa connect pocket
    ```
 
-4. **Choose what to keep.** The assistant can read your selected item with `memory-pa fetch pocket --id RECORD_ID` or `memory-pa fetch granola --id NOTE_ID`. Add `--transcript` when you want the transcript and your account allows it. The assistant turns the selected text into a proposal for you to review.
+3. **Paste the key when the terminal asks.** Nothing appears as you type or paste. Press Enter. When you see “Connection saved on this computer,” close the page that shows the key and say “Done” in chat. That’s all your assistant needs.
+4. **Let your assistant verify.** It runs `memory-pa connect granola --check --json` or `memory-pa connect pocket --check --json` where the key is set. The check makes a small read request and reports connection status. If the assistant runs on another computer, you can run the check in your own terminal and share the status.
+5. **Choose one note to try.** Ask the assistant to open a note you pick, or to list a few titles so you can choose. The assistant opens only the selected item, then shows its save preview for your approval.
 
-For a scheduled job running on another computer, set `MEMORY_PA_GRANOLA_API_KEY` or `MEMORY_PA_POCKET_API_KEY` as a secret in the job's environment. Use `memory-pa disconnect APP` to remove the saved key from this computer. The provider's settings manage the key itself. [Granola API](https://docs.granola.ai/help-center/sharing/integrations/granola-api) · [Pocket API](https://docs.heypocketai.com/docs/api)
+For a scheduled job, put `MEMORY_PA_GRANOLA_API_KEY` or `MEMORY_PA_POCKET_API_KEY` in the scheduler's secret settings. The job uses that environment key when present. Run `memory-pa disconnect APP` to remove the saved key from this computer. To revoke the key itself, use the provider's settings. [Granola API](https://docs.granola.ai/help-center/sharing/integrations/granola-api) · [Pocket API](https://docs.heypocketai.com/docs/api)
 
 ## Use Plaud from the terminal
 
-Plaud provides MCP and a terminal app for reading personal recordings. To use the terminal path, follow the official install steps and sign in with `plaud login`. Your assistant can use `plaud files` or `plaud recent`, then `plaud summary ID` or `plaud transcript ID` for the item you select. Ask it to import the result as it would a note from MCP. [Plaud CLI](https://support.plaud.ai/hc/en-us/articles/57751026815257-Plaud-CLI) · [Plaud data access](https://support.plaud.ai/hc/en-us/articles/60726890231449-How-can-I-get-API-access-to-my-Plaud-data)
+Plaud provides MCP and a terminal app for reading personal recordings. To use the terminal path, follow the official install steps and run `plaud login`. Take control for the browser sign-in. Once you're done, your assistant can use `plaud files` or `plaud recent` with your okay, then `plaud summary ID` or `plaud transcript ID` for the item you select. [Plaud CLI](https://support.plaud.ai/hc/en-us/articles/57751026815257-Plaud-CLI) · [Plaud data access](https://support.plaud.ai/hc/en-us/articles/60726890231449-How-can-I-get-API-access-to-my-Plaud-data)
 
 ## Make it a routine
 

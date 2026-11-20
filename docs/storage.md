@@ -2,6 +2,8 @@
 
 Use `init --remember` to set the default store on this computer. `memory-pa config` shows the current choice and `memory-pa validate` checks that it works. The saved settings live in `~/.memory-pa/config.json` and hold the store address, Git branch, and named AWS profile. Use Git or AWS sign-in for credentials.
 
+For guided setup, tell the assistant which store you want. It can offer to open the sign-in screen and help set up the store with your okay. Take control for sign-in and approvals, then say “Done” so it can resume setup and run `memory-pa validate`. Enter credentials in the Git or AWS sign-in flow and keep them out of chat.
+
 To choose a different store for a command, pass `--store` before the command. For a routine or an agent on another machine, set `MEMORY_PA_STORE` in that agent's environment. Commands use the flag first, then the environment, then the saved default, then the built-in local folder. Set `MEMORY_PA_CONFIG` to a different settings file if an agent needs its own saved default.
 
 ## This computer
@@ -35,7 +37,7 @@ The adapter uses a dedicated branch in a standard SHA-1 Git repository, `main` b
 3. Install the S3 extra and use the address of your bucket and prefix.
 
 ```sh
-uv tool install --python 3.11 "memory-pa[s3] @ git+https://github.com/anuj-pm-irl/memory-pa.git@v0.1.1"
+uv tool install --python 3.11 "memory-pa[s3] @ git+https://github.com/anuj-pm-irl/memory-pa.git@v0.1.2"
 memory-pa --store s3://your-private-bucket/my-memory init --remember
 ```
 

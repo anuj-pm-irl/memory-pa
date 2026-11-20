@@ -178,6 +178,14 @@ def _dispatch(args):
         sys.stdout.buffer.write(schema.read_bytes())
         return
     if args.command == "connect":
+        if args.check:
+            providers.fetch(args.provider, limit=1)
+            _output(
+                args,
+                {"status": "verified", "provider": args.provider},
+                [f"{args.provider.capitalize()} connection verified."],
+            )
+            return
         if not sys.stdin.isatty():
             raise MemoryPAError(
                 "Open Terminal or PowerShell yourself to enter the key. Use your scheduler's secret settings for headless runs."
@@ -310,8 +318,10 @@ def parser():
     command("validate", "check the format and links of the current workspace")
     export = command("export", "copy the current workspace into a new directory")
     export.add_argument("directory")
-    command("connect", "enter a note taker API key in your own terminal").add_argument(
-        "provider", choices=providers.APIS
+    connector = command("connect", "set up or check a note taker connection")
+    connector.add_argument("provider", choices=providers.APIS)
+    connector.add_argument(
+        "--check", action="store_true", help="verify API access and print status"
     )
     command("disconnect", "remove a locally saved API key").add_argument(
         "provider", choices=providers.APIS
