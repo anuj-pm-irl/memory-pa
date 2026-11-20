@@ -15,6 +15,15 @@ When using an independent JSON Schema validator, load both v1 schemas by their `
 
 A note uses `undated` when its date is unknown. Two different titles that produce the same filename use a source ID suffix to disambiguate. The capture time is separate from the event date. The selected text is stored as supplied after the `## Source text` heading. The source record's `text_sha256` verifies those exact UTF-8 bytes.
 
+## How the memory map is built
+
+1. **The assistant prepares a proposal.** It takes the text you chose and suggests a topic, a summary, decisions, actions, and mentions of people, companies, or projects that the text supports. `memory-pa add` previews it so you can review what will be saved.
+2. **The save builds the links.** The CLI checks for duplicate sources and prepares a Markdown note plus a source record. The source record points to the note and entity IDs. Entity records point back to the source ID with the facts from that mention. A later note can update an existing action by its ID and point back to the previous source. A name that could refer to an existing entity goes to review.
+3. **The CLI refreshes the topic pages.** `index.md` links to topic pages, and each topic page lists its recent notes, decisions, and open actions. The CLI validates the links and saves the files together in one revision in the store you picked. The same file layout works in a local folder, private Git, and S3.
+4. **Search retrieves the evidence.** `memory-pa search` looks for words in the note and its linked information. Results include a note path and section so the assistant can open the source and show what supports its answer.
+
+See the [fictional proposal](../examples/robot-club.json) and its [generated topic page](../examples/workspace/topics/robot-club/_summary.md) for the same example used in the README.
+
 ## Proposals
 
 A [v1 proposal](../schemas/proposal-v1.json) requires `format_version`, `topic`, `title`, `source`, and `text`. You can add dates, a summary, decisions, actions, and entities. See the [fictional example](../examples/robot-club.json).
