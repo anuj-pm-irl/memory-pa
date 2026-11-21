@@ -1,0 +1,268 @@
+[
+  {
+    "file": "tower-access/elevator-learns-to-whisper.md",
+    "title": "The elevator learns to whisper",
+    "date": "2032-06-03",
+    "source": {"kind": "meeting"},
+    "summary": "Pepper approved a one-week Quiet Window trial on the east freight lift, keeping the lobby chime and emergency bell audible.",
+    "decisions": ["Trial the east freight lift Quiet Window from 20:00 to 22:00."],
+    "actions": [{"ref": "bell-drill", "text": "Run the emergency bell drill.", "owner": "James Rhodes"}],
+    "entities": [
+      {"kind": "person", "name": "Pepper Potts", "facts": ["Approved the first lift trial."]},
+      {"kind": "person", "name": "James Rhodes", "facts": ["Tony calls him Rhodey.", "Agreed to run the emergency bell drill."]},
+      {"kind": "project", "name": "Lift Quiet Window", "facts": ["East freight lift trial, 20:00 to 22:00."]}
+    ]
+  },
+  {
+    "file": "harbor-clinic/hologram-needs-a-human.md",
+    "title": "The hologram that needs a human",
+    "date": "2032-06-04",
+    "source": {"kind": "meeting"},
+    "summary": "The Lantern Desk hologram is opt-in. A volunteer and paper check-in cards are available throughout the Harbor Clinic pilot.",
+    "decisions": ["Make the Lantern Desk hologram opt-in.", "Keep the vendor storage offer on hold."],
+    "actions": [{"ref": "large-print-cards", "text": "Bring large-print paper cards to training.", "owner": "Luis Vega"}],
+    "entities": [
+      {"kind": "person", "name": "Shuri", "facts": ["Leads the Lantern Desk pilot."]},
+      {"kind": "person", "name": "Luis Vega", "facts": ["Coordinates the pilot at Harbor Clinic."]},
+      {"kind": "person", "name": "Pepper Potts", "basis": "The record names Pepper Potts as the reviewer of the vendor offer.", "facts": ["Put the vendor's storage offer on hold."]},
+      {"kind": "project", "name": "Lantern Desk", "facts": ["Uses a tablet and volunteer at Harbor Clinic."]}
+    ]
+  },
+  {
+    "file": "city-lanterns/after-the-lights-go-out.md",
+    "title": "After the lights go out",
+    "date": "2032-06-05",
+    "source": {"kind": "meeting"},
+    "summary": "Sam and Dana set up a City Lanterns lending pilot through the Red Hook library.",
+    "decisions": ["Reserve twelve lamps for the Red Hook library."],
+    "actions": [{"ref": "library-lamp-sample", "text": "Bring a sample lamp to the library meeting.", "owner": "Sam Wilson"}],
+    "entities": [
+      {"kind": "person", "name": "Sam Wilson", "facts": ["Keeps the shared lamp pool until the delivery route is settled."]},
+      {"kind": "person", "name": "Dana Ortiz", "facts": ["Runs library lamp checkout and returns."]},
+      {"kind": "project", "name": "City Lanterns", "facts": ["Lends lamps during outages."]}
+    ]
+  },
+  {
+    "file": "workshop/dum-e-report-card.md",
+    "title": "DUM-E gets a report card",
+    "date": "2032-06-06",
+    "source": {"kind": "note"},
+    "summary": "DUM-E's guest demo is on hold pending three supervised cleanup passes.",
+    "decisions": ["Designate the copper tray as the drop-off point for wet sponges.", "Keep the red reset card in the side drawer during testing."],
+    "actions": [{"ref": "cleanup-check", "text": "Record three consecutive supervised cleanup passes.", "owner": "Peter Parker"}],
+    "entities": [
+      {"kind": "person", "name": "Peter Parker", "facts": ["Painted two yellow bins for dry supplies."]},
+      {"kind": "project", "name": "DUM-E Guest Demo", "facts": ["Guest demo requires three supervised cleanup passes."]}
+    ]
+  },
+  {
+    "file": "field-kitchen/breakfast-in-a-blackout.md",
+    "title": "Breakfast in a blackout",
+    "date": "2032-06-07",
+    "source": {"kind": "meeting"},
+    "summary": "Happy planned forty-eight vegetable breakfast boxes for the Red Hook community kitchen.",
+    "decisions": ["Send forty-eight vegetable breakfast boxes to the Red Hook community kitchen."],
+    "actions": [{"ref": "menu-card", "text": "Bring sample menu cards to the handoff dry run.", "owner": "Happy Hogan", "due": "2032-06-20"}],
+    "entities": [
+      {"kind": "person", "name": "Happy Hogan", "facts": ["Oversees the breakfast box handoff."]},
+      {"kind": "person", "name": "Sam Wilson", "basis": "The record names Sam Wilson and places him on the library-drive handoff.", "facts": ["Will call the community kitchen before the first delivery."]},
+      {"kind": "project", "name": "Field Kitchen", "facts": ["Prepares food boxes for the community kitchen."]}
+    ]
+  },
+  {
+    "file": "roof-garden/birds-request-a-change-order.md",
+    "title": "The birds request a change order",
+    "date": "2032-06-08",
+    "source": {"kind": "note"},
+    "summary": "Bruce and Rhodey tried the Blue Hour watering circuit at 05:40 and observed starlings in the planter rail.",
+    "decisions": ["Run the Blue Hour watering circuit at 05:40 for three mornings."],
+    "actions": [{"ref": "watering-trial", "text": "Log the Blue Hour watering trial in the planter saucers.", "owner": "James Rhodes"}],
+    "entities": [
+      {"kind": "person", "name": "Bruce Banner", "facts": ["Requested a time and location for the starling observation."]},
+      {"kind": "person", "name": "James Rhodes", "basis": "The note names James Rhodes and then identifies the gardener's partner as Rhodey.", "facts": ["Will log water collected in the saucers."]},
+      {"kind": "project", "name": "Blue Hour Watering", "facts": ["The copper trough drains into a separate crate."]}
+    ]
+  },
+  {
+    "file": "tower-access/cello-complaint.md",
+    "title": "The cello complaint",
+    "date": "2032-06-10",
+    "source": {"kind": "recording"},
+    "summary": "The rehearsal complaint came from the east lift speaker. The emergency bell passed its lobby and basement drill.",
+    "decisions": ["Keep the Quiet Window trial on the east lift through June 16."],
+    "actions": [{"ref": "bell-drill", "status": "done"}],
+    "entities": [
+      {"kind": "person", "name": "James Rhodes", "basis": "The record says Rhodey is the James Rhodes who ran the first trial.", "facts": ["Traced the complaint to the east freight cage speaker.", "Closed the emergency bell drill."]},
+      {"kind": "project", "name": "Lift Quiet Window", "basis": "The note follows up on the first east lift Quiet Window trial.", "facts": ["The east lift speaker disturbed rehearsals."]}
+    ]
+  },
+  {
+    "file": "harbor-clinic/short-life-for-long-queue.md",
+    "title": "A short life for a long queue",
+    "date": "2032-06-12",
+    "source": {"kind": "meeting"},
+    "summary": "The check-in rehearsal moved paper cards to the lower counter. Fourteen-day vendor storage remains an option for review.",
+    "decisions": ["Hold the Lantern Desk storage decision until the June 24 review."],
+    "actions": [
+      {"ref": "large-print-cards", "status": "done"},
+      {"ref": "language-rehearsal", "text": "Repeat the language-choice rehearsal with the second shift.", "owner": "Luis Vega"}
+    ],
+    "entities": [
+      {"kind": "person", "name": "Luis Vega", "basis": "The record names Luis Vega as the clinic rehearsal coordinator.", "facts": ["Moved the large-print cards to the lower counter."]},
+      {"kind": "person", "name": "Shuri", "basis": "Shuri is leading the same Lantern Desk walkthrough.", "facts": ["Kept fourteen days on the options sheet for review."]},
+      {"kind": "project", "name": "Lantern Desk", "basis": "The note records the Lantern Desk language-choice rehearsal.", "facts": ["Paper check-in and the volunteer table worked during rehearsal."]}
+    ]
+  },
+  {
+    "file": "city-lanterns/lamp-for-bus-stop.md",
+    "title": "A lamp for the bus stop",
+    "date": "2032-06-15",
+    "source": {"kind": "note"},
+    "summary": "The City Lanterns cart went from Pier 6 to Red Hook. The lending pool held thirty-six lamps including the library reserve.",
+    "decisions": ["Keep twelve of thirty-six lamps reserved for the Red Hook library.", "Use a red sleeve for loan receipts on the route sheet."],
+    "actions": [
+      {"ref": "white-triangle", "text": "Mark the return box with a white triangle.", "owner": "Sam Wilson"},
+      {"ref": "wet-route-test", "text": "Try the Pier 6 cart turn in rain.", "owner": "Sam Wilson"}
+    ],
+    "entities": [
+      {"kind": "person", "name": "Sam Wilson", "basis": "The note names Sam Wilson piloting the City Lanterns cart.", "facts": ["Counted thirty-six lamps in the lending pool."]},
+      {"kind": "person", "name": "Dana Ortiz", "basis": "The record names Dana Ortiz managing the same library reserve.", "facts": ["Asked to add the bus stop to the route sheet."]},
+      {"kind": "project", "name": "City Lanterns", "basis": "The note names the City Lanterns lamp lending pool and cart.", "facts": ["The shared route links Pier 6 and Red Hook."]}
+    ]
+  },
+  {
+    "file": "workshop/captain-borrows-a-dolly.md",
+    "title": "Captain America borrows a dolly",
+    "date": "2032-06-16",
+    "source": {"kind": "note"},
+    "summary": "Steve tested the west aisle for the open-house dolly and signed it out as Captain's Cart.",
+    "decisions": ["Use the west aisle for the dolly route.", "Mark the dolly handle with an orange sticker."],
+    "actions": [{"ref": "dolly-sticker", "text": "Check the orange sticker on the dolly handle.", "owner": "Steve Rogers"}],
+    "entities": [
+      {"kind": "person", "name": "Steve Rogers", "facts": ["Captain America borrowed the workshop dolly."]},
+      {"kind": "person", "name": "Peter Parker", "basis": "The note names Peter Parker in the same workshop and cleanup trial.", "facts": ["Marked the dolly handle with an orange sticker."]}
+    ]
+  },
+  {
+    "file": "tower-access/elevator-keeps-its-voice.md",
+    "title": "The elevator keeps its voice",
+    "date": "2032-06-17",
+    "source": {"kind": "meeting"},
+    "summary": "Pepper signed the permanent west freight lift Quiet Window, replacing the east lift trial.",
+    "decisions": ["Run Quiet Window on the west freight lift from 21:30 to 23:00.", "Keep the lobby chime and emergency bell audible."],
+    "actions": [{"ref": "switchplate-card", "text": "Post the final west lift hours on the switchplate card.", "owner": "James Rhodes", "due": "2032-06-19"}],
+    "entities": [
+      {"kind": "person", "name": "Pepper Potts", "basis": "Pepper Potts signed off on the same Quiet Window policy following the first trial.", "facts": ["Approved the permanent west lift policy."]},
+      {"kind": "person", "name": "James Rhodes", "basis": "The facilities record names James Rhodes following up on the lift trial.", "facts": ["Will post the final hours for residents."]},
+      {"kind": "project", "name": "Lift Quiet Window", "basis": "The decision expressly replaces the east lift trial with the west lift schedule.", "facts": ["Approved permanent west lift hours of 21:30 to 23:00."]}
+    ]
+  },
+  {
+    "file": "field-kitchen/card-in-red-sleeve.md",
+    "title": "The card in the red sleeve",
+    "date": "2032-06-20",
+    "source": {"kind": "meeting"},
+    "summary": "Happy showed the menu card at the dry run. The kitchen gave the allergen card and the lantern receipts different home positions.",
+    "decisions": ["Clip the allergen card in a red sleeve inside the crate lid.", "Use purple tags for boxes that contain sesame."],
+    "actions": [{"ref": "menu-card", "status": "done"}],
+    "entities": [
+      {"kind": "person", "name": "Happy Hogan", "basis": "Happy Hogan brought the sample menu card to the scheduled dry run.", "facts": ["Completed the menu-card action with the Red Hook volunteers."]},
+      {"kind": "person", "name": "Sam Wilson", "basis": "The note names Sam Wilson handling the same City Lanterns cart receipts.", "facts": ["Agreed to use the cart's front pocket for loan receipts."]},
+      {"kind": "project", "name": "Field Kitchen", "basis": "The record calls the same kitchen handoff the field kitchen rehearsal.", "facts": ["The allergen card goes inside the crate lid."]}
+    ]
+  },
+  {
+    "file": "tower-access/badge-gets-its-own-desk.md",
+    "title": "The night badge gets its own desk",
+    "date": "2032-06-22",
+    "source": {"kind": "email"},
+    "summary": "Rhodey posted the west lift switchplate card. The loading dock added a night badge return tray at its desk.",
+    "decisions": ["Leave the night badge in the brass tray at the loading dock desk from 23:00."],
+    "actions": [
+      {"ref": "switchplate-card", "status": "done"},
+      {"ref": "dock-tray", "text": "Check that the brass tray is within the clerk's reach.", "owner": "James Rhodes"}
+    ],
+    "entities": [
+      {"kind": "person", "name": "James Rhodes", "basis": "The note names James Rhodes filling his prior switchplate assignment.", "facts": ["Installed the switchplate card and sent Pepper a photo."]},
+      {"kind": "project", "name": "Lift Quiet Window", "basis": "The record explicitly closes the Quiet Window switchplate task.", "facts": ["The final hours are posted on the west lift and beside the lobby door."]}
+    ]
+  },
+  {
+    "file": "harbor-clinic/tablet-forgets-first.md",
+    "title": "The tablet forgets first",
+    "date": "2032-06-24",
+    "source": {"kind": "meeting"},
+    "summary": "Pepper approved the local retention rule for the Lantern Desk tablet and took vendor storage off the shortlist.",
+    "decisions": ["Delete check-in text after twenty-four hours.", "Keep anonymous queue totals for seven days."],
+    "actions": [{"ref": "deletion-receipt", "text": "Verify the first deletion receipt with Luis.", "owner": "Shuri"}],
+    "entities": [
+      {"kind": "person", "name": "Pepper Potts", "basis": "Pepper Potts returned to decide the storage offer she had put on hold.", "facts": ["Approved the local retention rule."]},
+      {"kind": "person", "name": "Shuri", "basis": "Shuri demonstrated the same Lantern Desk tablet during the storage review.", "facts": ["Will check the first deletion receipt."]},
+      {"kind": "person", "name": "Luis Vega", "basis": "The policy names Luis Vega as the same clinic tally coordinator.", "facts": ["Will compare the anonymous tally with the volunteer's count."]},
+      {"kind": "project", "name": "Lantern Desk", "basis": "This note decides the Lantern Desk storage question raised in the rehearsal.", "facts": ["Text is local and deleted after twenty-four hours."]}
+    ]
+  },
+  {
+    "file": "city-lanterns/rain-rule.md",
+    "title": "The rain rule",
+    "date": "2032-06-26",
+    "source": {"kind": "note"},
+    "summary": "City Lanterns will hold wet crates at Pier 6 for a dock lead's dry check. The red sleeve rides in the cart's front pocket.",
+    "decisions": ["Wet crates stay on Pier 6 until the dock lead signs the dry check.", "Keep lantern loan receipts in the red sleeve in the cart's front pocket."],
+    "actions": [
+      {"ref": "wet-route-test", "status": "done"},
+      {"ref": "wet-weather-brief", "text": "Show the second crew the wet-weather pickup sequence.", "owner": "Sam Wilson"}
+    ],
+    "entities": [
+      {"kind": "person", "name": "Sam Wilson", "basis": "Sam Wilson ran the rain test on his City Lanterns cart route.", "facts": ["Will show the second crew the pickup sequence."]},
+      {"kind": "person", "name": "Dana Ortiz", "basis": "Dana Ortiz updates the same library's loan count while the cart waits.", "facts": ["Approved the wet-weather rule with Sam."]},
+      {"kind": "project", "name": "City Lanterns", "basis": "This is the City Lanterns wet-weather rule requested at the route test.", "facts": ["The Red Hook library can use its reserve during a weather hold."]}
+    ]
+  },
+  {
+    "file": "roof-garden/basil-gets-a-lawyer.md",
+    "title": "When the basil gets a lawyer",
+    "date": "2032-06-28",
+    "source": {"kind": "meeting"},
+    "summary": "The roof Quiet Window pauses the sprinklers and camera from 06:00 to 07:00. Blue Hour watering moved to 07:10.",
+    "decisions": ["Run the roof Quiet Window from 06:00 to 07:00.", "Move Blue Hour watering to 07:10."],
+    "actions": [
+      {"ref": "watering-trial", "status": "done"},
+      {"ref": "starling-log", "text": "Collect another week's starling observations.", "owner": "Bruce Banner"}
+    ],
+    "entities": [
+      {"kind": "person", "name": "Bruce Banner", "basis": "Bruce Banner is following up on his starling observations and watering trial.", "facts": ["Moved Blue Hour watering to 07:10."]},
+      {"kind": "person", "name": "James Rhodes", "basis": "James Rhodes checked the same planter saucers after the reschedule.", "facts": ["Checked the saucers after the first late run."]},
+      {"kind": "project", "name": "Blue Hour Watering", "basis": "The note closes the 05:40 Blue Hour trial and sets a new start time.", "facts": ["Current start time is 07:10."]},
+      {"kind": "project", "name": "Roof Quiet Window", "facts": ["Sprinklers and roof camera are paused between 06:00 and 07:00."]}
+    ]
+  },
+  {
+    "file": "workshop/robot-earns-saturday.md",
+    "title": "The robot earns Saturday",
+    "date": "2032-06-29",
+    "source": {"kind": "note"},
+    "summary": "DUM-E earned a supervised Saturday guest demo and the reset card moved to the pegboard.",
+    "decisions": ["Clear DUM-E for the Saturday guest demo with a mentor at the bench.", "Move the red reset card to the pegboard above the copper tray."],
+    "actions": [{"ref": "cleanup-check", "status": "done"}],
+    "entities": [
+      {"kind": "person", "name": "Peter Parker", "basis": "Peter Parker returned the clipboard for his DUM-E cleanup check.", "facts": ["Cleared the guest demo and closed the check."]},
+      {"kind": "person", "name": "Steve Rogers", "basis": "Steve Rogers returned the same Captain's Cart dolly with its orange sticker.", "facts": ["Returned Captain's Cart to the workshop."]},
+      {"kind": "project", "name": "DUM-E Guest Demo", "basis": "This log reports the result of the three-pass guest demo release check.", "facts": ["DUM-E passed three supervised cleanup runs."]}
+    ]
+  },
+  {
+    "file": "field-kitchen/too-much-orange-juice.md",
+    "title": "We bought too much orange juice",
+    "date": "2032-06-30",
+    "source": {"kind": "chat"},
+    "summary": "The field kitchen will send sixteen sealed juice cartons to Red Hook and keep the volunteer meal at Pier 6.",
+    "decisions": ["Send sixteen sealed juice cartons to the Red Hook community kitchen.", "Keep the volunteer meal at Pier 6 until the last cart returns."],
+    "actions": [{"ref": "juice-slip", "text": "Match the juice cartons against the cold shelf count and get the slip initialled.", "owner": "Happy Hogan"}],
+    "entities": [
+      {"kind": "person", "name": "Happy Hogan", "basis": "Happy Hogan is running the next community kitchen handoff.", "facts": ["Will get the delivery slip initialled."]},
+      {"kind": "person", "name": "Sam Wilson", "basis": "The record names Sam Wilson logging returns for the same lantern cart.", "facts": ["Recorded lantern returns at the folding table."]},
+      {"kind": "project", "name": "Field Kitchen", "basis": "The dry run used the same field kitchen allergen card and crate.", "facts": ["The volunteer meal stays at Pier 6."]}
+    ]
+  }
+]

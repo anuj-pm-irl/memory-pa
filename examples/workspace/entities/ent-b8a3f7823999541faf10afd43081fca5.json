@@ -1,0 +1,54 @@
+{
+  "id": "ent-b8a3f7823999541faf10afd43081fca5",
+  "kind": "person",
+  "mentions": [
+    {
+      "facts": [
+        "Keeps the shared lamp pool until the delivery route is settled."
+      ],
+      "name": "Sam Wilson",
+      "source_id": "src-258045d780685a14a80eb1422771e6ad"
+    },
+    {
+      "basis": "The record names Sam Wilson and places him on the library-drive handoff.",
+      "facts": [
+        "Will call the community kitchen before the first delivery."
+      ],
+      "name": "Sam Wilson",
+      "source_id": "src-baeb48698794563eaf3fab3708280451"
+    },
+    {
+      "basis": "The note names Sam Wilson piloting the City Lanterns cart.",
+      "facts": [
+        "Counted thirty-six lamps in the lending pool."
+      ],
+      "name": "Sam Wilson",
+      "source_id": "src-6e11f840268a5ae68a0ace182843bd94"
+    },
+    {
+      "basis": "The note names Sam Wilson handling the same City Lanterns cart receipts.",
+      "facts": [
+        "Agreed to use the cart's front pocket for loan receipts."
+      ],
+      "name": "Sam Wilson",
+      "source_id": "src-32603d4fd2305ca28327587c420c5d8c"
+    },
+    {
+      "basis": "Sam Wilson ran the rain test on his City Lanterns cart route.",
+      "facts": [
+        "Will show the second crew the pickup sequence."
+      ],
+      "name": "Sam Wilson",
+      "source_id": "src-c8918ceafe685811931c4b85f28ada92"
+    },
+    {
+      "basis": "The record names Sam Wilson logging returns for the same lantern cart.",
+      "facts": [
+        "Recorded lantern returns at the folding table."
+      ],
+      "name": "Sam Wilson",
+      "source_id": "src-7f15d0e02cf55f5ba7b6e2a783ab0bb8"
+    }
+  ],
+  "name": "Sam Wilson"
+}

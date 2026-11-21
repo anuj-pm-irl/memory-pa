@@ -1,0 +1,42 @@
+{
+  "actions": [
+    {
+      "due": null,
+      "id": "act-dd5afc3200825f24b26cb27c3ecdd205",
+      "owner": "James Rhodes",
+      "previous_source": "src-8ac66f658e355b49a7769936131c9bab",
+      "status": "done",
+      "text": "Log the Blue Hour watering trial in the planter saucers."
+    },
+    {
+      "due": null,
+      "id": "act-fc61fa37e255582faa0fbe89af938308",
+      "owner": "Bruce Banner",
+      "previous_source": null,
+      "status": "open",
+      "text": "Collect another week's starling observations."
+    }
+  ],
+  "captured_at": "2026-11-20T10:29:03Z",
+  "date": "2032-06-28",
+  "decisions": [
+    "Run the roof Quiet Window from 06:00 to 07:00.",
+    "Move Blue Hour watering to 07:10."
+  ],
+  "entities": [
+    "ent-dd5afc3200825f24b26cb27c3ecdd205",
+    "ent-e204bfad52cf55b18946c5676ad08047",
+    "ent-cddc6217086d5bf89e01be221d85afad",
+    "ent-5ee55c6de2ec5069a7a65e3c8b5883a3"
+  ],
+  "fingerprint": "d74229e90f80e255a10f05da6725a8439ab96005652c94a15ba400e28b4fd2b2",
+  "id": "src-4d1e007f9ff1563ba3a55cd3fdaf3eb0",
+  "note": "topics/roof-garden/when-the-basil-gets-a-lawyer-2032-06-28.md",
+  "origin": {
+    "kind": "meeting"
+  },
+  "summary": "The roof Quiet Window pauses the sprinklers and camera from 06:00 to 07:00. Blue Hour watering moved to 07:10.",
+  "text_sha256": "937f6feb8b18143f396715c06739f675da949148f355c442fc0ed17bab9340be",
+  "title": "When the basil gets a lawyer",
+  "topic": "roof-garden"
+}

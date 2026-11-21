@@ -1,0 +1,56 @@
+{
+  "id": "ent-e204bfad52cf55b18946c5676ad08047",
+  "kind": "person",
+  "mentions": [
+    {
+      "facts": [
+        "Tony calls him Rhodey.",
+        "Agreed to run the emergency bell drill."
+      ],
+      "name": "James Rhodes",
+      "source_id": "src-0b69b0906ddb53278cf0a3fbbda1f93a"
+    },
+    {
+      "basis": "The note names James Rhodes and then identifies the gardener's partner as Rhodey.",
+      "facts": [
+        "Will log water collected in the saucers."
+      ],
+      "name": "James Rhodes",
+      "source_id": "src-8ac66f658e355b49a7769936131c9bab"
+    },
+    {
+      "basis": "The record says Rhodey is the James Rhodes who ran the first trial.",
+      "facts": [
+        "Traced the complaint to the east freight cage speaker.",
+        "Closed the emergency bell drill."
+      ],
+      "name": "James Rhodes",
+      "source_id": "src-441ac8728d2e5f89a79005087e279d68"
+    },
+    {
+      "basis": "The facilities record names James Rhodes following up on the lift trial.",
+      "facts": [
+        "Will post the final hours for residents."
+      ],
+      "name": "James Rhodes",
+      "source_id": "src-2c42d193991e5f97bc110ce734fe592f"
+    },
+    {
+      "basis": "The note names James Rhodes filling his prior switchplate assignment.",
+      "facts": [
+        "Installed the switchplate card and sent Pepper a photo."
+      ],
+      "name": "James Rhodes",
+      "source_id": "src-c926527a82b05be7a9ec495cbba47c9d"
+    },
+    {
+      "basis": "James Rhodes checked the same planter saucers after the reschedule.",
+      "facts": [
+        "Checked the saucers after the first late run."
+      ],
+      "name": "James Rhodes",
+      "source_id": "src-4d1e007f9ff1563ba3a55cd3fdaf3eb0"
+    }
+  ],
+  "name": "James Rhodes"
+}

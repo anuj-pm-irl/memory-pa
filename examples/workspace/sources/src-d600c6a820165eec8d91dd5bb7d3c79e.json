@@ -1,0 +1,32 @@
+{
+  "actions": [
+    {
+      "due": null,
+      "id": "act-a5a15599442f5baf89d614c4d3fc9e11",
+      "owner": "Peter Parker",
+      "previous_source": null,
+      "status": "open",
+      "text": "Record three consecutive supervised cleanup passes."
+    }
+  ],
+  "captured_at": "2026-11-20T10:29:01Z",
+  "date": "2032-06-06",
+  "decisions": [
+    "Designate the copper tray as the drop-off point for wet sponges.",
+    "Keep the red reset card in the side drawer during testing."
+  ],
+  "entities": [
+    "ent-a5a15599442f5baf89d614c4d3fc9e11",
+    "ent-5f44f5573ad657879910213087fc993f"
+  ],
+  "fingerprint": "0d463bea7e4e5127e4924927566c17256dca84e59413fe8297463a12c47d5781",
+  "id": "src-d600c6a820165eec8d91dd5bb7d3c79e",
+  "note": "topics/workshop/dum-e-gets-a-report-card-2032-06-06.md",
+  "origin": {
+    "kind": "note"
+  },
+  "summary": "DUM-E's guest demo is on hold pending three supervised cleanup passes.",
+  "text_sha256": "c6bac3a5510d7346fab628bcbf6150406c4e5d7832936241e0763be2e3e9dda9",
+  "title": "DUM-E gets a report card",
+  "topic": "workshop"
+}

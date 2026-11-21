@@ -1,0 +1,40 @@
+{
+  "actions": [
+    {
+      "due": null,
+      "id": "act-d35e38e5048b5c42a102502480ae424f",
+      "owner": "Luis Vega",
+      "previous_source": "src-b5142531668b54c99148e7af40abd980",
+      "status": "done",
+      "text": "Bring large-print paper cards to training."
+    },
+    {
+      "due": null,
+      "id": "act-3b2e785c05705579b8d0eaf0dfdc717a",
+      "owner": "Luis Vega",
+      "previous_source": null,
+      "status": "open",
+      "text": "Repeat the language-choice rehearsal with the second shift."
+    }
+  ],
+  "captured_at": "2026-11-20T10:29:02Z",
+  "date": "2032-06-12",
+  "decisions": [
+    "Hold the Lantern Desk storage decision until the June 24 review."
+  ],
+  "entities": [
+    "ent-efe3fb7630f5577ca35f5b5b1c8d7734",
+    "ent-d35e38e5048b5c42a102502480ae424f",
+    "ent-05a9ad61cd9a5897963ab928491a08d1"
+  ],
+  "fingerprint": "170312df590f7ac9c25c78862d695e20d9e29618880c969609b876ee0c4dbbb4",
+  "id": "src-827caf56a2e15b93b0c240f54b081baa",
+  "note": "topics/harbor-clinic/a-short-life-for-a-long-queue-2032-06-12.md",
+  "origin": {
+    "kind": "meeting"
+  },
+  "summary": "The check-in rehearsal moved paper cards to the lower counter. Fourteen-day vendor storage remains an option for review.",
+  "text_sha256": "387f025a83d8bebc5f1ddc3ae39d3868597e0aeeee552af725aa1264567c624b",
+  "title": "A short life for a long queue",
+  "topic": "harbor-clinic"
+}

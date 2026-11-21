@@ -1,0 +1,30 @@
+{
+  "id": "ent-e60713d4a5dd55729aa59517e17594c0",
+  "kind": "person",
+  "mentions": [
+    {
+      "facts": [
+        "Runs library lamp checkout and returns."
+      ],
+      "name": "Dana Ortiz",
+      "source_id": "src-258045d780685a14a80eb1422771e6ad"
+    },
+    {
+      "basis": "The record names Dana Ortiz managing the same library reserve.",
+      "facts": [
+        "Asked to add the bus stop to the route sheet."
+      ],
+      "name": "Dana Ortiz",
+      "source_id": "src-6e11f840268a5ae68a0ace182843bd94"
+    },
+    {
+      "basis": "Dana Ortiz updates the same library's loan count while the cart waits.",
+      "facts": [
+        "Approved the wet-weather rule with Sam."
+      ],
+      "name": "Dana Ortiz",
+      "source_id": "src-c8918ceafe685811931c4b85f28ada92"
+    }
+  ],
+  "name": "Dana Ortiz"
+}

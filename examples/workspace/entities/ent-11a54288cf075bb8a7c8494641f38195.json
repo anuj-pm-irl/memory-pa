@@ -1,0 +1,30 @@
+{
+  "id": "ent-11a54288cf075bb8a7c8494641f38195",
+  "kind": "project",
+  "mentions": [
+    {
+      "facts": [
+        "Lends lamps during outages."
+      ],
+      "name": "City Lanterns",
+      "source_id": "src-258045d780685a14a80eb1422771e6ad"
+    },
+    {
+      "basis": "The note names the City Lanterns lamp lending pool and cart.",
+      "facts": [
+        "The shared route links Pier 6 and Red Hook."
+      ],
+      "name": "City Lanterns",
+      "source_id": "src-6e11f840268a5ae68a0ace182843bd94"
+    },
+    {
+      "basis": "This is the City Lanterns wet-weather rule requested at the route test.",
+      "facts": [
+        "The Red Hook library can use its reserve during a weather hold."
+      ],
+      "name": "City Lanterns",
+      "source_id": "src-c8918ceafe685811931c4b85f28ada92"
+    }
+  ],
+  "name": "City Lanterns"
+}

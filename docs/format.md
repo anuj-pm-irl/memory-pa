@@ -22,11 +22,11 @@ A note uses `undated` when its date is unknown. Two different titles that produc
 3. **The CLI refreshes the topic pages.** `index.md` links to topic pages, and each topic page lists its recent notes, decisions, and open actions. The CLI validates the links and saves the files together in one revision in the store you picked. The same file layout works in a local folder, private Git, and S3.
 4. **Search retrieves the evidence.** `memory-pa search` looks for words in the note and its linked information. Results include a note path and section so the assistant can open the source and show what supports its answer.
 
-See the [fictional proposal](../examples/robot-club.json) and its [generated topic page](../examples/workspace/topics/robot-club/_summary.md) for the same example used in the README.
+Browse the [complete Avengers workspace](../examples/workspace/index.md) to see 18 saved notes and six generated topic summaries. The [field kitchen topic](../examples/workspace/topics/field-kitchen/_summary.md) includes the note used in the demo.
 
 ## Proposals
 
-A [v1 proposal](../schemas/proposal-v1.json) requires `format_version`, `topic`, `title`, `source`, and `text`. You can add dates, a summary, decisions, actions, and entities. See the [fictional example](../examples/robot-club.json).
+A [v1 proposal](../schemas/proposal-v1.json) requires `format_version`, `topic`, `title`, `source`, and `text`. You can add dates, a summary, decisions, actions, and entities. See the [standalone breakfast meeting proposal](../examples/breakfast-in-a-blackout.json).
 
 - Set `source.kind` to `note`, `file`, `meeting`, `recording`, `email`, `chat`, or `other`. If the source offers a stable ID, include `source.external` with `provider`, `account`, and `id`. Use a consistent account label for that provider. Include `source.url` when you have a link that people with access can open.
 - Keep each decision and fact tied to the supplied text. Leave a date, speaker, or identity open when the source leaves it open. Add an explicit source-backed `basis` when linking a mention to an existing entity `id`. A matching name prompts for review. Set `distinct: true` after confirming the name belongs to a different entity.

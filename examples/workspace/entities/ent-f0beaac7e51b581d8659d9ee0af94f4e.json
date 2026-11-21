@@ -1,0 +1,30 @@
+{
+  "id": "ent-f0beaac7e51b581d8659d9ee0af94f4e",
+  "kind": "project",
+  "mentions": [
+    {
+      "facts": [
+        "Prepares food boxes for the community kitchen."
+      ],
+      "name": "Field Kitchen",
+      "source_id": "src-baeb48698794563eaf3fab3708280451"
+    },
+    {
+      "basis": "The record calls the same kitchen handoff the field kitchen rehearsal.",
+      "facts": [
+        "The allergen card goes inside the crate lid."
+      ],
+      "name": "Field Kitchen",
+      "source_id": "src-32603d4fd2305ca28327587c420c5d8c"
+    },
+    {
+      "basis": "The dry run used the same field kitchen allergen card and crate.",
+      "facts": [
+        "The volunteer meal stays at Pier 6."
+      ],
+      "name": "Field Kitchen",
+      "source_id": "src-7f15d0e02cf55f5ba7b6e2a783ab0bb8"
+    }
+  ],
+  "name": "Field Kitchen"
+}

@@ -1,0 +1,32 @@
+{
+  "actions": [
+    {
+      "due": "2032-06-20",
+      "id": "act-53b60ec585715d2b8ef02d8ba491a831",
+      "owner": "Happy Hogan",
+      "previous_source": null,
+      "status": "open",
+      "text": "Bring sample menu cards to the handoff dry run."
+    }
+  ],
+  "captured_at": "2026-11-20T10:29:01Z",
+  "date": "2032-06-07",
+  "decisions": [
+    "Send forty-eight vegetable breakfast boxes to the Red Hook community kitchen."
+  ],
+  "entities": [
+    "ent-53b60ec585715d2b8ef02d8ba491a831",
+    "ent-b8a3f7823999541faf10afd43081fca5",
+    "ent-f0beaac7e51b581d8659d9ee0af94f4e"
+  ],
+  "fingerprint": "82d96b001d5d995b521cb54b1871df5b56b1b93fa27e84bd6921db5356a3ab21",
+  "id": "src-baeb48698794563eaf3fab3708280451",
+  "note": "topics/field-kitchen/breakfast-in-a-blackout-2032-06-07.md",
+  "origin": {
+    "kind": "meeting"
+  },
+  "summary": "Happy planned forty-eight vegetable breakfast boxes for the Red Hook community kitchen.",
+  "text_sha256": "2c5f14950ab0f61d020c70fda16b6088d27cc4591ac76713676a410b71126d9f",
+  "title": "Breakfast in a blackout",
+  "topic": "field-kitchen"
+}

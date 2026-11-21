@@ -1,6 +1,6 @@
 # Contributing
 
-Try `memory-pa demo` first. If you're reporting a bug, describe the behavior using made-up notes and test credentials. This project uses fictional fixtures for examples, tests, screenshots, and release artifacts.
+After installing this checkout, try `memory-pa demo`. It opens the [complete fictional Avengers workspace](examples/workspace/index.md) without using your configured store. If you're reporting a bug, describe the behavior using made-up notes and test credentials. This project uses fictional fixtures for examples, tests, screenshots, and release artifacts.
 
 For development, use Python 3.11 or newer and Git.
 

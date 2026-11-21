@@ -1,0 +1,33 @@
+{
+  "actions": [
+    {
+      "due": null,
+      "id": "act-a5a15599442f5baf89d614c4d3fc9e11",
+      "owner": "Peter Parker",
+      "previous_source": "src-d600c6a820165eec8d91dd5bb7d3c79e",
+      "status": "done",
+      "text": "Record three consecutive supervised cleanup passes."
+    }
+  ],
+  "captured_at": "2026-11-20T10:29:03Z",
+  "date": "2032-06-29",
+  "decisions": [
+    "Clear DUM-E for the Saturday guest demo with a mentor at the bench.",
+    "Move the red reset card to the pegboard above the copper tray."
+  ],
+  "entities": [
+    "ent-a5a15599442f5baf89d614c4d3fc9e11",
+    "ent-e41eef0c2bd45515873bc50ae5dc3d8e",
+    "ent-5f44f5573ad657879910213087fc993f"
+  ],
+  "fingerprint": "4dd00739f3687e01e0dcda0cdcef29a1a85c83dc2a7277e6dc749ae7cf3d2f8c",
+  "id": "src-42d654c1813c55beaeeb6623ea0ec1e9",
+  "note": "topics/workshop/the-robot-earns-saturday-2032-06-29.md",
+  "origin": {
+    "kind": "note"
+  },
+  "summary": "DUM-E earned a supervised Saturday guest demo and the reset card moved to the pegboard.",
+  "text_sha256": "3e1b346249bbb185bda5e4a6c462932090391607ed29aebd4376a90b3dd8cea6",
+  "title": "The robot earns Saturday",
+  "topic": "workshop"
+}

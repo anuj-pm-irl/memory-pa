@@ -1,0 +1,32 @@
+{
+  "actions": [
+    {
+      "due": null,
+      "id": "act-53303917aa9155f5add397f0ce32ad12",
+      "owner": "James Rhodes",
+      "previous_source": null,
+      "status": "open",
+      "text": "Run the emergency bell drill."
+    }
+  ],
+  "captured_at": "2026-11-20T10:29:01Z",
+  "date": "2032-06-03",
+  "decisions": [
+    "Trial the east freight lift Quiet Window from 20:00 to 22:00."
+  ],
+  "entities": [
+    "ent-53303917aa9155f5add397f0ce32ad12",
+    "ent-e204bfad52cf55b18946c5676ad08047",
+    "ent-4ba14cd554c756cb8c29775d46efde03"
+  ],
+  "fingerprint": "a038ff2762d6bd3dc7e5dd783c1b9af2014c105c7c10f2fa01b9970b24d70e87",
+  "id": "src-0b69b0906ddb53278cf0a3fbbda1f93a",
+  "note": "topics/tower-access/the-elevator-learns-to-whisper-2032-06-03.md",
+  "origin": {
+    "kind": "meeting"
+  },
+  "summary": "Pepper approved a one-week Quiet Window trial on the east freight lift, keeping the lobby chime and emergency bell audible.",
+  "text_sha256": "0d7998bfff40d12b2d1036a0ce430ed4a7628b8749a07191b1cfe20ebc159464",
+  "title": "The elevator learns to whisper",
+  "topic": "tower-access"
+}

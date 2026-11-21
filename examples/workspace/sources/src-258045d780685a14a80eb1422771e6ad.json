@@ -1,0 +1,32 @@
+{
+  "actions": [
+    {
+      "due": null,
+      "id": "act-b8a3f7823999541faf10afd43081fca5",
+      "owner": "Sam Wilson",
+      "previous_source": null,
+      "status": "open",
+      "text": "Bring a sample lamp to the library meeting."
+    }
+  ],
+  "captured_at": "2026-11-20T10:29:01Z",
+  "date": "2032-06-05",
+  "decisions": [
+    "Reserve twelve lamps for the Red Hook library."
+  ],
+  "entities": [
+    "ent-b8a3f7823999541faf10afd43081fca5",
+    "ent-e60713d4a5dd55729aa59517e17594c0",
+    "ent-11a54288cf075bb8a7c8494641f38195"
+  ],
+  "fingerprint": "7fa98791a69cf2d0baf1a801b16451a9aa4635d4462546f278530e32b06d94fa",
+  "id": "src-258045d780685a14a80eb1422771e6ad",
+  "note": "topics/city-lanterns/after-the-lights-go-out-2032-06-05.md",
+  "origin": {
+    "kind": "meeting"
+  },
+  "summary": "Sam and Dana set up a City Lanterns lending pilot through the Red Hook library.",
+  "text_sha256": "22122e7e42427018c986d5ba47949696b2d40b99c7fdc96010bf9026fa0a1ee0",
+  "title": "After the lights go out",
+  "topic": "city-lanterns"
+}

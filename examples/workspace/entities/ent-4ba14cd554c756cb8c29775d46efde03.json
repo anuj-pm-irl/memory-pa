@@ -1,0 +1,38 @@
+{
+  "id": "ent-4ba14cd554c756cb8c29775d46efde03",
+  "kind": "project",
+  "mentions": [
+    {
+      "facts": [
+        "East freight lift trial, 20:00 to 22:00."
+      ],
+      "name": "Lift Quiet Window",
+      "source_id": "src-0b69b0906ddb53278cf0a3fbbda1f93a"
+    },
+    {
+      "basis": "The note follows up on the first east lift Quiet Window trial.",
+      "facts": [
+        "The east lift speaker disturbed rehearsals."
+      ],
+      "name": "Lift Quiet Window",
+      "source_id": "src-441ac8728d2e5f89a79005087e279d68"
+    },
+    {
+      "basis": "The decision expressly replaces the east lift trial with the west lift schedule.",
+      "facts": [
+        "Approved permanent west lift hours of 21:30 to 23:00."
+      ],
+      "name": "Lift Quiet Window",
+      "source_id": "src-2c42d193991e5f97bc110ce734fe592f"
+    },
+    {
+      "basis": "The record explicitly closes the Quiet Window switchplate task.",
+      "facts": [
+        "The final hours are posted on the west lift and beside the lobby door."
+      ],
+      "name": "Lift Quiet Window",
+      "source_id": "src-c926527a82b05be7a9ec495cbba47c9d"
+    }
+  ],
+  "name": "Lift Quiet Window"
+}

@@ -25,4 +25,11 @@ package-dir = {"" = "src", "memory_pa.schemas" = "schemas", "memory_pa.examples"
 
 [tool.setuptools.package-data]
 "memory_pa.schemas" = ["*.json"]
-"memory_pa.examples" = ["*.json"]
+"memory_pa.examples" = [
+    "*.json",
+    "workspace/*.json",
+    "workspace/*.md",
+    "workspace/sources/*.json",
+    "workspace/entities/*.json",
+    "workspace/topics/*/*.md",
+]

@@ -56,8 +56,9 @@ class CLITests(unittest.TestCase):
 
     def test_demo_uses_fictional_workspace(self):
         output = self.call("demo")
-        self.assertIn("Rainy Robot Club", output)
-        self.assertIn("Decision", output)
+        self.assertIn("Stark Archive", output)
+        self.assertIn("Loaded 18 notes", output)
+        self.assertIn("Happy Hogan", output)
         self.assertIn("Open action", output)
         self.assertIn("#source-text", output)
         self.assertFalse(self.store.exists())

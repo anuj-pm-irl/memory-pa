@@ -1,0 +1,34 @@
+{
+  "actions": [
+    {
+      "due": null,
+      "id": "act-d35e38e5048b5c42a102502480ae424f",
+      "owner": "Luis Vega",
+      "previous_source": null,
+      "status": "open",
+      "text": "Bring large-print paper cards to training."
+    }
+  ],
+  "captured_at": "2026-11-20T10:29:01Z",
+  "date": "2032-06-04",
+  "decisions": [
+    "Make the Lantern Desk hologram opt-in.",
+    "Keep the vendor storage offer on hold."
+  ],
+  "entities": [
+    "ent-d35e38e5048b5c42a102502480ae424f",
+    "ent-efe3fb7630f5577ca35f5b5b1c8d7734",
+    "ent-53303917aa9155f5add397f0ce32ad12",
+    "ent-05a9ad61cd9a5897963ab928491a08d1"
+  ],
+  "fingerprint": "2205471bacdd55ffbfc543cce83bb779c9ea00ab0ecbc0966087f00e16db0f0e",
+  "id": "src-b5142531668b54c99148e7af40abd980",
+  "note": "topics/harbor-clinic/the-hologram-that-needs-a-human-2032-06-04.md",
+  "origin": {
+    "kind": "meeting"
+  },
+  "summary": "The Lantern Desk hologram is opt-in. A volunteer and paper check-in cards are available throughout the Harbor Clinic pilot.",
+  "text_sha256": "86bd0523710dc7980bdcf46421914f8ae8089446af8200388495df8544df7c6e",
+  "title": "The hologram that needs a human",
+  "topic": "harbor-clinic"
+}

@@ -3,7 +3,6 @@ from __future__ import annotations
 import argparse
 import getpass
 import sys
-import tempfile
 import warnings
 from importlib.metadata import version
 from importlib.resources import files
@@ -134,39 +133,43 @@ def _init(args, store, head, selection):
     _output(args, result, lines)
 
 
+def _demo_files(directory, prefix=""):
+    for item in directory.iterdir():
+        path = f"{prefix}{item.name}"
+        if item.is_dir():
+            yield from _demo_files(item, f"{path}/")
+        elif path.endswith((".json", ".md")):
+            yield path, item.read_bytes()
+
+
 def _demo(args):
-    proposal = parse_json(
-        files("memory_pa.examples").joinpath("robot-club.json").read_bytes(), "the fictional demo"
+    workspace = Workspace(dict(_demo_files(files("memory_pa.examples").joinpath("workspace"))))
+    note = "topics/field-kitchen/breakfast-in-a-blackout-2032-06-07.md"
+    hits = [
+        hit for hit in workspace.search("menu cards", 12)
+        if hit["note"] == note and hit["section"] == "action-items"
+    ]
+    evidence = workspace.show(note, "source-text").decode("utf-8")
+    _output(
+        args,
+        {
+            "status": "demo",
+            "note": note,
+            "note_count": len(workspace.sources),
+            "results": hits,
+            "source_text": evidence,
+        },
+        [
+            "Explore the Stark Archive, a fictional Avengers dataset.",
+            f"Loaded {len(workspace.sources)} notes.",
+            "",
+            "Who will bring sample menu cards to the handoff dry run?",
+            *(f"Open action · {hit['text'].split(' [act-', 1)[0]}" for hit in hits),
+            "",
+            f"Opened {note}#source-text",
+            evidence,
+        ],
     )
-    with tempfile.TemporaryDirectory(prefix="memory-pa-demo-") as temporary:
-        store = LocalStorage(Path(temporary, "workspace"))
-        base = store.publish(None, empty_workspace())
-        capture = Workspace(store.read().files).prepare(proposal)
-        store.publish(base, capture.files)
-        workspace = Workspace(store.read().files)
-        hits = [
-            hit
-            for hit in workspace.search("blue lantern", 12)
-            if hit["section"] in {"decisions", "action-items"}
-        ]
-        note = capture.source["note"]
-        evidence = workspace.show(note, "source-text").decode("utf-8")
-        _output(
-            args,
-            {"status": "demo", "note": note, "results": hits, "source_text": evidence},
-            [
-                "Welcome to the Rainy Robot Club. This is a fictional demo.",
-                "",
-                "Saved one meeting note.",
-                *(
-                    f"{'Decision' if hit['section'] == 'decisions' else 'Open action'} · {hit['text'].split(' [act-', 1)[0]}"
-                    for hit in hits
-                ),
-                "",
-                f"Opened {note}#source-text",
-                evidence,
-            ],
-        )
 
 
 def _dispatch(args):
@@ -289,7 +292,7 @@ def parser():
         sub.add_argument("--json", action="store_true", help="return JSON")
         return sub
 
-    command("demo", "try the fictional Rainy Robot Club workspace")
+    command("demo", "explore the fictional Avengers archive")
     command("schema", "print an installed v1 schema").add_argument(
         "kind", choices=("proposal", "workspace")
     )

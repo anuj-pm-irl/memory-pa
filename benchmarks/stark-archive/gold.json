@@ -1,0 +1,314 @@
+[
+  {
+    "id": "lookup-01",
+    "group": "lookup",
+    "question": "Where do visitors leave the night badge?",
+    "query": "brass tray night badge",
+    "evidence": {"tower-access/badge-gets-its-own-desk.md": "Visitors leave the night badge in the brass tray at the loading dock desk."}
+  },
+  {
+    "id": "lookup-02",
+    "group": "lookup",
+    "question": "What did Happy say the purple box tags mean?",
+    "query": "purple tags",
+    "evidence": {"field-kitchen/card-in-red-sleeve.md": "Purple tags identify boxes that contain sesame."}
+  },
+  {
+    "id": "lookup-03",
+    "group": "lookup",
+    "question": "What is the dock lead's rule on wet lantern crates?",
+    "query": "dock lead dry check",
+    "evidence": {"city-lanterns/rain-rule.md": "Wet crates stay on Pier 6 until the dock lead signs the dry check."}
+  },
+  {
+    "id": "lookup-04",
+    "group": "lookup",
+    "question": "Where did Luis say the blank large-print cards would sit at training?",
+    "query": "yellow card holder",
+    "evidence": {"harbor-clinic/hologram-needs-a-human.md": "The blank ones will sit in the yellow card holder beside the volunteer."}
+  },
+  {
+    "id": "lookup-05",
+    "group": "lookup",
+    "question": "Which aisle did we approve for the dolly?",
+    "query": "west aisle dolly",
+    "evidence": {"workshop/captain-borrows-a-dolly.md": "The west aisle is the approved dolly route."}
+  },
+  {
+    "id": "lookup-06",
+    "group": "lookup",
+    "question": "What did Peter paint for the dry supplies?",
+    "query": "yellow bins dry supplies",
+    "evidence": {"workshop/dum-e-report-card.md": "Peter painted two yellow bins for the dry supplies"}
+  },
+  {
+    "id": "lookup-07",
+    "group": "lookup",
+    "question": "How many vegetable breakfast boxes did Happy commit to?",
+    "query": "vegetable breakfast boxes",
+    "evidence": {"field-kitchen/breakfast-in-a-blackout.md": "Happy will send forty-eight vegetable breakfast boxes to the Red Hook community kitchen."}
+  },
+  {
+    "id": "lookup-08",
+    "group": "lookup",
+    "question": "How many cartons of juice are going to the community kitchen?",
+    "query": "juice cartons",
+    "evidence": {"field-kitchen/too-much-orange-juice.md": "The field kitchen will send sixteen sealed juice cartons to the Red Hook community kitchen."}
+  },
+  {
+    "id": "lookup-09",
+    "group": "lookup",
+    "question": "How many lamps did Sam count in the June 15 lending pool?",
+    "query": "thirty-six lamps",
+    "evidence": {"city-lanterns/lamp-for-bus-stop.md": "Sam counted thirty-six lamps in the lending pool."}
+  },
+  {
+    "id": "lookup-10",
+    "group": "lookup",
+    "question": "Where did the first watering run wake the starlings?",
+    "query": "starlings planter rail",
+    "evidence": {"roof-garden/birds-request-a-change-order.md": "The first run woke a handful of starlings in the planter rail."}
+  },
+  {
+    "id": "lookup-11",
+    "group": "lookup",
+    "question": "Where did the clinic put the large-print cards during the rehearsal?",
+    "query": "lower counter",
+    "evidence": {"harbor-clinic/short-life-for-long-queue.md": "Luis moved the large-print cards to the lower counter so a seated visitor could reach them."}
+  },
+  {
+    "id": "lookup-12",
+    "group": "lookup",
+    "question": "How long does Harbor Clinic keep anonymous queue totals?",
+    "query": "anonymous queue totals",
+    "evidence": {"harbor-clinic/tablet-forgets-first.md": "Harbor Clinic keeps anonymous queue totals for seven days."}
+  },
+  {
+    "id": "timeline-01",
+    "group": "timeline",
+    "question": "Which lift and hours did Pepper finally approve for residents?",
+    "query": "quiet window lift",
+    "evidence": {"tower-access/elevator-keeps-its-voice.md": "Pepper Potts approved the west freight lift for Quiet Window from 21:30 to 23:00."}
+  },
+  {
+    "id": "timeline-02",
+    "group": "timeline",
+    "question": "Find the original approval of the east lift trial and its hours.",
+    "query": "east lift trial hours",
+    "evidence": {"tower-access/elevator-learns-to-whisper.md": "Pepper Potts approved a one-week Quiet Window trial on the east freight lift. Trial hours are 20:00 to 22:00."}
+  },
+  {
+    "id": "timeline-03",
+    "group": "timeline",
+    "question": "Did James actually install the switchplate card?",
+    "query": "switchplate card",
+    "evidence": {"tower-access/badge-gets-its-own-desk.md": "James Rhodes printed the final hours and installed the switchplate card on the west freight lift."}
+  },
+  {
+    "id": "timeline-04",
+    "group": "timeline",
+    "question": "What retention rule did Pepper approve for the volunteer tablet's text?",
+    "query": "retention check-in text",
+    "evidence": {"harbor-clinic/tablet-forgets-first.md": "The pilot tablet deletes check-in text after twenty-four hours."}
+  },
+  {
+    "id": "timeline-05",
+    "group": "timeline",
+    "question": "When does the Blue Hour watering run now?",
+    "query": "blue hour watering",
+    "evidence": {"roof-garden/basil-gets-a-lawyer.md": "Bruce moved Blue Hour watering to 07:10 and closed the 05:40 trial."}
+  },
+  {
+    "id": "timeline-06",
+    "group": "timeline",
+    "question": "Where is DUM-E's red reset card now?",
+    "query": "red reset card",
+    "evidence": {"workshop/robot-earns-saturday.md": "The red reset card moves from the side drawer to the pegboard above the copper tray."}
+  },
+  {
+    "id": "timeline-07",
+    "group": "timeline",
+    "question": "Did the basement hear the bell in the drill?",
+    "query": "emergency bell drill",
+    "evidence": {"tower-access/cello-complaint.md": "Both lobby and basement observers heard it clearly."}
+  },
+  {
+    "id": "timeline-08",
+    "group": "timeline",
+    "question": "What did we do with DUM-E's guest demo after Peter finished the cleanup check?",
+    "query": "guest demo cleanup",
+    "evidence": {"workshop/robot-earns-saturday.md": "Peter cleared DUM-E for the Saturday guest demo with a mentor at the bench."}
+  },
+  {
+    "id": "paraphrase-01",
+    "group": "paraphrase",
+    "question": "When does the service elevator go quiet now?",
+    "query": "When does the service elevator go quiet now?",
+    "evidence": {"tower-access/elevator-keeps-its-voice.md": "Pepper Potts approved the west freight lift for Quiet Window from 21:30 to 23:00."}
+  },
+  {
+    "id": "paraphrase-02",
+    "group": "paraphrase",
+    "question": "Can a visitor skip the virtual receptionist?",
+    "query": "skip virtual receptionist",
+    "evidence": {"harbor-clinic/hologram-needs-a-human.md": "Patients can walk straight to the volunteer and use a paper card."}
+  },
+  {
+    "id": "paraphrase-03",
+    "group": "paraphrase",
+    "question": "Where is the sponge landing zone?",
+    "query": "sponge landing zone",
+    "evidence": {"workshop/dum-e-report-card.md": "The team designated the copper tray as the drop-off point for wet sponges."}
+  },
+  {
+    "id": "paraphrase-04",
+    "group": "paraphrase",
+    "question": "What happens to the cartload of boxes that gets soaked?",
+    "query": "soaked boxes hold",
+    "evidence": {"city-lanterns/rain-rule.md": "Wet crates stay on Pier 6 until the dock lead signs the dry check."}
+  },
+  {
+    "id": "paraphrase-05",
+    "group": "paraphrase",
+    "question": "What lane did the workshop set aside for the trolley?",
+    "query": "workshop trolley lane",
+    "evidence": {"workshop/captain-borrows-a-dolly.md": "The west aisle is the approved dolly route."}
+  },
+  {
+    "id": "paraphrase-06",
+    "group": "paraphrase",
+    "question": "What happens to the overhead watering and video feed during the bird hour?",
+    "query": "roof camera sprinklers pause",
+    "evidence": {"roof-garden/basil-gets-a-lawyer.md": "The sprinklers and roof camera stay paused during that hour."}
+  },
+  {
+    "id": "alias-01",
+    "group": "alias",
+    "question": "Did Rhodey hear back from both bell drill observers?",
+    "query": "rhodey emergency bell",
+    "evidence": {"tower-access/cello-complaint.md": "Both lobby and basement observers heard it clearly."}
+  },
+  {
+    "id": "alias-02",
+    "group": "alias",
+    "question": "Who borrowed Captain's Cart in the original sign-out?",
+    "query": "captain's cart orange sticker",
+    "evidence": {"workshop/captain-borrows-a-dolly.md": "Steve asked me to put his name on the borrower line so the nickname could remain on the equipment line."}
+  },
+  {
+    "id": "alias-03",
+    "group": "alias",
+    "question": "What final lift hours was Rhodey asked to post?",
+    "query": "rhodey final lift hours",
+    "evidence": {"tower-access/elevator-keeps-its-voice.md": "Pepper Potts approved the west freight lift for Quiet Window from 21:30 to 23:00."}
+  },
+  {
+    "id": "alias-04",
+    "group": "alias",
+    "question": "What did Spidey put on the clipboard for the first cleanup check?",
+    "query": "spidey cleanup clipboard",
+    "evidence": {"workshop/dum-e-report-card.md": "Peter will record the passes on a clipboard and mark where the sponge lands."}
+  },
+  {
+    "id": "multi-01",
+    "group": "multi-note",
+    "question": "Show me the signed-off hours for the lift and roof Quiet Windows.",
+    "query": "quiet window",
+    "evidence": {
+      "tower-access/elevator-keeps-its-voice.md": "Pepper Potts approved the west freight lift for Quiet Window from 21:30 to 23:00.",
+      "roof-garden/basil-gets-a-lawyer.md": "Bruce and Pepper Potts approved a roof Quiet Window from 06:00 to 07:00."
+    }
+  },
+  {
+    "id": "multi-02",
+    "group": "multi-note",
+    "question": "Show me the records assigning a home to each team's red sleeve.",
+    "query": "red sleeve",
+    "evidence": {
+      "field-kitchen/card-in-red-sleeve.md": "The field kitchen will keep the allergen card in a red sleeve clipped inside the crate lid.",
+      "city-lanterns/rain-rule.md": "Lantern loan receipts travel in the red sleeve in the cart's front pocket."
+    }
+  },
+  {
+    "id": "multi-03",
+    "group": "multi-note",
+    "question": "Show me the original Blue Hour test time and the replacement.",
+    "query": "blue hour watering 05:40",
+    "evidence": {
+      "roof-garden/birds-request-a-change-order.md": "Run the Blue Hour watering circuit at 05:40 for three mornings.",
+      "roof-garden/basil-gets-a-lawyer.md": "Bruce moved Blue Hour watering to 07:10 and closed the 05:40 trial."
+    }
+  },
+  {
+    "id": "multi-04",
+    "group": "multi-note",
+    "question": "Which retention length was pitched and which one was approved?",
+    "query": "lantern desk storage",
+    "evidence": {
+      "harbor-clinic/short-life-for-long-queue.md": "The vendor pitched fourteen-day storage for the check-in text.",
+      "harbor-clinic/tablet-forgets-first.md": "The pilot tablet deletes check-in text after twenty-four hours."
+    }
+  },
+  {
+    "id": "multi-05",
+    "group": "multi-note",
+    "question": "Show me the original library reserve and the later count of the full lending pool.",
+    "query": "red hook library lamps",
+    "evidence": {
+      "city-lanterns/after-the-lights-go-out.md": "Reserve twelve lamps for the Red Hook library.",
+      "city-lanterns/lamp-for-bus-stop.md": "Sam counted thirty-six lamps in the lending pool."
+    }
+  },
+  {
+    "id": "multi-06",
+    "group": "multi-note",
+    "question": "Find the switchplate assignment and the record that closes it.",
+    "query": "switchplate card final hours",
+    "evidence": {
+      "tower-access/elevator-keeps-its-voice.md": "James Rhodes will put the final lift hours on the switchplate card by June 19.",
+      "tower-access/badge-gets-its-own-desk.md": "James Rhodes printed the final hours and installed the switchplate card on the west freight lift."
+    }
+  },
+  {
+    "id": "absent-01",
+    "group": "unanswerable",
+    "question": "When is the meteor insurance renewal due?",
+    "query": "meteor insurance renewal",
+    "evidence": {}
+  },
+  {
+    "id": "absent-02",
+    "group": "unanswerable",
+    "question": "Who accepted the arcade cabinet delivery?",
+    "query": "arcade cabinet delivery",
+    "evidence": {}
+  },
+  {
+    "id": "absent-03",
+    "group": "unanswerable",
+    "question": "Find the code the night clerk used to override the badge reader.",
+    "query": "night badge override code",
+    "evidence": {}
+  },
+  {
+    "id": "absent-04",
+    "group": "unanswerable",
+    "question": "Find a signed-off roof Quiet Window that starts at 21:30.",
+    "query": "quiet window roof 21:30",
+    "evidence": {}
+  },
+  {
+    "id": "absent-05",
+    "group": "unanswerable",
+    "question": "Find an approval for keeping check-in text for fourteen days.",
+    "query": "approved fourteen-day",
+    "evidence": {}
+  },
+  {
+    "id": "absent-06",
+    "group": "unanswerable",
+    "question": "Find approval for a night badge that changes the lift Quiet Window.",
+    "query": "night badge quiet window",
+    "evidence": {}
+  }
+]

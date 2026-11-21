@@ -1,0 +1,1469 @@
+{
+  "environment": {
+    "memory_pa": "0.1.3",
+    "python": "3.12.14",
+    "platform": "macOS-26.6-arm64-arm-64bit",
+    "jsonschema": "4.26.0",
+    "storage": "local"
+  },
+  "dataset": {
+    "sha256": "03392f6ffdaa7f44dae606a7fc68f43dd753d896f338f5e35653e81f363418bf",
+    "notes": 18,
+    "entities": 17,
+    "topics": 6,
+    "source_text_bytes": 18733,
+    "snapshot_bytes": 81601,
+    "gold_cases": 42,
+    "verified_evidence_quotes": 42
+  },
+  "retrieval": {
+    "overall": {
+      "answerable": 36,
+      "unanswerable": 6,
+      "hits_at_1": 24,
+      "all_gold_at_1": 19,
+      "mean_recall_at_1": 0.5972,
+      "hits_at_5": 29,
+      "all_gold_at_5": 28,
+      "mean_recall_at_5": 0.7917,
+      "hits_at_10": 29,
+      "all_gold_at_10": 29,
+      "mean_recall_at_10": 0.8056,
+      "mrr_at_10": 0.7245,
+      "empty_results": 4
+    },
+    "by_group": {
+      "lookup": {
+        "answerable": 12,
+        "unanswerable": 0,
+        "hits_at_1": 11,
+        "all_gold_at_1": 11,
+        "mean_recall_at_1": 0.9167,
+        "hits_at_5": 12,
+        "all_gold_at_5": 12,
+        "mean_recall_at_5": 1.0,
+        "hits_at_10": 12,
+        "all_gold_at_10": 12,
+        "mean_recall_at_10": 1.0,
+        "mrr_at_10": 0.9583
+      },
+      "timeline": {
+        "answerable": 8,
+        "unanswerable": 0,
+        "hits_at_1": 6,
+        "all_gold_at_1": 6,
+        "mean_recall_at_1": 0.75,
+        "hits_at_5": 8,
+        "all_gold_at_5": 8,
+        "mean_recall_at_5": 1.0,
+        "hits_at_10": 8,
+        "all_gold_at_10": 8,
+        "mean_recall_at_10": 1.0,
+        "mrr_at_10": 0.8229
+      },
+      "paraphrase": {
+        "answerable": 6,
+        "unanswerable": 0,
+        "hits_at_1": 1,
+        "all_gold_at_1": 1,
+        "mean_recall_at_1": 0.1667,
+        "hits_at_5": 1,
+        "all_gold_at_5": 1,
+        "mean_recall_at_5": 0.1667,
+        "hits_at_10": 1,
+        "all_gold_at_10": 1,
+        "mean_recall_at_10": 0.1667,
+        "mrr_at_10": 0.1667
+      },
+      "alias": {
+        "answerable": 4,
+        "unanswerable": 0,
+        "hits_at_1": 1,
+        "all_gold_at_1": 1,
+        "mean_recall_at_1": 0.25,
+        "hits_at_5": 2,
+        "all_gold_at_5": 2,
+        "mean_recall_at_5": 0.5,
+        "hits_at_10": 2,
+        "all_gold_at_10": 2,
+        "mean_recall_at_10": 0.5,
+        "mrr_at_10": 0.375
+      },
+      "multi-note": {
+        "answerable": 6,
+        "unanswerable": 0,
+        "hits_at_1": 5,
+        "all_gold_at_1": 0,
+        "mean_recall_at_1": 0.4167,
+        "hits_at_5": 6,
+        "all_gold_at_5": 5,
+        "mean_recall_at_5": 0.9167,
+        "hits_at_10": 6,
+        "all_gold_at_10": 6,
+        "mean_recall_at_10": 1.0,
+        "mrr_at_10": 0.9167
+      },
+      "unanswerable": {
+        "answerable": 0,
+        "unanswerable": 6,
+        "empty_results": 4
+      }
+    }
+  },
+  "latency_ms": {
+    "cli_search": {
+      "samples": 210,
+      "p50": 64.563,
+      "p95": 71.513
+    },
+    "warm_search": {
+      "samples": 1680,
+      "p50": 0.204,
+      "p95": 0.226
+    },
+    "cli_show_source": {
+      "samples": 18,
+      "p50": 63.619,
+      "p95": 66.453
+    },
+    "cli_capture_preview_and_apply": {
+      "samples": 18,
+      "p50": 136.253,
+      "p95": 150.118
+    }
+  },
+  "cases": [
+    {
+      "id": "lookup-01",
+      "group": "lookup",
+      "query": "brass tray night badge",
+      "gold_ranks": {
+        "tower-access/badge-gets-its-own-desk.md": 1
+      },
+      "matches": [
+        {
+          "note": "tower-access/badge-gets-its-own-desk.md",
+          "section": "decisions"
+        },
+        {
+          "note": "tower-access/badge-gets-its-own-desk.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 64.075,
+        "p95": 66.39
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.206,
+        "p95": 0.216
+      }
+    },
+    {
+      "id": "lookup-02",
+      "group": "lookup",
+      "query": "purple tags",
+      "gold_ranks": {
+        "field-kitchen/card-in-red-sleeve.md": 1
+      },
+      "matches": [
+        {
+          "note": "field-kitchen/card-in-red-sleeve.md",
+          "section": "decisions"
+        },
+        {
+          "note": "field-kitchen/card-in-red-sleeve.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 64.399,
+        "p95": 65.799
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.205,
+        "p95": 0.218
+      }
+    },
+    {
+      "id": "lookup-03",
+      "group": "lookup",
+      "query": "dock lead dry check",
+      "gold_ranks": {
+        "city-lanterns/rain-rule.md": 1
+      },
+      "matches": [
+        {
+          "note": "city-lanterns/rain-rule.md",
+          "section": "summary"
+        },
+        {
+          "note": "city-lanterns/rain-rule.md",
+          "section": "decisions"
+        },
+        {
+          "note": "city-lanterns/rain-rule.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 64.564,
+        "p95": 70.944
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.21,
+        "p95": 0.225
+      }
+    },
+    {
+      "id": "lookup-04",
+      "group": "lookup",
+      "query": "yellow card holder",
+      "gold_ranks": {
+        "harbor-clinic/hologram-needs-a-human.md": 1
+      },
+      "matches": [
+        {
+          "note": "harbor-clinic/hologram-needs-a-human.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 65.843,
+        "p95": 74.316
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.201,
+        "p95": 0.209
+      }
+    },
+    {
+      "id": "lookup-05",
+      "group": "lookup",
+      "query": "west aisle dolly",
+      "gold_ranks": {
+        "workshop/captain-borrows-a-dolly.md": 1
+      },
+      "matches": [
+        {
+          "note": "workshop/captain-borrows-a-dolly.md",
+          "section": "summary"
+        },
+        {
+          "note": "workshop/captain-borrows-a-dolly.md",
+          "section": "decisions"
+        },
+        {
+          "note": "workshop/captain-borrows-a-dolly.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 64.449,
+        "p95": 70.606
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.205,
+        "p95": 0.214
+      }
+    },
+    {
+      "id": "lookup-06",
+      "group": "lookup",
+      "query": "yellow bins dry supplies",
+      "gold_ranks": {
+        "workshop/dum-e-report-card.md": 1
+      },
+      "matches": [
+        {
+          "note": "workshop/dum-e-report-card.md",
+          "section": "entities"
+        },
+        {
+          "note": "workshop/dum-e-report-card.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 64.553,
+        "p95": 64.845
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.204,
+        "p95": 0.22
+      }
+    },
+    {
+      "id": "lookup-07",
+      "group": "lookup",
+      "query": "vegetable breakfast boxes",
+      "gold_ranks": {
+        "field-kitchen/breakfast-in-a-blackout.md": 1
+      },
+      "matches": [
+        {
+          "note": "field-kitchen/breakfast-in-a-blackout.md",
+          "section": "summary"
+        },
+        {
+          "note": "field-kitchen/breakfast-in-a-blackout.md",
+          "section": "decisions"
+        },
+        {
+          "note": "field-kitchen/breakfast-in-a-blackout.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 64.242,
+        "p95": 68.445
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.207,
+        "p95": 0.219
+      }
+    },
+    {
+      "id": "lookup-08",
+      "group": "lookup",
+      "query": "juice cartons",
+      "gold_ranks": {
+        "field-kitchen/too-much-orange-juice.md": 1
+      },
+      "matches": [
+        {
+          "note": "field-kitchen/too-much-orange-juice.md",
+          "section": "summary"
+        },
+        {
+          "note": "field-kitchen/too-much-orange-juice.md",
+          "section": "decisions"
+        },
+        {
+          "note": "field-kitchen/too-much-orange-juice.md",
+          "section": "action-items"
+        },
+        {
+          "note": "field-kitchen/too-much-orange-juice.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 65.44,
+        "p95": 70.548
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.208,
+        "p95": 0.231
+      }
+    },
+    {
+      "id": "lookup-09",
+      "group": "lookup",
+      "query": "thirty-six lamps",
+      "gold_ranks": {
+        "city-lanterns/lamp-for-bus-stop.md": 1
+      },
+      "matches": [
+        {
+          "note": "city-lanterns/lamp-for-bus-stop.md",
+          "section": "summary"
+        },
+        {
+          "note": "city-lanterns/lamp-for-bus-stop.md",
+          "section": "decisions"
+        },
+        {
+          "note": "city-lanterns/lamp-for-bus-stop.md",
+          "section": "entities"
+        },
+        {
+          "note": "city-lanterns/lamp-for-bus-stop.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 66.343,
+        "p95": 70.461
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.205,
+        "p95": 0.233
+      }
+    },
+    {
+      "id": "lookup-10",
+      "group": "lookup",
+      "query": "starlings planter rail",
+      "gold_ranks": {
+        "roof-garden/birds-request-a-change-order.md": 2
+      },
+      "matches": [
+        {
+          "note": "roof-garden/basil-gets-a-lawyer.md",
+          "section": "source-text"
+        },
+        {
+          "note": "roof-garden/birds-request-a-change-order.md",
+          "section": "summary"
+        },
+        {
+          "note": "roof-garden/birds-request-a-change-order.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 65.287,
+        "p95": 67.251
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.209,
+        "p95": 0.235
+      }
+    },
+    {
+      "id": "lookup-11",
+      "group": "lookup",
+      "query": "lower counter",
+      "gold_ranks": {
+        "harbor-clinic/short-life-for-long-queue.md": 1
+      },
+      "matches": [
+        {
+          "note": "harbor-clinic/short-life-for-long-queue.md",
+          "section": "summary"
+        },
+        {
+          "note": "harbor-clinic/short-life-for-long-queue.md",
+          "section": "entities"
+        },
+        {
+          "note": "harbor-clinic/short-life-for-long-queue.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 65.345,
+        "p95": 72.601
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.206,
+        "p95": 0.235
+      }
+    },
+    {
+      "id": "lookup-12",
+      "group": "lookup",
+      "query": "anonymous queue totals",
+      "gold_ranks": {
+        "harbor-clinic/tablet-forgets-first.md": 1
+      },
+      "matches": [
+        {
+          "note": "harbor-clinic/tablet-forgets-first.md",
+          "section": "decisions"
+        },
+        {
+          "note": "harbor-clinic/tablet-forgets-first.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 64.04,
+        "p95": 66.906
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.202,
+        "p95": 0.208
+      }
+    },
+    {
+      "id": "timeline-01",
+      "group": "timeline",
+      "query": "quiet window lift",
+      "gold_ranks": {
+        "tower-access/elevator-keeps-its-voice.md": 4
+      },
+      "matches": [
+        {
+          "note": "roof-garden/basil-gets-a-lawyer.md",
+          "section": "source-text"
+        },
+        {
+          "note": "tower-access/badge-gets-its-own-desk.md",
+          "section": "entities"
+        },
+        {
+          "note": "tower-access/badge-gets-its-own-desk.md",
+          "section": "source-text"
+        },
+        {
+          "note": "tower-access/elevator-keeps-its-voice.md",
+          "section": "summary"
+        },
+        {
+          "note": "tower-access/elevator-keeps-its-voice.md",
+          "section": "decisions"
+        },
+        {
+          "note": "tower-access/elevator-keeps-its-voice.md",
+          "section": "entities"
+        },
+        {
+          "note": "tower-access/elevator-keeps-its-voice.md",
+          "section": "source-text"
+        },
+        {
+          "note": "tower-access/cello-complaint.md",
+          "section": "decisions"
+        },
+        {
+          "note": "tower-access/cello-complaint.md",
+          "section": "entities"
+        },
+        {
+          "note": "tower-access/cello-complaint.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 64.72,
+        "p95": 71.315
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.147,
+        "p95": 0.175
+      }
+    },
+    {
+      "id": "timeline-02",
+      "group": "timeline",
+      "query": "east lift trial hours",
+      "gold_ranks": {
+        "tower-access/elevator-learns-to-whisper.md": 3
+      },
+      "matches": [
+        {
+          "note": "tower-access/elevator-keeps-its-voice.md",
+          "section": "source-text"
+        },
+        {
+          "note": "tower-access/cello-complaint.md",
+          "section": "source-text"
+        },
+        {
+          "note": "tower-access/elevator-learns-to-whisper.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 63.743,
+        "p95": 64.038
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.209,
+        "p95": 0.228
+      }
+    },
+    {
+      "id": "timeline-03",
+      "group": "timeline",
+      "query": "switchplate card",
+      "gold_ranks": {
+        "tower-access/badge-gets-its-own-desk.md": 1
+      },
+      "matches": [
+        {
+          "note": "tower-access/badge-gets-its-own-desk.md",
+          "section": "summary"
+        },
+        {
+          "note": "tower-access/badge-gets-its-own-desk.md",
+          "section": "action-items"
+        },
+        {
+          "note": "tower-access/badge-gets-its-own-desk.md",
+          "section": "entities"
+        },
+        {
+          "note": "tower-access/badge-gets-its-own-desk.md",
+          "section": "source-text"
+        },
+        {
+          "note": "tower-access/elevator-keeps-its-voice.md",
+          "section": "action-items"
+        },
+        {
+          "note": "tower-access/elevator-keeps-its-voice.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 67.038,
+        "p95": 74.314
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.206,
+        "p95": 0.217
+      }
+    },
+    {
+      "id": "timeline-04",
+      "group": "timeline",
+      "query": "retention check-in text",
+      "gold_ranks": {
+        "harbor-clinic/tablet-forgets-first.md": 1
+      },
+      "matches": [
+        {
+          "note": "harbor-clinic/tablet-forgets-first.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 64.044,
+        "p95": 66.004
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.199,
+        "p95": 0.214
+      }
+    },
+    {
+      "id": "timeline-05",
+      "group": "timeline",
+      "query": "blue hour watering",
+      "gold_ranks": {
+        "roof-garden/basil-gets-a-lawyer.md": 1
+      },
+      "matches": [
+        {
+          "note": "roof-garden/basil-gets-a-lawyer.md",
+          "section": "summary"
+        },
+        {
+          "note": "roof-garden/basil-gets-a-lawyer.md",
+          "section": "decisions"
+        },
+        {
+          "note": "roof-garden/basil-gets-a-lawyer.md",
+          "section": "action-items"
+        },
+        {
+          "note": "roof-garden/basil-gets-a-lawyer.md",
+          "section": "entities"
+        },
+        {
+          "note": "roof-garden/basil-gets-a-lawyer.md",
+          "section": "entities"
+        },
+        {
+          "note": "roof-garden/basil-gets-a-lawyer.md",
+          "section": "source-text"
+        },
+        {
+          "note": "roof-garden/birds-request-a-change-order.md",
+          "section": "summary"
+        },
+        {
+          "note": "roof-garden/birds-request-a-change-order.md",
+          "section": "decisions"
+        },
+        {
+          "note": "roof-garden/birds-request-a-change-order.md",
+          "section": "action-items"
+        },
+        {
+          "note": "roof-garden/birds-request-a-change-order.md",
+          "section": "entities"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 63.917,
+        "p95": 66.317
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.148,
+        "p95": 0.16
+      }
+    },
+    {
+      "id": "timeline-06",
+      "group": "timeline",
+      "query": "red reset card",
+      "gold_ranks": {
+        "workshop/robot-earns-saturday.md": 1
+      },
+      "matches": [
+        {
+          "note": "workshop/robot-earns-saturday.md",
+          "section": "decisions"
+        },
+        {
+          "note": "workshop/robot-earns-saturday.md",
+          "section": "source-text"
+        },
+        {
+          "note": "workshop/dum-e-report-card.md",
+          "section": "decisions"
+        },
+        {
+          "note": "workshop/dum-e-report-card.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 64.458,
+        "p95": 64.866
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.222,
+        "p95": 0.248
+      }
+    },
+    {
+      "id": "timeline-07",
+      "group": "timeline",
+      "query": "emergency bell drill",
+      "gold_ranks": {
+        "tower-access/cello-complaint.md": 1
+      },
+      "matches": [
+        {
+          "note": "tower-access/cello-complaint.md",
+          "section": "summary"
+        },
+        {
+          "note": "tower-access/cello-complaint.md",
+          "section": "action-items"
+        },
+        {
+          "note": "tower-access/cello-complaint.md",
+          "section": "entities"
+        },
+        {
+          "note": "tower-access/cello-complaint.md",
+          "section": "source-text"
+        },
+        {
+          "note": "tower-access/elevator-learns-to-whisper.md",
+          "section": "action-items"
+        },
+        {
+          "note": "tower-access/elevator-learns-to-whisper.md",
+          "section": "entities"
+        },
+        {
+          "note": "tower-access/elevator-learns-to-whisper.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 65.596,
+        "p95": 71.858
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.207,
+        "p95": 0.218
+      }
+    },
+    {
+      "id": "timeline-08",
+      "group": "timeline",
+      "query": "guest demo cleanup",
+      "gold_ranks": {
+        "workshop/robot-earns-saturday.md": 1
+      },
+      "matches": [
+        {
+          "note": "workshop/robot-earns-saturday.md",
+          "section": "entities"
+        },
+        {
+          "note": "workshop/robot-earns-saturday.md",
+          "section": "source-text"
+        },
+        {
+          "note": "workshop/captain-borrows-a-dolly.md",
+          "section": "source-text"
+        },
+        {
+          "note": "workshop/dum-e-report-card.md",
+          "section": "summary"
+        },
+        {
+          "note": "workshop/dum-e-report-card.md",
+          "section": "entities"
+        },
+        {
+          "note": "workshop/dum-e-report-card.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 65.356,
+        "p95": 66.754
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.205,
+        "p95": 0.231
+      }
+    },
+    {
+      "id": "paraphrase-01",
+      "group": "paraphrase",
+      "query": "When does the service elevator go quiet now?",
+      "gold_ranks": {
+        "tower-access/elevator-keeps-its-voice.md": null
+      },
+      "matches": [],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 63.972,
+        "p95": 67.011
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.215,
+        "p95": 0.245
+      }
+    },
+    {
+      "id": "paraphrase-02",
+      "group": "paraphrase",
+      "query": "skip virtual receptionist",
+      "gold_ranks": {
+        "harbor-clinic/hologram-needs-a-human.md": null
+      },
+      "matches": [],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 63.774,
+        "p95": 64.192
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.203,
+        "p95": 0.212
+      }
+    },
+    {
+      "id": "paraphrase-03",
+      "group": "paraphrase",
+      "query": "sponge landing zone",
+      "gold_ranks": {
+        "workshop/dum-e-report-card.md": null
+      },
+      "matches": [],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 64.175,
+        "p95": 69.257
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.197,
+        "p95": 0.21
+      }
+    },
+    {
+      "id": "paraphrase-04",
+      "group": "paraphrase",
+      "query": "soaked boxes hold",
+      "gold_ranks": {
+        "city-lanterns/rain-rule.md": null
+      },
+      "matches": [],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 65.338,
+        "p95": 66.669
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.204,
+        "p95": 0.217
+      }
+    },
+    {
+      "id": "paraphrase-05",
+      "group": "paraphrase",
+      "query": "workshop trolley lane",
+      "gold_ranks": {
+        "workshop/captain-borrows-a-dolly.md": null
+      },
+      "matches": [],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 64.002,
+        "p95": 68.673
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.209,
+        "p95": 0.224
+      }
+    },
+    {
+      "id": "paraphrase-06",
+      "group": "paraphrase",
+      "query": "roof camera sprinklers pause",
+      "gold_ranks": {
+        "roof-garden/basil-gets-a-lawyer.md": 1
+      },
+      "matches": [
+        {
+          "note": "roof-garden/basil-gets-a-lawyer.md",
+          "section": "summary"
+        },
+        {
+          "note": "roof-garden/basil-gets-a-lawyer.md",
+          "section": "entities"
+        },
+        {
+          "note": "roof-garden/basil-gets-a-lawyer.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 64.065,
+        "p95": 73.159
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.2,
+        "p95": 0.225
+      }
+    },
+    {
+      "id": "alias-01",
+      "group": "alias",
+      "query": "rhodey emergency bell",
+      "gold_ranks": {
+        "tower-access/cello-complaint.md": 1
+      },
+      "matches": [
+        {
+          "note": "tower-access/cello-complaint.md",
+          "section": "source-text"
+        },
+        {
+          "note": "tower-access/elevator-learns-to-whisper.md",
+          "section": "entities"
+        },
+        {
+          "note": "tower-access/elevator-learns-to-whisper.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 65.111,
+        "p95": 67.828
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.199,
+        "p95": 0.211
+      }
+    },
+    {
+      "id": "alias-02",
+      "group": "alias",
+      "query": "captain's cart orange sticker",
+      "gold_ranks": {
+        "workshop/captain-borrows-a-dolly.md": 2
+      },
+      "matches": [
+        {
+          "note": "workshop/robot-earns-saturday.md",
+          "section": "source-text"
+        },
+        {
+          "note": "workshop/captain-borrows-a-dolly.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 65.429,
+        "p95": 67.693
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.212,
+        "p95": 0.219
+      }
+    },
+    {
+      "id": "alias-03",
+      "group": "alias",
+      "query": "rhodey final lift hours",
+      "gold_ranks": {
+        "tower-access/elevator-keeps-its-voice.md": null
+      },
+      "matches": [
+        {
+          "note": "tower-access/badge-gets-its-own-desk.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 63.843,
+        "p95": 66.181
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.207,
+        "p95": 0.228
+      }
+    },
+    {
+      "id": "alias-04",
+      "group": "alias",
+      "query": "spidey cleanup clipboard",
+      "gold_ranks": {
+        "workshop/dum-e-report-card.md": null
+      },
+      "matches": [],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 67.346,
+        "p95": 88.309
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.2,
+        "p95": 0.217
+      }
+    },
+    {
+      "id": "multi-01",
+      "group": "multi-note",
+      "query": "quiet window",
+      "gold_ranks": {
+        "tower-access/elevator-keeps-its-voice.md": 7,
+        "roof-garden/basil-gets-a-lawyer.md": 1
+      },
+      "matches": [
+        {
+          "note": "roof-garden/basil-gets-a-lawyer.md",
+          "section": "summary"
+        },
+        {
+          "note": "roof-garden/basil-gets-a-lawyer.md",
+          "section": "decisions"
+        },
+        {
+          "note": "roof-garden/basil-gets-a-lawyer.md",
+          "section": "entities"
+        },
+        {
+          "note": "roof-garden/basil-gets-a-lawyer.md",
+          "section": "source-text"
+        },
+        {
+          "note": "tower-access/badge-gets-its-own-desk.md",
+          "section": "entities"
+        },
+        {
+          "note": "tower-access/badge-gets-its-own-desk.md",
+          "section": "source-text"
+        },
+        {
+          "note": "tower-access/elevator-keeps-its-voice.md",
+          "section": "summary"
+        },
+        {
+          "note": "tower-access/elevator-keeps-its-voice.md",
+          "section": "decisions"
+        },
+        {
+          "note": "tower-access/elevator-keeps-its-voice.md",
+          "section": "entities"
+        },
+        {
+          "note": "tower-access/elevator-keeps-its-voice.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 65.819,
+        "p95": 66.234
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.097,
+        "p95": 0.101
+      }
+    },
+    {
+      "id": "multi-02",
+      "group": "multi-note",
+      "query": "red sleeve",
+      "gold_ranks": {
+        "field-kitchen/card-in-red-sleeve.md": 5,
+        "city-lanterns/rain-rule.md": 2
+      },
+      "matches": [
+        {
+          "note": "field-kitchen/too-much-orange-juice.md",
+          "section": "source-text"
+        },
+        {
+          "note": "city-lanterns/rain-rule.md",
+          "section": "summary"
+        },
+        {
+          "note": "city-lanterns/rain-rule.md",
+          "section": "decisions"
+        },
+        {
+          "note": "city-lanterns/rain-rule.md",
+          "section": "source-text"
+        },
+        {
+          "note": "field-kitchen/card-in-red-sleeve.md",
+          "section": "title"
+        },
+        {
+          "note": "field-kitchen/card-in-red-sleeve.md",
+          "section": "decisions"
+        },
+        {
+          "note": "field-kitchen/card-in-red-sleeve.md",
+          "section": "source-text"
+        },
+        {
+          "note": "city-lanterns/lamp-for-bus-stop.md",
+          "section": "decisions"
+        },
+        {
+          "note": "city-lanterns/lamp-for-bus-stop.md",
+          "section": "source-text"
+        },
+        {
+          "note": "city-lanterns/after-the-lights-go-out.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 64.659,
+        "p95": 66.946
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.192,
+        "p95": 0.2
+      }
+    },
+    {
+      "id": "multi-03",
+      "group": "multi-note",
+      "query": "blue hour watering 05:40",
+      "gold_ranks": {
+        "roof-garden/birds-request-a-change-order.md": 2,
+        "roof-garden/basil-gets-a-lawyer.md": 1
+      },
+      "matches": [
+        {
+          "note": "roof-garden/basil-gets-a-lawyer.md",
+          "section": "source-text"
+        },
+        {
+          "note": "roof-garden/birds-request-a-change-order.md",
+          "section": "summary"
+        },
+        {
+          "note": "roof-garden/birds-request-a-change-order.md",
+          "section": "decisions"
+        },
+        {
+          "note": "roof-garden/birds-request-a-change-order.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 64.357,
+        "p95": 69.182
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.21,
+        "p95": 0.219
+      }
+    },
+    {
+      "id": "multi-04",
+      "group": "multi-note",
+      "query": "lantern desk storage",
+      "gold_ranks": {
+        "harbor-clinic/short-life-for-long-queue.md": 2,
+        "harbor-clinic/tablet-forgets-first.md": 1
+      },
+      "matches": [
+        {
+          "note": "harbor-clinic/tablet-forgets-first.md",
+          "section": "summary"
+        },
+        {
+          "note": "harbor-clinic/short-life-for-long-queue.md",
+          "section": "decisions"
+        },
+        {
+          "note": "harbor-clinic/short-life-for-long-queue.md",
+          "section": "source-text"
+        },
+        {
+          "note": "harbor-clinic/hologram-needs-a-human.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 64.334,
+        "p95": 66.376
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.208,
+        "p95": 0.225
+      }
+    },
+    {
+      "id": "multi-05",
+      "group": "multi-note",
+      "query": "red hook library lamps",
+      "gold_ranks": {
+        "city-lanterns/after-the-lights-go-out.md": 4,
+        "city-lanterns/lamp-for-bus-stop.md": 1
+      },
+      "matches": [
+        {
+          "note": "city-lanterns/lamp-for-bus-stop.md",
+          "section": "summary"
+        },
+        {
+          "note": "city-lanterns/lamp-for-bus-stop.md",
+          "section": "decisions"
+        },
+        {
+          "note": "city-lanterns/lamp-for-bus-stop.md",
+          "section": "source-text"
+        },
+        {
+          "note": "city-lanterns/after-the-lights-go-out.md",
+          "section": "decisions"
+        },
+        {
+          "note": "city-lanterns/after-the-lights-go-out.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 65.526,
+        "p95": 72.881
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.216,
+        "p95": 0.23
+      }
+    },
+    {
+      "id": "multi-06",
+      "group": "multi-note",
+      "query": "switchplate card final hours",
+      "gold_ranks": {
+        "tower-access/elevator-keeps-its-voice.md": 3,
+        "tower-access/badge-gets-its-own-desk.md": 1
+      },
+      "matches": [
+        {
+          "note": "tower-access/badge-gets-its-own-desk.md",
+          "section": "action-items"
+        },
+        {
+          "note": "tower-access/badge-gets-its-own-desk.md",
+          "section": "source-text"
+        },
+        {
+          "note": "tower-access/elevator-keeps-its-voice.md",
+          "section": "action-items"
+        },
+        {
+          "note": "tower-access/elevator-keeps-its-voice.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 64.737,
+        "p95": 76.324
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.204,
+        "p95": 0.234
+      }
+    },
+    {
+      "id": "absent-01",
+      "group": "unanswerable",
+      "query": "meteor insurance renewal",
+      "gold_ranks": {},
+      "matches": [],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 66.604,
+        "p95": 71.558
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.198,
+        "p95": 0.21
+      }
+    },
+    {
+      "id": "absent-02",
+      "group": "unanswerable",
+      "query": "arcade cabinet delivery",
+      "gold_ranks": {},
+      "matches": [],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 63.698,
+        "p95": 63.955
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.197,
+        "p95": 0.22
+      }
+    },
+    {
+      "id": "absent-03",
+      "group": "unanswerable",
+      "query": "night badge override code",
+      "gold_ranks": {},
+      "matches": [],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 66.544,
+        "p95": 70.845
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.203,
+        "p95": 0.222
+      }
+    },
+    {
+      "id": "absent-04",
+      "group": "unanswerable",
+      "query": "quiet window roof 21:30",
+      "gold_ranks": {},
+      "matches": [],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 64.109,
+        "p95": 65.956
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.209,
+        "p95": 0.219
+      }
+    },
+    {
+      "id": "absent-05",
+      "group": "unanswerable",
+      "query": "approved fourteen-day",
+      "gold_ranks": {},
+      "matches": [
+        {
+          "note": "harbor-clinic/tablet-forgets-first.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 63.763,
+        "p95": 65.846
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.203,
+        "p95": 0.211
+      }
+    },
+    {
+      "id": "absent-06",
+      "group": "unanswerable",
+      "query": "night badge quiet window",
+      "gold_ranks": {},
+      "matches": [
+        {
+          "note": "tower-access/badge-gets-its-own-desk.md",
+          "section": "source-text"
+        }
+      ],
+      "cli_search_ms": {
+        "samples": 5,
+        "p50": 65.265,
+        "p95": 67.298
+      },
+      "warm_search_ms": {
+        "samples": 40,
+        "p50": 0.204,
+        "p95": 0.216
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "ent-5f44f5573ad657879910213087fc993f",
+  "kind": "project",
+  "mentions": [
+    {
+      "facts": [
+        "Guest demo requires three supervised cleanup passes."
+      ],
+      "name": "DUM-E Guest Demo",
+      "source_id": "src-d600c6a820165eec8d91dd5bb7d3c79e"
+    },
+    {
+      "basis": "This log reports the result of the three-pass guest demo release check.",
+      "facts": [
+        "DUM-E passed three supervised cleanup runs."
+      ],
+      "name": "DUM-E Guest Demo",
+      "source_id": "src-42d654c1813c55beaeeb6623ea0ec1e9"
+    }
+  ],
+  "name": "DUM-E Guest Demo"
+}

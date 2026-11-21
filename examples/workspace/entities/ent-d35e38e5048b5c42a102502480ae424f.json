@@ -1,0 +1,30 @@
+{
+  "id": "ent-d35e38e5048b5c42a102502480ae424f",
+  "kind": "person",
+  "mentions": [
+    {
+      "facts": [
+        "Leads the Lantern Desk pilot."
+      ],
+      "name": "Shuri",
+      "source_id": "src-b5142531668b54c99148e7af40abd980"
+    },
+    {
+      "basis": "Shuri is leading the same Lantern Desk walkthrough.",
+      "facts": [
+        "Kept fourteen days on the options sheet for review."
+      ],
+      "name": "Shuri",
+      "source_id": "src-827caf56a2e15b93b0c240f54b081baa"
+    },
+    {
+      "basis": "Shuri demonstrated the same Lantern Desk tablet during the storage review.",
+      "facts": [
+        "Will check the first deletion receipt."
+      ],
+      "name": "Shuri",
+      "source_id": "src-1058727237845059b9763a363d62a4a4"
+    }
+  ],
+  "name": "Shuri"
+}

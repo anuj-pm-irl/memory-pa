@@ -3,11 +3,13 @@
 Save a note with your AI assistant. Later, ask a question about it and see the note behind the answer. You choose where your notes live.
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="docs/media/save-ask-answer.svg">
-  <img src="docs/media/save-ask-answer.gif" width="720" alt="Save a note that Kit Copper will test the blue lantern. Ask who’s testing the lantern. Get the answer, Kit Copper, with a link to the meeting note.">
+  <source media="(prefers-reduced-motion: reduce)" srcset="docs/media/stark-archive-comic.png">
+  <img src="docs/media/save-ask-answer.gif" width="780" alt="Three-panel Stark Archive comic. Happy Hogan says he’ll bring the sample menu cards. Tony Stark asks who’s bringing them. Memory-pa answers Happy Hogan and opens the June 7 note.">
 </picture>
 
-[Read the sample meeting note](examples/workspace/topics/robot-club/rainy-robot-club-meeting-2026-02-03.md#source-text)
+[Read the source behind the comic](examples/workspace/topics/field-kitchen/breakfast-in-a-blackout-2032-06-07.md#source-text)
+
+The **Stark Archive** is the complete fictional Avengers demo, with 18 notes across six topics. [Browse the workspace](examples/workspace/index.md) · [Read the source notes and benchmark questions](benchmarks/stark-archive/README.md)
 
 ## Start in chat
 
@@ -21,7 +23,7 @@ Follow the setup skill in https://github.com/anuj-pm-irl/memory-pa
 
 1. **Choose where to keep your notes.** Pick a folder on your computer, private GitHub, or private S3. A folder on your computer is the easiest place to start.
 2. **Let your assistant set it up.** Say yes to the steps you want it to do.
-3. **Try the sample note.** Say **“Run the demo with me.”** Then ask **“Who’s testing the lantern?”**
+3. **Explore the Avengers archive.** Say **“Run the demo with me.”** It loads the full archive and answers **“Who will bring sample menu cards to the handoff dry run?”**
 
 If you need to sign in, your assistant will pause so you can do it yourself. If you need an API key, it will guide you to a hidden prompt in your own terminal. Close the screen showing the key and say **“Done.”**
 
@@ -35,11 +37,11 @@ Already use a note taker? Say **“Help me connect Pocket and try one note.”**
 
 memory-pa keeps your original note and links what you want to remember back to it.
 
-<img src="docs/media/one-note-map.svg" width="720" alt="The club meeting note links to Kit Copper, the decision to use the blue lantern, and the open task to test the lantern.">
+<img src="docs/media/stark-archive-memory-map.png" width="780" alt="Stark Archive detective board. Red thread connects Breakfast in a blackout to the Red Hook delivery decision, Happy Hogan’s open task, and Sam Wilson’s call. Two notes from Tower Access and Roof Garden connect to the same James Rhodes sticker.">
 
-When you save a later note saying the lantern passed its test, you can mark the task done and still see the meeting note where it started.
+Follow the red thread from the field kitchen note to Happy Hogan’s open task, or from two different topics to James Rhodes. The board shows selected connections from the 18-note archive. [Field kitchen note](examples/workspace/topics/field-kitchen/breakfast-in-a-blackout-2032-06-07.md) · [Browse all six topics](examples/workspace/index.md)
 
-[See a bigger map](docs/media/answer-trail.svg) · [How memory-pa builds the map](docs/format.md#how-the-memory-map-is-built)
+[How memory-pa builds the map](docs/format.md#how-the-memory-map-is-built)
 
 ## Update in chat
 
@@ -64,7 +66,7 @@ memory-pa demo
 memory-pa --store "~/Memory PA" init --remember
 ```
 
-Replace `~/Memory PA` with the folder you want. If your terminal can’t find `memory-pa`, run `uv tool update-shell`, reopen the terminal, and try again. [Command guide](docs/commands.md) · [Private GitHub and S3 setup](docs/storage.md)
+Replace `~/Memory PA` with the folder you want. The tagged release above includes the earlier demo. To run the Avengers demo from this checkout, follow the [development setup](CONTRIBUTING.md). If your terminal can’t find `memory-pa`, run `uv tool update-shell`, reopen the terminal, and try again. [Command guide](docs/commands.md) · [Private GitHub and S3 setup](docs/storage.md)
 
 </details>
 

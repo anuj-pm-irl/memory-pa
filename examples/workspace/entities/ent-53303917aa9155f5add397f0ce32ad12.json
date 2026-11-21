@@ -1,0 +1,38 @@
+{
+  "id": "ent-53303917aa9155f5add397f0ce32ad12",
+  "kind": "person",
+  "mentions": [
+    {
+      "facts": [
+        "Approved the first lift trial."
+      ],
+      "name": "Pepper Potts",
+      "source_id": "src-0b69b0906ddb53278cf0a3fbbda1f93a"
+    },
+    {
+      "basis": "The record names Pepper Potts as the reviewer of the vendor offer.",
+      "facts": [
+        "Put the vendor's storage offer on hold."
+      ],
+      "name": "Pepper Potts",
+      "source_id": "src-b5142531668b54c99148e7af40abd980"
+    },
+    {
+      "basis": "Pepper Potts signed off on the same Quiet Window policy following the first trial.",
+      "facts": [
+        "Approved the permanent west lift policy."
+      ],
+      "name": "Pepper Potts",
+      "source_id": "src-2c42d193991e5f97bc110ce734fe592f"
+    },
+    {
+      "basis": "Pepper Potts returned to decide the storage offer she had put on hold.",
+      "facts": [
+        "Approved the local retention rule."
+      ],
+      "name": "Pepper Potts",
+      "source_id": "src-1058727237845059b9763a363d62a4a4"
+    }
+  ],
+  "name": "Pepper Potts"
+}

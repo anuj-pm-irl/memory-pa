@@ -1,0 +1,22 @@
+{
+  "id": "ent-e41eef0c2bd45515873bc50ae5dc3d8e",
+  "kind": "person",
+  "mentions": [
+    {
+      "facts": [
+        "Captain America borrowed the workshop dolly."
+      ],
+      "name": "Steve Rogers",
+      "source_id": "src-ac935497a0e3538f8d54f242256c558e"
+    },
+    {
+      "basis": "Steve Rogers returned the same Captain's Cart dolly with its orange sticker.",
+      "facts": [
+        "Returned Captain's Cart to the workshop."
+      ],
+      "name": "Steve Rogers",
+      "source_id": "src-42d654c1813c55beaeeb6623ea0ec1e9"
+    }
+  ],
+  "name": "Steve Rogers"
+}

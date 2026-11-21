@@ -1,0 +1,41 @@
+{
+  "actions": [
+    {
+      "due": null,
+      "id": "act-37d2affbc4b95ce69604bc03162e55ed",
+      "owner": "Sam Wilson",
+      "previous_source": null,
+      "status": "open",
+      "text": "Mark the return box with a white triangle."
+    },
+    {
+      "due": null,
+      "id": "act-bfeb7571630a5416bf4dced7fcefde0a",
+      "owner": "Sam Wilson",
+      "previous_source": null,
+      "status": "open",
+      "text": "Try the Pier 6 cart turn in rain."
+    }
+  ],
+  "captured_at": "2026-11-20T10:29:02Z",
+  "date": "2032-06-15",
+  "decisions": [
+    "Keep twelve of thirty-six lamps reserved for the Red Hook library.",
+    "Use a red sleeve for loan receipts on the route sheet."
+  ],
+  "entities": [
+    "ent-b8a3f7823999541faf10afd43081fca5",
+    "ent-e60713d4a5dd55729aa59517e17594c0",
+    "ent-11a54288cf075bb8a7c8494641f38195"
+  ],
+  "fingerprint": "80eac04a1a4abb4d6be2b85ed6f5489c9472369aa3be26d2be03670b4941dc95",
+  "id": "src-6e11f840268a5ae68a0ace182843bd94",
+  "note": "topics/city-lanterns/a-lamp-for-the-bus-stop-2032-06-15.md",
+  "origin": {
+    "kind": "note"
+  },
+  "summary": "The City Lanterns cart went from Pier 6 to Red Hook. The lending pool held thirty-six lamps including the library reserve.",
+  "text_sha256": "c413419591670b7ec8649f2c05120befbb0ba3b1296a49cba32e416d819603b0",
+  "title": "A lamp for the bus stop",
+  "topic": "city-lanterns"
+}

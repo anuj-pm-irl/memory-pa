@@ -1,0 +1,32 @@
+{
+  "actions": [
+    {
+      "due": null,
+      "id": "act-dd5afc3200825f24b26cb27c3ecdd205",
+      "owner": "James Rhodes",
+      "previous_source": null,
+      "status": "open",
+      "text": "Log the Blue Hour watering trial in the planter saucers."
+    }
+  ],
+  "captured_at": "2026-11-20T10:29:01Z",
+  "date": "2032-06-08",
+  "decisions": [
+    "Run the Blue Hour watering circuit at 05:40 for three mornings."
+  ],
+  "entities": [
+    "ent-dd5afc3200825f24b26cb27c3ecdd205",
+    "ent-e204bfad52cf55b18946c5676ad08047",
+    "ent-cddc6217086d5bf89e01be221d85afad"
+  ],
+  "fingerprint": "3745ce4609b0c09de20c8d2c986f51078505be33cb8cf449636149439df7e0a2",
+  "id": "src-8ac66f658e355b49a7769936131c9bab",
+  "note": "topics/roof-garden/the-birds-request-a-change-order-2032-06-08.md",
+  "origin": {
+    "kind": "note"
+  },
+  "summary": "Bruce and Rhodey tried the Blue Hour watering circuit at 05:40 and observed starlings in the planter rail.",
+  "text_sha256": "44c60152222202fd5ea9feccafab18cc2b197be1381c7bfac7711e7aab6b50d6",
+  "title": "The birds request a change order",
+  "topic": "roof-garden"
+}

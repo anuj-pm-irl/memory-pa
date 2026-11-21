@@ -1,0 +1,30 @@
+{
+  "id": "ent-efe3fb7630f5577ca35f5b5b1c8d7734",
+  "kind": "person",
+  "mentions": [
+    {
+      "facts": [
+        "Coordinates the pilot at Harbor Clinic."
+      ],
+      "name": "Luis Vega",
+      "source_id": "src-b5142531668b54c99148e7af40abd980"
+    },
+    {
+      "basis": "The record names Luis Vega as the clinic rehearsal coordinator.",
+      "facts": [
+        "Moved the large-print cards to the lower counter."
+      ],
+      "name": "Luis Vega",
+      "source_id": "src-827caf56a2e15b93b0c240f54b081baa"
+    },
+    {
+      "basis": "The policy names Luis Vega as the same clinic tally coordinator.",
+      "facts": [
+        "Will compare the anonymous tally with the volunteer's count."
+      ],
+      "name": "Luis Vega",
+      "source_id": "src-1058727237845059b9763a363d62a4a4"
+    }
+  ],
+  "name": "Luis Vega"
+}

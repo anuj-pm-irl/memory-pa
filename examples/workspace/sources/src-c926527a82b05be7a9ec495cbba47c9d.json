@@ -1,0 +1,39 @@
+{
+  "actions": [
+    {
+      "due": "2032-06-19",
+      "id": "act-806a174ef572554c83757232d894a95d",
+      "owner": "James Rhodes",
+      "previous_source": "src-2c42d193991e5f97bc110ce734fe592f",
+      "status": "done",
+      "text": "Post the final west lift hours on the switchplate card."
+    },
+    {
+      "due": null,
+      "id": "act-2358dff22d4257ffaf20c122c343d7ac",
+      "owner": "James Rhodes",
+      "previous_source": null,
+      "status": "open",
+      "text": "Check that the brass tray is within the clerk's reach."
+    }
+  ],
+  "captured_at": "2026-11-20T10:29:03Z",
+  "date": "2032-06-22",
+  "decisions": [
+    "Leave the night badge in the brass tray at the loading dock desk from 23:00."
+  ],
+  "entities": [
+    "ent-e204bfad52cf55b18946c5676ad08047",
+    "ent-4ba14cd554c756cb8c29775d46efde03"
+  ],
+  "fingerprint": "68d81c033b39ed4704e4cb016faef1bb7cf3a6ab9ba1c9e2290e9fb3074309fa",
+  "id": "src-c926527a82b05be7a9ec495cbba47c9d",
+  "note": "topics/tower-access/the-night-badge-gets-its-own-desk-2032-06-22.md",
+  "origin": {
+    "kind": "email"
+  },
+  "summary": "Rhodey posted the west lift switchplate card. The loading dock added a night badge return tray at its desk.",
+  "text_sha256": "0ed183b425c7cbc256fd581a3af7af5739c79bf8686e03643f2273e89c92200d",
+  "title": "The night badge gets its own desk",
+  "topic": "tower-access"
+}

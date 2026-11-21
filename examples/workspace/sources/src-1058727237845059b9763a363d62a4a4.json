@@ -1,0 +1,34 @@
+{
+  "actions": [
+    {
+      "due": null,
+      "id": "act-ff9a88688ced53da8b76c3e461e3fe8f",
+      "owner": "Shuri",
+      "previous_source": null,
+      "status": "open",
+      "text": "Verify the first deletion receipt with Luis."
+    }
+  ],
+  "captured_at": "2026-11-20T10:29:03Z",
+  "date": "2032-06-24",
+  "decisions": [
+    "Delete check-in text after twenty-four hours.",
+    "Keep anonymous queue totals for seven days."
+  ],
+  "entities": [
+    "ent-53303917aa9155f5add397f0ce32ad12",
+    "ent-d35e38e5048b5c42a102502480ae424f",
+    "ent-efe3fb7630f5577ca35f5b5b1c8d7734",
+    "ent-05a9ad61cd9a5897963ab928491a08d1"
+  ],
+  "fingerprint": "a0c89f119b39d76d7a2b75b73339c72ab358923c269b4b2eaa404b49664d4908",
+  "id": "src-1058727237845059b9763a363d62a4a4",
+  "note": "topics/harbor-clinic/the-tablet-forgets-first-2032-06-24.md",
+  "origin": {
+    "kind": "meeting"
+  },
+  "summary": "Pepper approved the local retention rule for the Lantern Desk tablet and took vendor storage off the shortlist.",
+  "text_sha256": "c9afc3dd01912ec4a753f873877ba8309494ded90c8f80b0aff9b85aa344e496",
+  "title": "The tablet forgets first",
+  "topic": "harbor-clinic"
+}

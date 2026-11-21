@@ -1,0 +1,41 @@
+{
+  "actions": [
+    {
+      "due": null,
+      "id": "act-bfeb7571630a5416bf4dced7fcefde0a",
+      "owner": "Sam Wilson",
+      "previous_source": "src-6e11f840268a5ae68a0ace182843bd94",
+      "status": "done",
+      "text": "Try the Pier 6 cart turn in rain."
+    },
+    {
+      "due": null,
+      "id": "act-a0fbf21d9e185a3282aca93a022501dc",
+      "owner": "Sam Wilson",
+      "previous_source": null,
+      "status": "open",
+      "text": "Show the second crew the wet-weather pickup sequence."
+    }
+  ],
+  "captured_at": "2026-11-20T10:29:03Z",
+  "date": "2032-06-26",
+  "decisions": [
+    "Wet crates stay on Pier 6 until the dock lead signs the dry check.",
+    "Keep lantern loan receipts in the red sleeve in the cart's front pocket."
+  ],
+  "entities": [
+    "ent-b8a3f7823999541faf10afd43081fca5",
+    "ent-e60713d4a5dd55729aa59517e17594c0",
+    "ent-11a54288cf075bb8a7c8494641f38195"
+  ],
+  "fingerprint": "7eb4d93ce7a9658e31e254a08fb92a72e1be0074e92ef4db28f04a42df84862d",
+  "id": "src-c8918ceafe685811931c4b85f28ada92",
+  "note": "topics/city-lanterns/the-rain-rule-2032-06-26.md",
+  "origin": {
+    "kind": "note"
+  },
+  "summary": "City Lanterns will hold wet crates at Pier 6 for a dock lead's dry check. The red sleeve rides in the cart's front pocket.",
+  "text_sha256": "b9bf9bf2bc6537a558dbc0dc2f4f9689068d1cf85164f36799564fc815be573d",
+  "title": "The rain rule",
+  "topic": "city-lanterns"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "ent-a5a15599442f5baf89d614c4d3fc9e11",
+  "kind": "person",
+  "mentions": [
+    {
+      "facts": [
+        "Painted two yellow bins for dry supplies."
+      ],
+      "name": "Peter Parker",
+      "source_id": "src-d600c6a820165eec8d91dd5bb7d3c79e"
+    },
+    {
+      "basis": "The note names Peter Parker in the same workshop and cleanup trial.",
+      "facts": [
+        "Marked the dolly handle with an orange sticker."
+      ],
+      "name": "Peter Parker",
+      "source_id": "src-ac935497a0e3538f8d54f242256c558e"
+    },
+    {
+      "basis": "Peter Parker returned the clipboard for his DUM-E cleanup check.",
+      "facts": [
+        "Cleared the guest demo and closed the check."
+      ],
+      "name": "Peter Parker",
+      "source_id": "src-42d654c1813c55beaeeb6623ea0ec1e9"
+    }
+  ],
+  "name": "Peter Parker"
+}

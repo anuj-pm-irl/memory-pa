@@ -1,0 +1,33 @@
+{
+  "actions": [
+    {
+      "due": "2032-06-20",
+      "id": "act-53b60ec585715d2b8ef02d8ba491a831",
+      "owner": "Happy Hogan",
+      "previous_source": "src-baeb48698794563eaf3fab3708280451",
+      "status": "done",
+      "text": "Bring sample menu cards to the handoff dry run."
+    }
+  ],
+  "captured_at": "2026-11-20T10:29:02Z",
+  "date": "2032-06-20",
+  "decisions": [
+    "Clip the allergen card in a red sleeve inside the crate lid.",
+    "Use purple tags for boxes that contain sesame."
+  ],
+  "entities": [
+    "ent-53b60ec585715d2b8ef02d8ba491a831",
+    "ent-b8a3f7823999541faf10afd43081fca5",
+    "ent-f0beaac7e51b581d8659d9ee0af94f4e"
+  ],
+  "fingerprint": "96f099a936a0318d08f18c4615bb6a84b1c1a576c788db15297cd8e992ea37fd",
+  "id": "src-32603d4fd2305ca28327587c420c5d8c",
+  "note": "topics/field-kitchen/the-card-in-the-red-sleeve-2032-06-20.md",
+  "origin": {
+    "kind": "meeting"
+  },
+  "summary": "Happy showed the menu card at the dry run. The kitchen gave the allergen card and the lantern receipts different home positions.",
+  "text_sha256": "40c3617b992dbcb48303c622647e74dce0d6559cde80bef35cec3406ee50a3bb",
+  "title": "The card in the red sleeve",
+  "topic": "field-kitchen"
+}

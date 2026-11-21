@@ -1,0 +1,33 @@
+{
+  "actions": [
+    {
+      "due": "2032-06-19",
+      "id": "act-806a174ef572554c83757232d894a95d",
+      "owner": "James Rhodes",
+      "previous_source": null,
+      "status": "open",
+      "text": "Post the final west lift hours on the switchplate card."
+    }
+  ],
+  "captured_at": "2026-11-20T10:29:02Z",
+  "date": "2032-06-17",
+  "decisions": [
+    "Run Quiet Window on the west freight lift from 21:30 to 23:00.",
+    "Keep the lobby chime and emergency bell audible."
+  ],
+  "entities": [
+    "ent-53303917aa9155f5add397f0ce32ad12",
+    "ent-e204bfad52cf55b18946c5676ad08047",
+    "ent-4ba14cd554c756cb8c29775d46efde03"
+  ],
+  "fingerprint": "d9e3b1455a3d42b88491edc306fdf5091d1f27fe433a99cc19a825a62ed54d7b",
+  "id": "src-2c42d193991e5f97bc110ce734fe592f",
+  "note": "topics/tower-access/the-elevator-keeps-its-voice-2032-06-17.md",
+  "origin": {
+    "kind": "meeting"
+  },
+  "summary": "Pepper signed the permanent west freight lift Quiet Window, replacing the east lift trial.",
+  "text_sha256": "d572b35fefa63cdd9f3f6a2ba171c7de90e1a41877a1e2338d037381116a23f1",
+  "title": "The elevator keeps its voice",
+  "topic": "tower-access"
+}

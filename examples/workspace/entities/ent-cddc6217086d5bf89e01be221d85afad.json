@@ -1,0 +1,22 @@
+{
+  "id": "ent-cddc6217086d5bf89e01be221d85afad",
+  "kind": "project",
+  "mentions": [
+    {
+      "facts": [
+        "The copper trough drains into a separate crate."
+      ],
+      "name": "Blue Hour Watering",
+      "source_id": "src-8ac66f658e355b49a7769936131c9bab"
+    },
+    {
+      "basis": "The note closes the 05:40 Blue Hour trial and sets a new start time.",
+      "facts": [
+        "Current start time is 07:10."
+      ],
+      "name": "Blue Hour Watering",
+      "source_id": "src-4d1e007f9ff1563ba3a55cd3fdaf3eb0"
+    }
+  ],
+  "name": "Blue Hour Watering"
+}

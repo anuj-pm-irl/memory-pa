@@ -1,0 +1,30 @@
+{
+  "id": "ent-05a9ad61cd9a5897963ab928491a08d1",
+  "kind": "project",
+  "mentions": [
+    {
+      "facts": [
+        "Uses a tablet and volunteer at Harbor Clinic."
+      ],
+      "name": "Lantern Desk",
+      "source_id": "src-b5142531668b54c99148e7af40abd980"
+    },
+    {
+      "basis": "The note records the Lantern Desk language-choice rehearsal.",
+      "facts": [
+        "Paper check-in and the volunteer table worked during rehearsal."
+      ],
+      "name": "Lantern Desk",
+      "source_id": "src-827caf56a2e15b93b0c240f54b081baa"
+    },
+    {
+      "basis": "This note decides the Lantern Desk storage question raised in the rehearsal.",
+      "facts": [
+        "Text is local and deleted after twenty-four hours."
+      ],
+      "name": "Lantern Desk",
+      "source_id": "src-1058727237845059b9763a363d62a4a4"
+    }
+  ],
+  "name": "Lantern Desk"
+}

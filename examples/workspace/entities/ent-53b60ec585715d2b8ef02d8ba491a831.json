@@ -1,0 +1,30 @@
+{
+  "id": "ent-53b60ec585715d2b8ef02d8ba491a831",
+  "kind": "person",
+  "mentions": [
+    {
+      "facts": [
+        "Oversees the breakfast box handoff."
+      ],
+      "name": "Happy Hogan",
+      "source_id": "src-baeb48698794563eaf3fab3708280451"
+    },
+    {
+      "basis": "Happy Hogan brought the sample menu card to the scheduled dry run.",
+      "facts": [
+        "Completed the menu-card action with the Red Hook volunteers."
+      ],
+      "name": "Happy Hogan",
+      "source_id": "src-32603d4fd2305ca28327587c420c5d8c"
+    },
+    {
+      "basis": "Happy Hogan is running the next community kitchen handoff.",
+      "facts": [
+        "Will get the delivery slip initialled."
+      ],
+      "name": "Happy Hogan",
+      "source_id": "src-7f15d0e02cf55f5ba7b6e2a783ab0bb8"
+    }
+  ],
+  "name": "Happy Hogan"
+}

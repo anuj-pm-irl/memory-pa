@@ -1,0 +1,31 @@
+{
+  "actions": [
+    {
+      "due": null,
+      "id": "act-53303917aa9155f5add397f0ce32ad12",
+      "owner": "James Rhodes",
+      "previous_source": "src-0b69b0906ddb53278cf0a3fbbda1f93a",
+      "status": "done",
+      "text": "Run the emergency bell drill."
+    }
+  ],
+  "captured_at": "2026-11-20T10:29:02Z",
+  "date": "2032-06-10",
+  "decisions": [
+    "Keep the Quiet Window trial on the east lift through June 16."
+  ],
+  "entities": [
+    "ent-e204bfad52cf55b18946c5676ad08047",
+    "ent-4ba14cd554c756cb8c29775d46efde03"
+  ],
+  "fingerprint": "56431422461840e64f6eef56bb5331c51e1eb68ca4c626435620c72cd1dcfe0d",
+  "id": "src-441ac8728d2e5f89a79005087e279d68",
+  "note": "topics/tower-access/the-cello-complaint-2032-06-10.md",
+  "origin": {
+    "kind": "recording"
+  },
+  "summary": "The rehearsal complaint came from the east lift speaker. The emergency bell passed its lobby and basement drill.",
+  "text_sha256": "6ae56e91896d13103958ca09e8c1768c6d9f9ef9e6b21de9b115b3c91d824fe4",
+  "title": "The cello complaint",
+  "topic": "tower-access"
+}

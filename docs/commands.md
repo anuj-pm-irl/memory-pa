@@ -2,6 +2,10 @@
 
 Use `memory-pa --help` and `memory-pa COMMAND --help` for the full options.
 
+## Explore the Avengers archive
+
+Run `memory-pa demo` to load all 18 fictional notes and see the evidence behind Happy Hogan’s menu-card task. The demo uses its bundled workspace. [Browse all six topics](../examples/workspace/index.md)
+
 ## Update memory-pa
 
 1. Run `memory-pa --version`. Look for a newer published release and read its notes. [Latest memory-pa release](https://github.com/anuj-pm-irl/memory-pa/releases/latest)
@@ -28,19 +32,19 @@ If a routine update fails verification, install the previous tag with the same c
 ## Save a note from a file
 
 1. Run `memory-pa --store "~/Memory PA" init --remember` once to use that folder. Run `memory-pa config` any time to check where your notes go. See [storage setup](storage.md) for private GitHub and S3.
-2. Put some text you want to save in `my-note.txt`. Run the command below to preview the note. Use a short topic with lowercase letters and hyphens. Add `--date YYYY-MM-DD` when you know the date the note is about.
+2. Put some text you want to save in `my-note.txt`. To follow the Avengers example, use the [original breakfast note](../benchmarks/stark-archive/notes/field-kitchen/breakfast-in-a-blackout.md). Run the command below to preview the note. Use a short topic with lowercase letters and hyphens. Add `--date YYYY-MM-DD` when you know the date the note is about.
 
    ```sh
-   memory-pa add --file my-note.txt --title "Planting day" --topic garden-club
+   memory-pa add --file my-note.txt --title "Breakfast in a blackout" --topic field-kitchen --date 2032-06-07
    ```
 
 3. Check the note and the paths shown in the preview. Copy the `--apply` option and its token from the output, then add them to the same command. The token ties the save to the same input and workspace revision.
 4. Search for a word you remember and open a result.
 
    ```sh
-   memory-pa search "basil"
-   memory-pa show topics/garden-club/planting-day-undated.md --section source-text
-   memory-pa show topics/garden-club/_summary.md
+   memory-pa search "menu cards"
+   memory-pa show topics/field-kitchen/breakfast-in-a-blackout-2032-06-07.md --section source-text
+   memory-pa show topics/field-kitchen/_summary.md
    ```
 
 Use `--file -` to read pasted text from standard input. Use `--proposal path.json` or `--proposal -` for a structured note with decisions, actions, and entities. Pass the same input to both the preview and the save.

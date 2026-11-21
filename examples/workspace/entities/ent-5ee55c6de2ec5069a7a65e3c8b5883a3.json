@@ -1,0 +1,14 @@
+{
+  "id": "ent-5ee55c6de2ec5069a7a65e3c8b5883a3",
+  "kind": "project",
+  "mentions": [
+    {
+      "facts": [
+        "Sprinklers and roof camera are paused between 06:00 and 07:00."
+      ],
+      "name": "Roof Quiet Window",
+      "source_id": "src-4d1e007f9ff1563ba3a55cd3fdaf3eb0"
+    }
+  ],
+  "name": "Roof Quiet Window"
+}

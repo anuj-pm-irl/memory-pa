@@ -1,5 +1,6 @@
 include AGENTS.md CLAUDE.md CONTRIBUTING.md
 recursive-include docs *.md
-recursive-include docs/media *.gif *.svg
+recursive-include docs/media *.gif *.png
 recursive-include examples/workspace *.json *.md
 recursive-include skills *.md
+recursive-include benchmarks/stark-archive *.md *.json *.py

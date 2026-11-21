@@ -1,0 +1,33 @@
+{
+  "actions": [
+    {
+      "due": null,
+      "id": "act-30fbb21fde875ad4b5662e3da7b3538e",
+      "owner": "Happy Hogan",
+      "previous_source": null,
+      "status": "open",
+      "text": "Match the juice cartons against the cold shelf count and get the slip initialled."
+    }
+  ],
+  "captured_at": "2026-11-20T10:29:03Z",
+  "date": "2032-06-30",
+  "decisions": [
+    "Send sixteen sealed juice cartons to the Red Hook community kitchen.",
+    "Keep the volunteer meal at Pier 6 until the last cart returns."
+  ],
+  "entities": [
+    "ent-53b60ec585715d2b8ef02d8ba491a831",
+    "ent-b8a3f7823999541faf10afd43081fca5",
+    "ent-f0beaac7e51b581d8659d9ee0af94f4e"
+  ],
+  "fingerprint": "1df6dc533e6a14b521b2f6fef303dbcca7f0c7cf7b82db3102a2e143da08af38",
+  "id": "src-7f15d0e02cf55f5ba7b6e2a783ab0bb8",
+  "note": "topics/field-kitchen/we-bought-too-much-orange-juice-2032-06-30.md",
+  "origin": {
+    "kind": "chat"
+  },
+  "summary": "The field kitchen will send sixteen sealed juice cartons to Red Hook and keep the volunteer meal at Pier 6.",
+  "text_sha256": "844546fbde71290d19e3ab542efb79fbe45e3e8d7f242b1ea2fbd63e3fb43574",
+  "title": "We bought too much orange juice",
+  "topic": "field-kitchen"
+}

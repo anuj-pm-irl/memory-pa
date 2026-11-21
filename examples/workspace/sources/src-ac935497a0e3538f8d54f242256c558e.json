@@ -1,0 +1,32 @@
+{
+  "actions": [
+    {
+      "due": null,
+      "id": "act-e41eef0c2bd45515873bc50ae5dc3d8e",
+      "owner": "Steve Rogers",
+      "previous_source": null,
+      "status": "open",
+      "text": "Check the orange sticker on the dolly handle."
+    }
+  ],
+  "captured_at": "2026-11-20T10:29:02Z",
+  "date": "2032-06-16",
+  "decisions": [
+    "Use the west aisle for the dolly route.",
+    "Mark the dolly handle with an orange sticker."
+  ],
+  "entities": [
+    "ent-e41eef0c2bd45515873bc50ae5dc3d8e",
+    "ent-a5a15599442f5baf89d614c4d3fc9e11"
+  ],
+  "fingerprint": "4bd336d5065220e8ad857a0d2ebc175b60a39034db9668e3281806fa7cfbdbb8",
+  "id": "src-ac935497a0e3538f8d54f242256c558e",
+  "note": "topics/workshop/captain-america-borrows-a-dolly-2032-06-16.md",
+  "origin": {
+    "kind": "note"
+  },
+  "summary": "Steve tested the west aisle for the open-house dolly and signed it out as Captain's Cart.",
+  "text_sha256": "4830dd3bae557418755e0e8a0ec439efd14783e591abdf7cbc11c6518490de14",
+  "title": "Captain America borrows a dolly",
+  "topic": "workshop"
+}
