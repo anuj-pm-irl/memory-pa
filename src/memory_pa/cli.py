@@ -4,6 +4,7 @@ import argparse
 import getpass
 import sys
 import warnings
+from datetime import date
 from importlib.metadata import version
 from importlib.resources import files
 from pathlib import Path
@@ -144,12 +145,21 @@ def _demo_files(directory, prefix=""):
 
 def _demo(args):
     workspace = Workspace(dict(_demo_files(files("memory_pa.examples").joinpath("workspace"))))
-    note = "topics/field-kitchen/breakfast-in-a-blackout-2032-06-07.md"
+    replay_date = date(2032, 6, 19)
+    # The replay takes place before the note that records completion.
     hits = [
         hit for hit in workspace.search("menu cards", 12)
-        if hit["note"] == note and hit["section"] == "action-items"
+        if hit["section"] == "action-items" and hit["date"] and hit["date"] <= replay_date.isoformat()
     ]
+    note = hits[0]["note"]
     evidence = workspace.show(note, "source-text").decode("utf-8")
+    action = workspace.by_path[note]["actions"][0]
+    recipient = action["owner"]
+    due = date.fromisoformat(action["due"])
+    message = (
+        f"{recipient.split()[0]}, please bring the sample menu cards "
+        f"to the {due:%B} {due.day} handoff dry run."
+    )
     _output(
         args,
         {
@@ -158,13 +168,18 @@ def _demo(args):
             "note_count": len(workspace.sources),
             "results": hits,
             "source_text": evidence,
+            "reminder_preview": {"recipient": recipient, "message": message},
         },
         [
             "Explore the Stark Archive, a fictional Avengers dataset.",
             f"Loaded {len(workspace.sources)} notes.",
             "",
-            "Who will bring sample menu cards to the handoff dry run?",
+            f"{replay_date:%B} {replay_date.day}, {replay_date.year} · Fictional replay",
+            "Tony · JARVIS, remind whoever’s bringing the sample menu cards.",
             *(f"Open action · {hit['text'].split(' [act-', 1)[0]}" for hit in hits),
+            "",
+            f"Reminder preview from JARVIS · To {recipient}",
+            message,
             "",
             f"Opened {note}#source-text",
             evidence,

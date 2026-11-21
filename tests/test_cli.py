@@ -60,7 +60,17 @@ class CLITests(unittest.TestCase):
         self.assertIn("Loaded 18 notes", output)
         self.assertIn("Happy Hogan", output)
         self.assertIn("Open action", output)
+        self.assertIn("June 19, 2032 · Fictional replay", output)
+        self.assertIn("Reminder preview from JARVIS · To Happy Hogan", output)
         self.assertIn("#source-text", output)
+        demo = json.loads(self.call("demo", "--json"))
+        self.assertEqual(demo["results"][0]["date"], "2032-06-07")
+        preview = demo["reminder_preview"]
+        self.assertEqual(preview["recipient"], "Happy Hogan")
+        self.assertEqual(
+            preview["message"],
+            "Happy, please bring the sample menu cards to the June 20 handoff dry run.",
+        )
         self.assertFalse(self.store.exists())
         self.assertFalse(self.settings.exists())
 

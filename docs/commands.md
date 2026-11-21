@@ -4,7 +4,7 @@ Use `memory-pa --help` and `memory-pa COMMAND --help` for the full options.
 
 ## Explore the Avengers archive
 
-Run `memory-pa demo` to load all 18 fictional notes and see the evidence behind Happy Hogan’s menu-card task. The demo uses its bundled workspace. [Browse all six topics](../examples/workspace/index.md)
+Run `memory-pa demo` to load all 18 fictional notes, open the evidence for Happy Hogan’s menu-card task, and preview JARVIS’s reminder. The demo uses its bundled workspace. [Browse all six topics](../examples/workspace/index.md)
 
 ## Update memory-pa
 

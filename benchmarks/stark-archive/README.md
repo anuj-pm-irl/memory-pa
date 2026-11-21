@@ -6,7 +6,7 @@
 
 Tony Stark's alternate-universe archive follows one month at the tower after a neighborhood blackout. It contains 18 fictional source notes, six topics, and 17 linked people and projects. The scale target was one tenth of a 175-note reference archive by note count. The Stark notes contain 18.3 KiB of source text.
 
-Run `memory-pa demo` to explore this complete archive and see an answer backed by the field kitchen note. [Browse the generated workspace](../../examples/workspace/index.md)
+Run `memory-pa demo` to explore the archive and preview a reminder backed by the field kitchen note. [Browse the generated workspace](../../examples/workspace/index.md)
 
 ## Read the logs
 
