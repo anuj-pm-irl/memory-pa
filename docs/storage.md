@@ -37,7 +37,7 @@ The adapter uses a dedicated branch in a standard SHA-1 Git repository, `main` b
 3. Install the S3 extra and use the address of your bucket and prefix.
 
 ```sh
-uv tool install --python 3.11 "memory-pa[s3] @ git+https://github.com/anuj-pm-irl/memory-pa.git@v0.1.3"
+uv tool install --python 3.11 "memory-pa[s3] @ git+https://github.com/anuj-pm-irl/memory-pa.git@v0.1.4"
 memory-pa --store s3://your-private-bucket/my-memory init --remember
 ```
 

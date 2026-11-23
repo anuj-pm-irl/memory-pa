@@ -70,12 +70,12 @@ Update the CLI, then run `memory-pa upgrade` to check your existing store and `m
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/) and [Git](https://git-scm.com/install), then run these in Terminal or PowerShell.
 
 ```sh
-uv tool install --python 3.11 "git+https://github.com/anuj-pm-irl/memory-pa.git@v0.1.3"
+uv tool install --python 3.11 "git+https://github.com/anuj-pm-irl/memory-pa.git@v0.1.4"
 memory-pa demo
 memory-pa --store "~/Memory PA" init --remember
 ```
 
-Replace `~/Memory PA` with the folder you want. The tagged release above includes the earlier demo. To run the Avengers demo from this checkout, follow the [development setup](CONTRIBUTING.md). If your terminal can’t find `memory-pa`, run `uv tool update-shell`, reopen the terminal, and try again. [Command guide](docs/commands.md) · [Private GitHub and S3 setup](docs/storage.md)
+Replace `~/Memory PA` with the folder you want. If your terminal can’t find `memory-pa`, run `uv tool update-shell`, reopen the terminal, and try again. [Command guide](docs/commands.md) · [Private GitHub and S3 setup](docs/storage.md)
 
 </details>
 
