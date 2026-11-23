@@ -7,6 +7,11 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from memory_pa.memory import Workspace, empty_workspace
+from memory_pa.storage.git import GitStorage
+from memory_pa.storage.local import LocalStorage
+from memory_pa.workspace_guide import GUIDES
+
 from test_memory import example
 
 
@@ -73,6 +78,51 @@ class CLITests(unittest.TestCase):
         )
         self.assertFalse(self.store.exists())
         self.assertFalse(self.settings.exists())
+
+    def test_upgrade_adds_repo_guidance_to_existing_workspace(self):
+        store = LocalStorage(self.store)
+        legacy = {path: data for path, data in empty_workspace().items() if path not in GUIDES}
+        store.publish(None, legacy)
+        proposal = example()
+        saved = self.apply(proposal, self.preview(proposal))
+        before = store.read()
+        state = json.loads(self.call("validate", "--json"))
+
+        preview = json.loads(self.call("upgrade", "--json"))
+        self.assertEqual(preview["status"], "ready")
+        self.assertEqual(store.read(), before)
+        self.assertFalse((self.store / "AGENTS.md").exists())
+
+        upgraded = json.loads(self.call("upgrade", "--apply", "--json"))
+        self.assertEqual(upgraded["status"], "upgraded")
+        self.assertEqual(upgraded["workspace_id"], state["workspace_id"])
+        self.assertEqual(store.read().files, {**before.files, **GUIDES})
+        for name, content in GUIDES.items():
+            self.assertEqual((self.store / name).read_bytes(), content)
+        self.assertIn("blue lantern", self.call("show", saved["note"], "--section", "source-text"))
+        again = json.loads(self.call("upgrade", "--apply", "--json"))
+        self.assertEqual(again["status"], "current")
+        self.assertEqual(again["revision"], upgraded["revision"])
+
+    @unittest.skipUnless(shutil.which("git"), "Git is required")
+    def test_upgrade_preserves_private_git_history(self):
+        remote = self.tmp / "private.git"
+        subprocess.run(["git", "init", "--bare", "--quiet", str(remote)], check=True)
+        store = GitStorage(remote.as_uri(), "memory")
+        legacy = {path: data for path, data in empty_workspace().items() if path not in GUIDES}
+        old_revision = store.publish(None, Workspace(legacy).prepare(example()).files)
+        before = store.read()
+
+        result = json.loads(self.call(
+            "--store", f"git+{remote.as_uri()}", "--git-branch", "memory",
+            "upgrade", "--apply", "--json", use_default=True,
+        ))
+        self.assertEqual(result["status"], "upgraded")
+        self.assertEqual(store.read().files, {**before.files, **GUIDES})
+        parent = subprocess.check_output(
+            ["git", "-C", str(remote), "rev-parse", "memory^"], text=True
+        ).strip()
+        self.assertEqual(parent, old_revision)
 
     def test_remember_a_relative_folder_for_future_commands(self):
         folder = self.tmp / "My memory folder"

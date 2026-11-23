@@ -14,6 +14,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 from .errors import MemoryPAError
+from .workspace_guide import GUIDES
 
 MAX_FILES = 10_000
 MAX_TREE_BYTES = 64 * 1024 * 1024
@@ -58,6 +59,8 @@ def parse_json(raw: bytes, label: str):
 def check_path(name: str) -> None:
     if not isinstance(name, str):
         raise MemoryPAError("Snapshot paths must be strings.")
+    if name in GUIDES:
+        return
     parts = name.split("/")
     if len(name) > 200 or any(
         not SEGMENT.fullmatch(part) or part.endswith(".") or DEVICE.fullmatch(part)

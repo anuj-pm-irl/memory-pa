@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import sqlite3
 import tempfile
 import uuid
@@ -8,6 +9,7 @@ from pathlib import Path
 
 from ..errors import Conflict, MemoryPAError, UncertainWrite
 from ..files import private_path, read_tree, write_tree
+from ..workspace_guide import GUIDES
 from . import Revision
 
 
@@ -62,6 +64,7 @@ class LocalStorage:
                     row = connection.execute("SELECT token FROM head WHERE id = 1").fetchone()
                     if (row[0] if row else None) != expected:
                         raise Conflict("The local workspace changed. Preview the note again.")
+                    self._install_guides(Path(temporary), files)
                     stage.rename(self.revisions / token)
                     connection.execute("INSERT OR REPLACE INTO head VALUES (1, ?)", (token,))
             except sqlite3.Error as exc:
@@ -75,6 +78,21 @@ class LocalStorage:
                 ) from exc
         return token
 
+    def ensure_guides(self, files) -> None:
+        with tempfile.TemporaryDirectory(dir=self.root, prefix=".stage-") as temporary:
+            self._install_guides(Path(temporary), files)
+
+    def _install_guides(self, stage: Path, files) -> None:
+        for name in GUIDES.keys() & files.keys():
+            target = self.root / name
+            if not target.exists() and not target.is_symlink():
+                source = stage / name
+                source.write_bytes(files[name])
+                try:
+                    os.link(source, target)
+                except FileExistsError:
+                    pass
+
     def _check_layout(self) -> None:
         if (
             self.root.is_dir()
@@ -83,6 +101,13 @@ class LocalStorage:
                 not entry.name.startswith(".stage-")
                 for entry in self.root.iterdir()
                 if entry != self.revisions
+                and not (
+                    entry.name in GUIDES
+                    and entry.is_file()
+                    and not entry.is_symlink()
+                    and entry.stat().st_size == len(GUIDES[entry.name])
+                    and entry.read_bytes() == GUIDES[entry.name]
+                )
             )
         ):
             raise MemoryPAError("Choose a new directory or an existing memory-pa workspace.")

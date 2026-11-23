@@ -23,6 +23,7 @@ from .memory import MAX_SOURCE_BYTES, Workspace, empty_workspace
 from .settings import remember, select_store, settings_data
 from .storage import open_storage
 from .storage.local import LocalStorage
+from .workspace_guide import GUIDES, with_guides
 
 SECTIONS = ("title", "summary", "decisions", "action-items", "entities", "source-text")
 
@@ -116,13 +117,13 @@ def _init(args, store, head, selection):
     seed = read_tree(Path(args.seed).expanduser().resolve()) if args.seed else None
     if head.token is not None:
         workspace = Workspace(head.files)
-        if seed is not None and seed != head.files:
+        if seed is not None and {**GUIDES, **seed} != {**GUIDES, **head.files}:
             raise Conflict(
                 "That destination already holds a workspace. Choose an empty destination to import."
             )
         result = {"status": "exists", "workspace_id": workspace.id, "revision": head.token}
     else:
-        content = seed if seed is not None else empty_workspace()
+        content = with_guides(seed) if seed is not None else empty_workspace()
         workspace = Workspace(content)
         revision = store.publish(None, content)
         result = {"status": "created", "workspace_id": workspace.id, "revision": revision}
@@ -256,6 +257,32 @@ def _dispatch(args):
     workspace = Workspace(head.files)
     if args.command == "add":
         _add(args, store, head, workspace, selection)
+    elif args.command == "upgrade":
+        upgraded = with_guides(head.files)
+        changes = sorted(name for name in upgraded if upgraded[name] != head.files.get(name))
+        revision = head.token
+        status = "ready" if changes else "current"
+        if args.apply:
+            if changes:
+                Workspace(upgraded)
+                revision = store.publish(head.token, upgraded)
+                status = "upgraded"
+            elif isinstance(store, LocalStorage):
+                store.ensure_guides(upgraded)
+        _output(
+            args,
+            {
+                "status": status,
+                "workspace_id": workspace.id,
+                "revision": revision,
+                "files": changes,
+            },
+            [{
+                "ready": "Workspace guidance is available. Run upgrade --apply to install it.",
+                "current": "Workspace guidance is current.",
+                "upgraded": "Installed workspace guidance.",
+            }[status]],
+        )
     elif args.command == "search":
         if not 1 <= args.limit <= 100:
             raise MemoryPAError("Set --limit between 1 and 100.")
@@ -334,6 +361,8 @@ def parser():
     show.add_argument("selector", help="workspace-relative path, source ID, or entity ID")
     show.add_argument("--section", choices=SECTIONS)
     command("validate", "check the format and links of the current workspace")
+    upgrade = command("upgrade", "check or upgrade the existing workspace guidance")
+    upgrade.add_argument("--apply", action="store_true", help="install the current guides")
     export = command("export", "copy the current workspace into a new directory")
     export.add_argument("directory")
     connector = command("connect", "set up or check a note taker connection")

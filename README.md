@@ -62,7 +62,7 @@ After the update, check that you can still open my existing notes.
 Follow https://github.com/anuj-pm-irl/memory-pa/blob/main/docs/commands.md#update-memory-pa
 ```
 
-Your assistant can update the tool and the skill you copied into your project. If a release changes how notes are stored, it will explain the change and ask about a private backup first. [Update in Terminal](docs/commands.md#update-memory-pa)
+Update the CLI, then run `memory-pa upgrade` to check your existing store and `memory-pa upgrade --apply` to add its workspace instructions. The upgrade preserves your existing notes and workspace ID. [Update in Terminal](docs/commands.md#update-memory-pa)
 
 <details>
 <summary>Set up in Terminal</summary>
@@ -79,13 +79,8 @@ Replace `~/Memory PA` with the folder you want. The tagged release above include
 
 </details>
 
-<details>
-<summary>Use the skill in another project</summary>
+## Open your memory in another agent
 
-Ask your assistant to install the [memory-pa skill](skills/memory-pa/SKILL.md) in that project. To do it yourself, save the file as `.agents/skills/memory-pa/SKILL.md` for Codex or Antigravity, or `.claude/skills/memory-pa/SKILL.md` for Claude Code. Start a new chat and say “Use the memory-pa skill.”
-
-Share a memory across assistants by pointing them at the same folder or private storage address. [Storage guide](docs/storage.md)
-
-</details>
+Open the managed memory folder or a checkout of its private Git branch as the agent's workspace. The root `AGENTS.md` explains how to find evidence and save notes. Claude Code loads it through `CLAUDE.md`. If your agent needs an explicit entry point, point it to `AGENTS.md`. Agents use the memory-pa CLI for consistent writes and can read a Git checkout or private export directly. [Storage guide](docs/storage.md)
 
 [Contributing](CONTRIBUTING.md) · [MIT license](LICENSE)

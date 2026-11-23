@@ -25,9 +25,13 @@ Run `memory-pa demo` to load all 18 fictional notes, open the evidence for Happy
    uv tool install --python 3.11 "memory-pa[s3] @ git+https://github.com/anuj-pm-irl/memory-pa.git@v0.1.3"
    ```
 
-5. Run `memory-pa --version`, `memory-pa config --json`, and `memory-pa validate --json` again. Check that the installed version matches the release and the store settings and workspace ID match your earlier check. If you copied the skill into your project, update that copy from `skills/memory-pa/SKILL.md` at the same release tag. Use it in your next chat.
+5. Run `memory-pa --version`, `memory-pa config --json`, and `memory-pa validate --json` again. Check that the installed version matches the release and the store settings and workspace ID match your earlier check.
 
-If a routine update fails verification, install the previous tag with the same command and check the workspace again. For a release that changed how notes are stored, follow its recovery instructions.
+6. With a release that supports `upgrade`, run `memory-pa upgrade --json` against the same store. When it reports `ready`, run `memory-pa upgrade --apply --json` once to install `AGENTS.md` and `CLAUDE.md` in the existing workspace. This leaves the workspace ID, source records, notes, and links intact. For Git, the upgrade appends a commit to the selected private branch. Pull the updated branch in agent checkouts. Run `memory-pa validate --json` after the upgrade.
+
+Use the upgraded CLI on all runners sharing that store. Older releases reject the new instruction files. Keep a private export from before the upgrade if you need a rollback to an older reader.
+
+If a routine update fails verification before applying a workspace change, install the previous tag with the same command and check the workspace again. For a release that changed how notes are stored, follow its recovery instructions.
 
 ## Save a note from a file
 
@@ -50,6 +54,8 @@ If a routine update fails verification, install the previous tag with the same c
 Use `--file -` to read pasted text from standard input. Use `--proposal path.json` or `--proposal -` for a structured note with decisions, actions, and entities. Pass the same input to both the preview and the save.
 
 ## Work with an agent or script
+
+Open the workspace folder or private Git checkout in your agent and use its root `AGENTS.md`. It describes the workflow shared by agents and scripts.
 
 Use `memory-pa add --proposal - --json` for a preview, then repeat with `--apply APPLY_TOKEN`. A `ready` response contains the token, the note path, and the paths that will change. A `saved` or `duplicate` response gives the note path and source ID. Search returns records with `note`, `section`, `source_id`, `date`, `title`, and `text`.
 

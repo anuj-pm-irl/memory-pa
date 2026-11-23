@@ -19,6 +19,7 @@ from .records import (
     validate_record,
 )
 from .render import action_text, navigation, note_prefix
+from .workspace_guide import GUIDES
 
 MAX_SOURCE_BYTES = 2 * 1024 * 1024
 
@@ -27,6 +28,7 @@ def empty_workspace() -> dict[str, bytes]:
     return {
         "workspace.json": json_bytes({"format_version": 1, "workspace_id": uuid.uuid4().hex}),
         **navigation({}, {}),
+        **GUIDES,
     }
 
 
@@ -97,7 +99,7 @@ class Workspace:
             *(f"sources/{key}.json" for key in self.sources),
             *(f"entities/{key}.json" for key in self.entities),
         }
-        if self.files.keys() != expected_paths:
+        if self.files.keys() - GUIDES.keys() != expected_paths:
             raise MemoryPAError("The workspace contains unrecognized files.")
 
     def _record(self, path, kind):
